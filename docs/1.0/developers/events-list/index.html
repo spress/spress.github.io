@@ -1,0 +1,577 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+<title>Spress &#8250; Developers &#8250; Events list</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Events list of Spress livecycle">
+<meta name="author" content="Victor Puertas">
+<meta name="generator" content="Spress v2.2.0">
+
+            <meta name="twitter:card" content="summary">
+        <meta name="twitter:image" content="/assets/img/spress-logo.png">
+    <meta name="twitter:title" content="Developers &#8250; Events list">
+    <meta name="twitter:description" content="Events list of Spress livecycle">
+    <meta name="twitter:creator" content="@spress_cms">
+
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Developers &#8250; Events list">
+<meta property="og:description" content="Events list of Spress livecycle">
+<meta property="og:url" content="/docs/1.0/developers/events-list">
+<meta property="og:site_name" content="The static site generator in PHP">
+
+<link href="/rss.xml" type="application/rss+xml" rel="alternate" title="The static site generator in PHP Feed">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/touch-icon-iphone.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/assets/img/touch-icon-ipad.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/assets/img/touch-icon-iphone-retina.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/assets/img/touch-icon-ipad-retina.png">
+
+
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+<link href="/assets/css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="/assets/css/theme.css" rel="stylesheet" media="screen">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+
+   <link rel="stylesheet" href="//cdn.jsdelivr.net/highlight.js/9.0.0/styles/default.min.css">
+   <link rel="stylesheet" href="/assets/css/highlight-style.css">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    
+    ga('create', '', '');
+    ga('send', 'pageview');
+</script>    </head>
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Spress</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+        <li>
+        <a href="/">
+            Home
+                    </a>
+    </li>
+        <li>
+        <a href="/download">
+            Download
+                    </a>
+    </li>
+        <li>
+        <a href="/docs/getting-started/">
+            Get started
+                    </a>
+    </li>
+        <li>
+        <a href="/docs">
+            Docs
+                    </a>
+    </li>
+        <li>
+        <a href="/add-ons">
+            Add-ons
+                            <i class="fa fa-cogs"></i>
+                    </a>
+    </li>
+        <li>
+        <a href="/blog">
+            Blog
+                    </a>
+    </li>
+        <li>
+        <a href="/about">
+            About
+                    </a>
+    </li>
+    </ul>
+        </div>
+    </div>
+</div>        
+        <div class="container container-small">
+    <div class="page-header h-shadow">
+        <h1>
+            Events list
+                        <small>Developers</small>
+                    </h1>
+    </div>
+    
+        
+    <div class="row">
+        <div class="col-md-3">
+            <div class="list-group">
+            <a href="/docs/1.0/developers" class="list-group-item ">
+            Creating a plugin
+        </a>
+            <a href="/docs/1.0/developers/spress-lifecycle" class="list-group-item ">
+            Lifecycle
+        </a>
+            <a href="/docs/1.0/developers/events-list" class="list-group-item active">
+            Events list
+        </a>
+            <a href="/docs/1.0/developers/converters" class="list-group-item ">
+            Converters
+        </a>
+            <a href="/docs/1.0/developers/extending-twig" class="list-group-item ">
+            Extending Twig
+        </a>
+            <a href="/docs/1.0/developers/io-api" class="list-group-item ">
+            IO API
+        </a>
+    </div>
+        </div>
+        <div class="col-md-9">
+            <p>List of Spress events. All arguments are located at <code>Yosymfony\Spress\Plugin\Event</code>
+namespace. All events inherits from 
+<a href="http://symfony.com/doc/current/components/event_dispatcher/introduction.html#creating-and-dispatching-an-event">Symfony\Component\EventDispatcher\Event</a>.
+<table class="table">
+    <thead>
+        <tr>
+            <th class="col-sm-2">Event name</th>
+            <th>Argument</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>spress.start</td>
+            <td><a href="#environmentevent"><code>EnvironmentEvent</code></a></td>
+            <td>
+                The spress.start is thrown when project generation begins. With this
+                event you can modify the configuration repository, add converters or 
+                extend Twig. When this event is thrown, the site configuration 
+                was loaded.
+            </td>
+        </tr>
+        <tr>
+            <td>spress.before_convert</td>
+            <td><a href="#convertevent"><code>ConvertEvent</code></a></td>
+            <td>
+                <p>
+                    The spress.before_convert is thrown before converting the content
+                    of each page.
+                </p>
+                <p>
+    <code>getContent()</code> method returns the original content in
+    source format.
+</p>
+            </td>
+        </tr>
+        <tr>
+            <td>spress.after_convert</td>
+            <td><a href="#convertevent"><code>ConvertEvent</code></a></td>
+            <td>
+                <p>
+    The spress.after_convert is thrown after converting the content of
+    each page.
+    <strong>If the content doesn't have Front-matter, this event will never be
+    dispatched</strong>.
+</p>
+                <p>
+    <code>getContent()</code> method returns the content transformed by
+    converter. In this step Twig tags are not resolved.
+</p>
+            </td>
+        </tr>
+        <tr>
+            <td>spress.after_convert_posts</td>
+            <td><a href="#afterconvertpostsevent"><code>AfterConvertPostsEvent</code></a></td>
+            <td>
+                The spress.after_convert_posts is thrown after converting all posts.
+            </td>
+        </tr>
+        <tr>
+            <td>spress.before_render</td>
+            <td><a href="#renderevent"><code>RenderEvent</code></a></td>
+            <td>
+                <p>
+    The spress.before_render is thrown before rendering the content of
+    each page.
+    <strong>If the content doesn't have Front-matter this event will never be
+    dispatched</strong>.
+</p>
+                <p>
+    <code>getContent()</code> method returns the content transformed by
+    converter. In this step Twig tags are not resolved.
+</p>
+            </td>
+        </tr>
+        <tr>
+            <td>spress.after_render</td>
+            <td><a href="#renderevent"><code>RenderEvent</code></a></td>
+            <td>
+                <p>
+    The spress.after_render is thrown after rendering the content of
+    each page.
+    <strong>If the content doesn't have Front-matter this event will never be
+    dispatched</strong>.
+</p>
+                <p>
+    <code>getContent()</code> method return the fully rendered content 
+    (layout included).
+</p>
+                <p>
+    If you need to access to the rendered content without layout
+    you can to use <code>page.content</code> from the payload.
+</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                spress.before_render_pagination
+                <span class="label label-success">New in 1.0.1</span>
+            </td>
+            <td><a href="#renderevent"><code>RenderEvent</code></a></td>
+            <td>
+                <p>
+    The spress.before_render_pagination is thrown before rendering the content of
+    each page of post pagination.
+    <strong>This event won't fire unless you enable pagination of posts</strong>.
+</p>
+                <p>
+    <code>getContent()</code> method returns the content of pagination template.
+    In this step Twig tags are not resolved.
+</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                spress.after_render_pagination
+                <span class="label label-success">New in 1.0.1</span>
+            </td>
+            <td><a href="#renderevent"><code>RenderEvent</code></a></td>
+            <td>
+                <p>
+    The spress.after_render_pagination is thrown after rendering the content of
+    each pagination of posts.
+    <strong>This event won't fire unless you enable pagination of posts</strong>.
+</p>
+                <p>
+    <code>getContent()</code> method returns the full content rendered
+    (layout included).
+</p>
+                <p>
+    If you need to access to the pagination template content rendered
+    without layout you can to use <code>page.content</code> from the payload.
+</p>
+            </td>
+        </tr>
+        <tr>
+            <td>spress.finish</td>
+            <td><a href="#finishevent"><code>FinishEvent</code></a></td>
+            <td>
+    The spress.finish is thrown after the site was generated. All files 
+    are saved in <code>_site</code> folder.
+</td>
+        </tr>
+    </tbody>
+</table></p>
+
+<h2 id="environmentevent">EnvironmentEvent</h2>
+
+<p>This class lets you get the configuration repository, add converters and extend
+Twig.</p>
+
+<h4 id="get-configuration">Get the configuration</h4>
+
+<p>You have to load configuration repository to be able to alter the configuration.
+<a href="https://github.com/yosymfony/Config-loader#repository">ConfigRepository</a> 
+contains both site configuration and global configuration merged. 
+ConfigRepository have an array access interface.</p>
+
+<pre><code>$subscriber-&gt;addEventListener('spress.start', 
+    function(EnvironmentEvent $event)
+    {
+        $repository = $event-&gt;getConfigRepository();
+
+        // Get url key:
+        $url = $repository['url'];
+
+        // Add new key (will be accessible in your template):
+        $repository['description_site'] = 'Nice!!'
+    });
+</code></pre>
+
+<h4 id="add-new-converter">Add new converter</h4>
+
+<p>Converter can extend Spress to support new type of content.</p>
+
+<pre><code>$subscriber-&gt;addEventListener('spress.start', 
+    function(EnvironmentEvent $event)
+    {
+        $repository = $event-&gt;addConverter(new MyConverter());
+    });
+</code></pre>
+
+<p><a href="/docs/1.0/developers/converters/">How to create a Converter?</a>.</p>
+
+<h4 id="extending-twig">Extending Twig</h4>
+
+<p>Twig can be extened with functions, filters and tests.
+<a href="/docs/1.0/developers/extending-twig/">See extending Twig</a>.</p>
+
+<p></p>
+
+<pre><code>$subscriber-&gt;addEventListener('spress.start', 
+    function(EnvironmentEvent $event)
+    {
+        // Template manager to render Twig templates from a string:
+        $tm = $event-&gt;getTemplateManager();
+        $renderHtml = $tm-&gt;render('&lt;p&gt;{{ name }}&lt;/p&gt;', ['name' =&gt; 'Spress']);
+    });
+</code></pre>
+
+<p></p>
+
+<h4 id="path-info">Information about paths</h4>
+
+<pre><code>$subscriber-&gt;addEventListener('spress.start', 
+    function(EnvironmentEvent $event)
+    {
+        // Get the absolute paths of the site (string):
+        $v = $event-&gt;getSourceDir();
+
+        // Get the absolute path of posts folder (string):
+        $v = $event-&gt;getPostsDir();
+
+        // Get the absolute path of generated site folder (string):
+        $v = $event-&gt;getDestinationDir();
+
+        // Get the absolute path of includes folder (string):
+        $v = $event-&gt;getIncludesDir();
+
+        // Get the absolute path of layouts folder (string):
+        $v = $event-&gt;getLayoutsDir();
+    });
+</code></pre>
+
+<h2 id="contentevent">ContentEvent</h2>
+
+<p>Some Spress events inherits from ContentEvent. This is an base event for events 
+related with the content.</p>
+
+<pre><code>$subscriber-&gt;addEventListener('spress.before_convert', 
+    function(ConvertEvent $event)
+    {
+        // Get the identifier of the page (string):
+        $v = $event-&gt;getId();
+
+        // The page is a post? (boolean):
+        $v = $event-&gt;isPost();
+
+        // Get the content without Front-matter (string):
+        $v = $event-&gt;getContent();
+
+        // Set the content of the page:
+        $event-&gt;setContent('New content');
+
+        // Get source relative path to the site, filename included (string):
+        $v = $event-&gt;getRelativePath();
+    });
+</code></pre>
+
+<h2 id="afterconvertpostsevent">AfterConvertPostsEvent</h2>
+
+<p>Information about converted posts - like categories and tags.</p>
+
+<pre><code>$subscriber-&gt;addEventListener('spress.after_convert_posts', 
+    function(AfterConvertPostsEvent $event)
+    {
+        // Get the category list of all posts (array):
+        $v = $event-&gt;getCategories();
+
+        // Get the tag list of all posts (array):
+        $event-&gt;getTags();
+    });
+</code></pre>
+
+<h2 id="convertevent">ConvertEvent</h2>
+
+<p>This event extends <a href="#contentevent"><code>ContentEvent</code></a>.</p>
+
+<pre><code>$subscriber-&gt;addEventListener('spress.before_convert', 
+    function(ConvertEvent $event)
+    {
+        // Get the Front-matter of the page (array):
+        $v = $event-&gt;getFrontmatter();
+
+        // Set the Front-matter of the page:
+        $event-&gt;setFrontmatter(['title' =&gt; 'My posts']);
+    });
+</code></pre>
+
+<h2 id="renderevent">RenderEvent</h2>
+
+<p>This event extends <a href="#contentevent"><code>ContentEvent</code></a>.</p>
+
+<p></p>
+
+<pre><code>$subscriber-&gt;addEventListener('spress.before_render', 
+    function(RenderEvent $event)
+    {
+        // Get rendered Twig template:
+        $rendered = $event-&gt;render('Hi {{ name }}', ['name' =&gt; 'Victor']);
+
+        // Get the data model used in templates (array):
+        $v = $event-&gt;getPayload();
+
+        // Set a new data model available in templates:
+        $event-&gt;setPayload(['name' =&gt; 'Victor']);
+    });
+</code></pre>
+
+<p></p>
+
+<p>In the case of <em>spress.before_render_pagination</em> and <em>spress.after_render_pagination</em> events
+the RenderEvent argument points to pagination template page.</p>
+
+<h2 id="finishevent">FinishEvent</h2>
+
+<p>Information about the processed site.</p>
+
+<pre><code>$subscriber-&gt;addEventListener('spress.finish', 
+    function(FinishEvent $event)
+    {
+        // Get the results (array):
+        $v = $event-&gt;getResult();
+        $posts = $v['total_post'];
+    });
+</code></pre>
+
+<p>The array with results contains the following information:</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th class="col-sm-2">Key</th>
+            <th>Type</th>
+            <th>Value</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>total_post</td>
+            <td>int</td>
+            <td>
+                Number of posts found at posts directory.
+            </td>
+        </tr>
+        <tr>
+            <td>processed_post</td>
+            <td>int</td>
+            <td>
+                Number of posts with Front-matter.
+            </td>
+        </tr>
+        <tr>
+            <td>drafts_post</td>
+            <td>int</td>
+            <td>
+                Number of draft posts.
+            </td>
+        </tr>
+        <tr>
+            <td>total_pages</td>
+            <td>int</td>
+            <td>
+                Number of pages found at your site.
+            </td>
+        </tr>
+        <tr>
+            <td>processed_pages</td>
+            <td>int</td>
+            <td>
+                Number of pages with Front-matter.
+            </td>
+        </tr>
+        <tr>
+            <td>other_resources</td>
+            <td>int</td>
+            <td>
+                Others files not processable that will be copied verbatim to the
+                generated site.
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+        </div>
+    </div>
+</div>
+            
+        <footer id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class="list-inline">
+        <li>
+        <a href="https://gitter.im/spress/Spress">
+            Support
+                    </a>
+    </li>
+        <li>
+        <a href="/about/license">
+            License: MIT
+                    </a>
+    </li>
+        <li>
+        <a href="/about">
+            About
+                    </a>
+    </li>
+        <li>
+        <a href="http://yosymfony.com">
+            Yo! Symfony
+                    </a>
+    </li>
+    </ul>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <ul class="list-inline">
+        <li>
+        <a href="https://twitter.com/spress_cms">
+            <i class="fa fa-twitter fa-2x"></i>
+        </a>
+    </li>
+        
+        
+        
+        
+        <li>
+        <a href="https://github.com/spress">
+            <i class="fa fa-github fa-2x"></i>
+        </a>
+    </li>
+        
+        
+        <li>
+        <a href="https://www.youtube.com/user/yosymfony">
+            <i class="fa fa-youtube fa-2x"></i>
+        </a>
+    </li>
+    </ul>
+                    </div>
+                </div>
+                <p class="text-center">
+                    &copy; 2017 <a href="http://yosymfony.com">Yo! Symfony</a>.
+                    <span class="label label-default">Proudly powered by Spress</span>
+                </p>
+            </div>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,410 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+<title>Spress &#8250; Themes</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Create themes for Spress">
+<meta name="author" content="Victor Puertas">
+<meta name="generator" content="Spress v2.2.0">
+
+            <meta name="twitter:card" content="summary">
+        <meta name="twitter:image" content="/assets/img/spress-logo.png">
+    <meta name="twitter:title" content="Themes">
+    <meta name="twitter:description" content="Create themes for Spress">
+    <meta name="twitter:creator" content="@spress_cms">
+
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Themes">
+<meta property="og:description" content="Create themes for Spress">
+<meta property="og:url" content="/docs/1.0/themes">
+<meta property="og:site_name" content="The static site generator in PHP">
+
+<link href="/rss.xml" type="application/rss+xml" rel="alternate" title="The static site generator in PHP Feed">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/touch-icon-iphone.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/assets/img/touch-icon-ipad.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/assets/img/touch-icon-iphone-retina.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/assets/img/touch-icon-ipad-retina.png">
+
+
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+<link href="/assets/css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="/assets/css/theme.css" rel="stylesheet" media="screen">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+
+   <link rel="stylesheet" href="//cdn.jsdelivr.net/highlight.js/9.0.0/styles/default.min.css">
+   <link rel="stylesheet" href="/assets/css/highlight-style.css">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    
+    ga('create', '', '');
+    ga('send', 'pageview');
+</script>    </head>
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Spress</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+        <li>
+        <a href="/">
+            Home
+                    </a>
+    </li>
+        <li>
+        <a href="/download">
+            Download
+                    </a>
+    </li>
+        <li>
+        <a href="/docs/getting-started/">
+            Get started
+                    </a>
+    </li>
+        <li>
+        <a href="/docs">
+            Docs
+                    </a>
+    </li>
+        <li>
+        <a href="/add-ons">
+            Add-ons
+                            <i class="fa fa-cogs"></i>
+                    </a>
+    </li>
+        <li>
+        <a href="/blog">
+            Blog
+                    </a>
+    </li>
+        <li>
+        <a href="/about">
+            About
+                    </a>
+    </li>
+    </ul>
+        </div>
+    </div>
+</div>        
+        <div class="container container-small">
+    <div class="page-header h-shadow">
+        <h1>
+            Themes
+                    </h1>
+    </div>
+    
+    <div class="row">
+    <div class="col-md-3">
+        <div class="list-group">
+            <a href="/docs/1.0/getting-started" class="list-group-item ">
+            Getting started
+        </a>
+            <a href="/docs/1.0/how-it-work" class="list-group-item ">
+            How it work?
+        </a>
+            <a href="/docs/1.0/configuration" class="list-group-item ">
+            Configuration
+        </a>
+            <a href="/docs/1.0/variables" class="list-group-item ">
+            Variables
+        </a>
+            <a href="/docs/1.0/front-matter" class="list-group-item ">
+            Front-matter
+        </a>
+            <a href="/docs/1.0/writing-posts" class="list-group-item ">
+            Writing posts
+        </a>
+            <a href="/docs/1.0/creating-pages" class="list-group-item ">
+            Creating pages
+        </a>
+            <a href="/docs/1.0/permalinks" class="list-group-item ">
+            Permalinks
+        </a>
+            <a href="/docs/1.0/pagination" class="list-group-item ">
+            Pagination
+        </a>
+            <a href="/docs/1.0/themes" class="list-group-item active">
+            Themes
+        </a>
+            <a href="/docs/1.0/deployment-methods" class="list-group-item ">
+            Deployment methods
+        </a>
+    </div>
+    </div>
+    <div class="col-md-9">
+        <p><strong>Themes are simply sites</strong>. Spress uses the power of Twig for render templates. You can reusable parts
+of your HTML and write your templates with a easy languaje. For more information
+about Twig, see the <a href="http://twig.sensiolabs.org">Twig web page</a>.</p>
+
+<h2>Create a site blank</h2>
+
+<p>With the <code>spress new:site</code> <a href="/docs/1.0/how-it-work/#site-new-command">command</a> you
+can create a blank site with the below structure:</p>
+
+<pre><code>.
+|- composer.json
+|- config.yml
+|- index.html
+|- _layouts/
+|- _posts/
+</code></pre>
+
+<p>The command has an extra <code>--all</code> option to create a complete scaffolding of the
+site:</p>
+
+<pre><code>.
+|- composer.json
+|- config.yml
+|- _includes/
+|- index.html
+|- _layouts/
+|- _posts/
+|- _plugins/
+</code></pre>
+
+<h2>Hierachical layouts</h2>
+
+<p>Your layouts can inherit from other layouts. Layouts are located at <code>_layout</code>
+folder.</p>
+
+<pre><code>_layout/
+|- default.html
+|- post.html
+</code></pre>
+
+<p>The <code>default.html</code> may hold the general HTML definitions like <em>html</em> and <em>head</em> 
+tags:</p>
+
+<p></p>
+
+<pre><code>&lt;!DOCTYPE HTML&gt;
+&lt;html lang="en"&gt;
+    &lt;head&gt;
+        &lt;meta charset="utf-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;meta name="description" content="{{ site.description }}"&gt;
+        &lt;meta name="author" content="{{ site.author.name }}"&gt;
+        &lt;title&gt;{{ page.title | default(site.title) }}&lt;/title&gt;
+        &lt;link href="/assets/style.css" rel="stylesheet" media="screen"&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        {% block content %}
+            {{ page.content }}
+        {% endblock %}
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p></p>
+
+<p>The <code>post.html</code> can to inheritance from <code>default.html</code>:</p>
+
+<p></p>
+
+<pre><code>---
+layout: default
+---
+{% block content %}
+
+    &lt;p&gt;This is the layout for posts&lt;/p&gt;
+
+    {{ page.content }}
+
+{% endblock %}
+</code></pre>
+
+<p></p>
+
+<h2>Reusable content</h2>
+
+<p>The reusable parts are located at <code>_includes</code> folder.</p>
+
+<pre><code>_include
+|- nav.html
+|- widget
+|  |- email.html
+</code></pre>
+
+<p>To include a reusable part use <code>include</code> Twig statement:</p>
+
+<p></p>
+
+<pre>
+    <code class="twig">
+        {% include 'nav.html' %}
+        {% include 'widget/email.html' %}
+    </code>
+</pre>
+
+<p></p>
+
+<p>More information about 
+<a href="http://twig.sensiolabs.org/doc/tags/include.html">include statement of Twig</a>.</p>
+
+<h2>Plugins installation</h2>
+
+<p>You can use <a href="/add-ons">plugins</a> in your site. For to do it, go to your site folder
+and create <code>composer.json</code> file and add the following content:</p>
+
+<pre>
+    <code class="json">
+        {
+            "require": {
+                "spress/github-metadata-plugin": "~1.0-dev"
+            },
+            "config": {
+                "vendor-dir": "_plugins/vendors"
+            }
+        }
+    </code>
+</pre>
+
+<p>Next, run <code>composer update</code> command and then you can use the plugin in your site.
+The plugins are availables in <code>_plugins</code> folder.</p>
+
+<p>In the previous example, you declare that need the latest version of a plugin called 
+<code>spress/github-metadata-plugin</code>.</p>
+
+<h2>Create a redistributable theme</h2>
+
+<p>Your own themes can be downloaded by other users and be using for building their web pages
+or as base for new themes. A theme can be installed downloading manually, using GIT for
+getting the repository or install globally with Composer.</p>
+
+<p>For create a distribuible package with Composer, you shuld create a repository
+in Github or similar and to register it in <a href="https://packagist.org/about">Packagist</a> repository.</p>
+
+<p>Example of a <a href="https://github.com/yosymfony/Spress-theme-spresso">theme</a>. 
+You can see it in <a href="http://yosymfony.github.io/Spress-example/">action</a>.</p>
+
+<h2>How to install a new theme?</h2>
+
+<p>Several ways to do it.</p>
+
+<h3>Download a copy</h3>
+
+<ul>
+<li>Get a copy of the latest release.</li>
+<li>Uncompress it.</li>
+<li>Go to theme folder</li>
+<li><code>spress site:build --server --watch</code></li>
+</ul>
+
+<h3>With Git</h3>
+
+<ul>
+<li>Fork the repository</li>
+<li>Clone it: <code>https://github.com/YOUR-USER/THEME-REPOSITORY.git</code></li>
+<li>Go to <code>THEME-REPOSITORY</code> folder</li>
+<li><code>spress site:build --server --watch</code></li>
+</ul>
+
+<h3>Globally</h3>
+
+<p><strong>This option is not available using <code>spress.phar</code></strong></p>
+
+<p>Go to your Spress installation folder i.e ~/Spress and add the following depencency
+to your <code>composer.json</code> file</p>
+
+<pre>
+    <code class="json">
+        "require": {
+            "spress-add-ons/about-me-theme": "1.0.*@dev"
+        }
+    </code>
+</pre>
+
+<p>and then run the following command to install the dependency.</p>
+
+<pre><code>$ composer update
+</code></pre>
+
+<p>Next create your new site:</p>
+
+<pre><code>$ spress new:site /your-site-dir about-me
+$ cd /your-site-dir
+$ spress site:build --server --watch
+</code></pre>
+
+    </div>
+</div>
+</div>
+            
+        <footer id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class="list-inline">
+        <li>
+        <a href="https://gitter.im/spress/Spress">
+            Support
+                    </a>
+    </li>
+        <li>
+        <a href="/about/license">
+            License: MIT
+                    </a>
+    </li>
+        <li>
+        <a href="/about">
+            About
+                    </a>
+    </li>
+        <li>
+        <a href="http://yosymfony.com">
+            Yo! Symfony
+                    </a>
+    </li>
+    </ul>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <ul class="list-inline">
+        <li>
+        <a href="https://twitter.com/spress_cms">
+            <i class="fa fa-twitter fa-2x"></i>
+        </a>
+    </li>
+        
+        
+        
+        
+        <li>
+        <a href="https://github.com/spress">
+            <i class="fa fa-github fa-2x"></i>
+        </a>
+    </li>
+        
+        
+        <li>
+        <a href="https://www.youtube.com/user/yosymfony">
+            <i class="fa fa-youtube fa-2x"></i>
+        </a>
+    </li>
+    </ul>
+                    </div>
+                </div>
+                <p class="text-center">
+                    &copy; 2017 <a href="http://yosymfony.com">Yo! Symfony</a>.
+                    <span class="label label-default">Proudly powered by Spress</span>
+                </p>
+            </div>
+        </footer>
+    </body>
+</html>

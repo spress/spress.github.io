@@ -1,0 +1,519 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+<title>Spress &#8250; Configuration of a Spress site</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The Spress site configuration file">
+<meta name="author" content="Victor Puertas">
+<meta name="generator" content="Spress v2.2.0">
+
+            <meta name="twitter:card" content="summary">
+        <meta name="twitter:image" content="/assets/img/spress-logo.png">
+    <meta name="twitter:title" content="Configuration of a Spress site">
+    <meta name="twitter:description" content="The Spress site configuration file">
+    <meta name="twitter:creator" content="@spress_cms">
+
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Configuration of a Spress site">
+<meta property="og:description" content="The Spress site configuration file">
+<meta property="og:url" content="/docs/configuration">
+<meta property="og:site_name" content="The static site generator in PHP">
+
+<link href="/rss.xml" type="application/rss+xml" rel="alternate" title="The static site generator in PHP Feed">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/touch-icon-iphone.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/assets/img/touch-icon-ipad.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/assets/img/touch-icon-iphone-retina.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/assets/img/touch-icon-ipad-retina.png">
+
+
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+<link href="/assets/css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="/assets/css/theme.css" rel="stylesheet" media="screen">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+
+   <link rel="stylesheet" href="//cdn.jsdelivr.net/highlight.js/9.0.0/styles/default.min.css">
+   <link rel="stylesheet" href="/assets/css/highlight-style.css">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    
+    ga('create', '', '');
+    ga('send', 'pageview');
+</script>    </head>
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Spress</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+        <li>
+        <a href="/">
+            Home
+                    </a>
+    </li>
+        <li>
+        <a href="/download">
+            Download
+                    </a>
+    </li>
+        <li>
+        <a href="/docs/getting-started/">
+            Get started
+                    </a>
+    </li>
+        <li>
+        <a href="/docs">
+            Docs
+                    </a>
+    </li>
+        <li>
+        <a href="/add-ons">
+            Add-ons
+                            <i class="fa fa-cogs"></i>
+                    </a>
+    </li>
+        <li>
+        <a href="/blog">
+            Blog
+                    </a>
+    </li>
+        <li>
+        <a href="/about">
+            About
+                    </a>
+    </li>
+    </ul>
+        </div>
+    </div>
+</div>        
+        <div class="container container-small">
+    <div class="page-header h-shadow">
+        <h1>
+            Configuration
+                    </h1>
+    </div>
+    
+    <div class="row">
+    <div class="col-md-3">
+        <div class="list-group">
+            <a href="/docs/getting-started" class="list-group-item ">
+            Getting started
+        </a>
+            <a href="/docs/how-it-works" class="list-group-item ">
+            How it works?
+        </a>
+            <a href="/docs/configuration" class="list-group-item active">
+            Configuration
+        </a>
+            <a href="/docs/variables" class="list-group-item ">
+            Variables
+        </a>
+            <a href="/docs/attributes" class="list-group-item ">
+            Attributes
+        </a>
+            <a href="/docs/collections" class="list-group-item ">
+            Collections
+        </a>
+            <a href="/docs/creating-pages" class="list-group-item ">
+            Creating pages
+        </a>
+            <a href="/docs/writing-posts" class="list-group-item ">
+            Writing posts
+        </a>
+            <a href="/docs/permalinks" class="list-group-item ">
+            Permalinks
+        </a>
+            <a href="/docs/pagination" class="list-group-item ">
+            Pagination
+        </a>
+            <a href="/docs/taxonomies" class="list-group-item ">
+            Taxonomies
+        </a>
+            <a href="/docs/themes" class="list-group-item ">
+            Themes
+        </a>
+            <a href="/docs/plugins" class="list-group-item ">
+            Plugins
+        </a>
+            <a href="/docs/deployment-methods" class="list-group-item ">
+            Deployment methods
+        </a>
+            <a href="/docs/blog-migrations" class="list-group-item ">
+            Blog migrations
+        </a>
+            <a href="/docs/migrating-1.x-to-2.x" class="list-group-item ">
+            Migrating from 1.x to 2.x
+        </a>
+    </div>
+    </div>
+    <div class="col-md-9">
+    	<p class="text-right">
+    		<i class="fa fa-github"></i>
+    		<a href="https://github.com/yosymfony/Spress.yosymfony.com/edit/master/src/content/docs/configuration.md">
+    			Edit this page on Github
+    		</a>
+    	</p>
+        <p>Your site have a <code>config.yml</code> file that lets you change the default configuration
+of Spress and create new variables that will be accessible in your template with
+<code>{{ site.your_variable }}</code>. Some global variables like <code>timezone</code> or
+<code>safe</code> can be specified in the <a href="/docs/how-it-works/#site-build-command">command line options or flags</a>.</p>
+
+<div class="panel panel-default">
+  <div class="panel-body">
+    <div class="row">
+        <div class="col-md-1">
+            <i class="fa fa-exclamation-triangle fa-3x color-red"></i>
+        </div>
+        <div class="col-md-11">
+            <p>
+    The configuration is using <a href="http://yaml.org">YAML</a> formatted file. Do not use
+    tabs!
+</p>
+        </div>
+    </div>
+  </div>
+</div>
+
+<h2 id="environment">Environment configuration: development and production</h2>
+
+<p>The environment configuration is useful for writing configuration options for development and
+production environments. Each Spress site has a <code>config.yml</code> file with the options
+for the default environment (dev). If you want to set options for production environment you
+can create a <code>config_prod.yml</code> file with the options that will override values from <code>config.yml</code>.
+The command line option <code>--env="prod"</code> lets you enable a specific environment.</p>
+
+<p>The pattern for environment configuration filename is <code>config_{environment-name}.yml</code>.</p>
+
+<p>An example for "prod" (production) environment:</p>
+
+<pre><code>$ spress site:build --env=prod
+</code></pre>
+
+<p>More information and examples available at this <a href="/news/2014/06/12/new-in-spress-1-1-environment-configurations/">blog post</a>.</p>
+
+<h2 id="deafult-configuration">Default configuration</h2>
+
+<p>Spress runs with the default configuration:</p>
+
+<pre><code>debug: false
+
+# Reading
+env: 'dev'
+drafts: false
+text_extensions: [ 'htm', 'html', 'html.twig', 'twig.html', 'js', 'less', 'markdown', 'md', 'mkd', 'mkdn', 'coffee', 'css', 'erb', 'haml', 'handlebars', 'hb', 'ms', 'mustache', 'php', 'rb', 'sass', 'scss', 'slim', 'txt', 'xhtml', 'xml' ]
+attribute_syntax: 'yaml'
+map_converter_extension:
+  'html.twig': 'html'
+  'twig.html': 'html'
+  'twig': 'html'
+
+# Markdown converters
+markdown_ext: ['markdown', 'mkd', 'mkdn', 'md']
+parsedown_activated: false
+
+# Outputting
+include: ['.htaccess']
+exclude: []
+timezone: 'UTC'                          # e.g. Europe/Madrid
+safe: false
+permalink: 'pretty'
+preserve_path_title: false
+no_html_extension: false
+layout_ext: ['html.twig', 'twig', 'html']
+url: ''                                  # e.g: http://your-domain.local:4000
+
+# Collections
+collections:
+  posts:
+    output: true
+    sort_by: 'date'
+    sort_type: 'descending'
+
+# Serving
+host: '0.0.0.0'
+port: 4000
+server_watch_ext: ['html', 'htm', 'xml']
+
+# Plugin manager
+plugin_manager_builder:
+  exclude_path: ['tests', 'Tests']
+</code></pre>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th class="col-sm-2">Name</th>
+            <th>Type</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>attribute_syntax</td>
+            <td>string</td>
+            <td>
+    Format for declaration of <a href="/docs/attributes">attributes</a>.
+    Values: <code>yaml</code> or <code>json</code>.
+</td>
+        </tr>
+        <tr>
+            <td>collections</td>
+            <td>array</td>
+            <td>Defines the <a href="/docs/collections">collections</a> for the content.</td>
+        </tr>
+        <tr>
+            <td>debug</td>
+            <td>boolean</td>
+            <td>Enables debug mode.</td>
+        </tr>
+        <tr>
+            <td>drafts</td>
+            <td>boolean</td>
+            <td>Include drafts in the generated site.</td>
+        </tr>
+        <tr>
+            <td>env</td>
+            <td>string</td>
+            <td>The name of environment.</td>
+        </tr>
+        <tr>
+            <td>exclude</td>
+            <td>array</td>
+            <td>
+    Force to exclude files or directories from <code>src/content</code> folder.
+    e.g: <code>['posts']</code>.
+</td>
+        </tr>
+        <tr>
+            <td>include</td>
+            <td>array</td>
+            <td>
+    Force to include files or directories.
+    e.g: <code>['/home/static/pages']</code>.
+</td>
+        </tr>
+        <tr>
+            <td>host</td>
+            <td>string</td>
+            <td>
+    Listen at the given hostname. Used with <code>site:build --server</code> command.
+</td>
+        </tr>
+        <tr>
+            <td>map_converter_extension</td>
+            <td>array</td>
+            <td>
+    <span class="label label-success">Spress >= 2.1</span>
+    Map filename extention to another one. e.g: <code>.twig</code> to <code>.html</code>.
+    This feature lets you work more appropriately with pages using
+    IDEs that have support for <a href="http://twig.sensiolabs.org/">Twig</a> syntax.
+</td>
+        </tr>
+        <tr>
+            <td>markdown_ext</td>
+            <td>array</td>
+            <td>
+                For Markdown converter, this is a list of file extensions that
+                will be considered as Markdown files.
+            </td>
+        </tr>
+        <tr>
+            <td>layout_ext</td>
+            <td>array</td>
+            <td>
+                File extensions that will be considered as layout templates.
+            </td>
+        </tr>
+        <tr>
+            <td>parsedown_activated</td>
+            <td>boolean</td>
+            <td>
+    Activates <a href="http://parsedown.org/">Parsedown</a> as default Markdown converter instead of
+    <a href="https://michelf.ca/projects/php-markdown/">Michel Fortin</a> converter - Parsedown is
+    3-4 times faster than Markdown.
+</td>
+        </tr>
+        <tr>
+            <td>permalink</td>
+            <td>string</td>
+            <td>
+    The style of the <a href="/docs/permalinks/">permalinks</a>.
+</td>
+        </tr>
+        <tr>
+            <td>plugin_manager_builder</td>
+            <td>array</td>
+            <td>
+    <span class="label label-success">Spress >= 2.1.3</span>
+    Directives for plugin manager builder. See <a href="#plugin_manager_builder">more details</a>.
+</td>
+        </tr>
+        <tr>
+            <td>port</td>
+            <td>integer</td>
+            <td>
+    Listen on the given port. Used with <code>site:build --server</code> command.
+</td>
+        </tr>
+        <tr>
+            <td>preserve_path_title</td>
+            <td>boolean</td>
+            <td>
+    Set to <code>true</code> in case of you want to
+    <a href="/docs/writing-posts/#preserve-title">preserve the title extracted
+    from the filename path</a>
+    over the Front matter title attribute.
+</td>
+        </tr>
+        <tr>
+            <td>no_html_extension</td>
+            <td>boolean</td>
+            <td>
+    <span class="label label-success">Spress >= 2.1.0</span>
+    Set to <code>true</code> in case of you want to
+    <a href="/docs/permalinks/#forcing-extensionless">force the "extensionless" mode</a>
+    from <code>pretty</code> permalink style with custom permalinks.
+</td>
+        </tr>
+        <tr>
+            <td>safe</span></td>
+            <td>boolean</span></td>
+            <td>Disable site plugins.</td>
+        </tr>
+        <tr>
+            <td>text_extensions</td>
+            <td>array</td>
+            <td>File extensions that will be considered as not binary files.</td>
+        </tr>
+        <tr>
+            <td>timezone</td>
+            <td>string</td>
+            <td>
+    Set the Timezone. See
+    <a href="http://www.php.net/manual/en/timezones.php">more timezones in PHP</a>.
+</td>
+        </tr>
+        <tr>
+            <td>server_watch_ext</td>
+            <td>array</td>
+            <td>Array of file extensions that will trigger auto-regeneration or request.</td>
+        </tr>
+        <tr>
+            <td>url</td>
+            <td>string</td>
+            <td>
+    URL base of your site. This is useful for scenarios where a site
+    isn't available from the domain root. Example of use in a template:
+    
+    <code>&lt;link href="{{ site.url }}/css/style.css" rel="stylesheet"&gt;</code>
+    
+</td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="plugin_manager_builder">Options for plugin_manager_builder</h3>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th class="col-sm-2">Name</th>
+            <th>Type</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>exclude_path</td>
+            <td>array</td>
+            <td>
+    Indicates which directories are
+    excluded of the discovering class process. Useful for excluding
+    tests directories.
+</td>
+        </tr>
+    </tbody>
+</table>
+
+    </div>
+</div>
+</div>
+            
+        <footer id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class="list-inline">
+        <li>
+        <a href="https://gitter.im/spress/Spress">
+            Support
+                    </a>
+    </li>
+        <li>
+        <a href="/about/license">
+            License: MIT
+                    </a>
+    </li>
+        <li>
+        <a href="/about">
+            About
+                    </a>
+    </li>
+        <li>
+        <a href="http://yosymfony.com">
+            Yo! Symfony
+                    </a>
+    </li>
+    </ul>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <ul class="list-inline">
+        <li>
+        <a href="https://twitter.com/spress_cms">
+            <i class="fa fa-twitter fa-2x"></i>
+        </a>
+    </li>
+        
+        
+        
+        
+        <li>
+        <a href="https://github.com/spress">
+            <i class="fa fa-github fa-2x"></i>
+        </a>
+    </li>
+        
+        
+        <li>
+        <a href="https://www.youtube.com/user/yosymfony">
+            <i class="fa fa-youtube fa-2x"></i>
+        </a>
+    </li>
+    </ul>
+                    </div>
+                </div>
+                <p class="text-center">
+                    &copy; 2017 <a href="http://yosymfony.com">Yo! Symfony</a>.
+                    <span class="label label-default">Proudly powered by Spress</span>
+                </p>
+            </div>
+        </footer>
+    </body>
+</html>

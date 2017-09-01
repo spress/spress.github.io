@@ -1,0 +1,254 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+<title>Spress &#8250; Deployment methods</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="How to deploy a Spress site to your web host">
+<meta name="author" content="Victor Puertas">
+<meta name="generator" content="Spress v2.2.0">
+
+            <meta name="twitter:card" content="summary">
+        <meta name="twitter:image" content="/assets/img/spress-logo.png">
+    <meta name="twitter:title" content="Deployment methods">
+    <meta name="twitter:description" content="How to deploy a Spress site to your web host">
+    <meta name="twitter:creator" content="@spress_cms">
+
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Deployment methods">
+<meta property="og:description" content="How to deploy a Spress site to your web host">
+<meta property="og:url" content="/docs/1.0/deployment-methods">
+<meta property="og:site_name" content="The static site generator in PHP">
+
+<link href="/rss.xml" type="application/rss+xml" rel="alternate" title="The static site generator in PHP Feed">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/touch-icon-iphone.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/assets/img/touch-icon-ipad.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/assets/img/touch-icon-iphone-retina.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/assets/img/touch-icon-ipad-retina.png">
+
+
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+<link href="/assets/css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="/assets/css/theme.css" rel="stylesheet" media="screen">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+
+   <link rel="stylesheet" href="//cdn.jsdelivr.net/highlight.js/9.0.0/styles/default.min.css">
+   <link rel="stylesheet" href="/assets/css/highlight-style.css">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    
+    ga('create', '', '');
+    ga('send', 'pageview');
+</script>    </head>
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Spress</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+        <li>
+        <a href="/">
+            Home
+                    </a>
+    </li>
+        <li>
+        <a href="/download">
+            Download
+                    </a>
+    </li>
+        <li>
+        <a href="/docs/getting-started/">
+            Get started
+                    </a>
+    </li>
+        <li>
+        <a href="/docs">
+            Docs
+                    </a>
+    </li>
+        <li>
+        <a href="/add-ons">
+            Add-ons
+                            <i class="fa fa-cogs"></i>
+                    </a>
+    </li>
+        <li>
+        <a href="/blog">
+            Blog
+                    </a>
+    </li>
+        <li>
+        <a href="/about">
+            About
+                    </a>
+    </li>
+    </ul>
+        </div>
+    </div>
+</div>        
+        <div class="container container-small">
+    <div class="page-header h-shadow">
+        <h1>
+            Deployment methods
+                    </h1>
+    </div>
+    
+    <div class="row">
+    <div class="col-md-3">
+        <div class="list-group">
+            <a href="/docs/1.0/getting-started" class="list-group-item ">
+            Getting started
+        </a>
+            <a href="/docs/1.0/how-it-work" class="list-group-item ">
+            How it work?
+        </a>
+            <a href="/docs/1.0/configuration" class="list-group-item ">
+            Configuration
+        </a>
+            <a href="/docs/1.0/variables" class="list-group-item ">
+            Variables
+        </a>
+            <a href="/docs/1.0/front-matter" class="list-group-item ">
+            Front-matter
+        </a>
+            <a href="/docs/1.0/writing-posts" class="list-group-item ">
+            Writing posts
+        </a>
+            <a href="/docs/1.0/creating-pages" class="list-group-item ">
+            Creating pages
+        </a>
+            <a href="/docs/1.0/permalinks" class="list-group-item ">
+            Permalinks
+        </a>
+            <a href="/docs/1.0/pagination" class="list-group-item ">
+            Pagination
+        </a>
+            <a href="/docs/1.0/themes" class="list-group-item ">
+            Themes
+        </a>
+            <a href="/docs/1.0/deployment-methods" class="list-group-item active">
+            Deployment methods
+        </a>
+    </div>
+    </div>
+    <div class="col-md-9">
+        <p>There is several ways to deploy a site to your web host:</p>
+
+<ul>
+<li><a href="/docs/1.0/deployment-methods/#ftp">FTP</a>.</li>
+<li><a href="/docs/1.0/deployment-methods/#rsync">rsync</a>.</li>
+<li><a href="/docs/1.0/deployment-methods/#github-pages">Github Pages</a>.</li>
+<li><a href="/docs/1.0/deployment-methods/#openshift">Openshift</a>.</li>
+</ul>
+
+<h3 id="ftp">FTP</h3>
+
+<p>Tradicional web hosting providers let you upload files to their servers using FTP protocol.
+Once you have generated your site at <code>_site</code> folder running <code>spress site:build</code> command you
+can upload the content of that folder to your hosting provider using a FTP application like
+<a href="https://cyberduck.io/">Cyberduck</a> available for Mac OS and Windows. For *nix case, you can
+use <a href="https://duck.sh/">Duck CLI</a>.</p>
+
+<h3 id="rsync">rsync</h3>
+
+<p><strong>rsync</strong> is a widely-used utility to keep copies of a file on two computer systems the same.
+Once you have generated your site at <code>_site</code> folder, run the follow command for synchronizing
+your generated site with the <code>httpdocs</code> folder at your web host:</p>
+
+<pre><code>rsync -avze 'ssh -p 999' _site/ youruser@yoursite.com:httpdocs
+</code></pre>
+
+<h3 id="github-pages">Github pages</h3>
+
+<p><a href="https://github.com/">Github</a> is a repository hosting service that offers a simple hosting for personal
+and project sites. See the instruction of <a href="https://pages.github.com/">Github pages</a>
+for more information about how to publish a site.</p>
+
+<h3 id="openshift">Openshift</h3>
+
+<p><a href="https://www.openshift.com/">OpenShift</a> is a cloud computing platform as a service from Red Hat.
+We have ready a <a href="https://github.com/spress/Openshift-spress-cartridge">Cartridge for running a static site or blog</a>
+in your OpenShift Gear. More information about how to use the <a href="/news/2015/01/17/spress-cartridge-for-openshift/">Spress Cartridge</a>.</p>
+
+    </div>
+</div>
+</div>
+            
+        <footer id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class="list-inline">
+        <li>
+        <a href="https://gitter.im/spress/Spress">
+            Support
+                    </a>
+    </li>
+        <li>
+        <a href="/about/license">
+            License: MIT
+                    </a>
+    </li>
+        <li>
+        <a href="/about">
+            About
+                    </a>
+    </li>
+        <li>
+        <a href="http://yosymfony.com">
+            Yo! Symfony
+                    </a>
+    </li>
+    </ul>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <ul class="list-inline">
+        <li>
+        <a href="https://twitter.com/spress_cms">
+            <i class="fa fa-twitter fa-2x"></i>
+        </a>
+    </li>
+        
+        
+        
+        
+        <li>
+        <a href="https://github.com/spress">
+            <i class="fa fa-github fa-2x"></i>
+        </a>
+    </li>
+        
+        
+        <li>
+        <a href="https://www.youtube.com/user/yosymfony">
+            <i class="fa fa-youtube fa-2x"></i>
+        </a>
+    </li>
+    </ul>
+                    </div>
+                </div>
+                <p class="text-center">
+                    &copy; 2017 <a href="http://yosymfony.com">Yo! Symfony</a>.
+                    <span class="label label-default">Proudly powered by Spress</span>
+                </p>
+            </div>
+        </footer>
+    </body>
+</html>

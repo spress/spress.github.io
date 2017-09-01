@@ -1,0 +1,514 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+<title>Spress &#8250; Changelog</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The Spress changelog">
+<meta name="author" content="Victor Puertas">
+<meta name="generator" content="Spress v2.2.0">
+
+            <meta name="twitter:card" content="summary">
+        <meta name="twitter:image" content="/assets/img/spress-logo.png">
+    <meta name="twitter:title" content="Changelog">
+    <meta name="twitter:description" content="The Spress changelog">
+    <meta name="twitter:creator" content="@spress_cms">
+
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Changelog">
+<meta property="og:description" content="The Spress changelog">
+<meta property="og:url" content="/about/changelog">
+<meta property="og:site_name" content="The static site generator in PHP">
+
+<link href="/rss.xml" type="application/rss+xml" rel="alternate" title="The static site generator in PHP Feed">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/touch-icon-iphone.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/assets/img/touch-icon-ipad.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/assets/img/touch-icon-iphone-retina.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/assets/img/touch-icon-ipad-retina.png">
+
+
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+<link href="/assets/css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="/assets/css/theme.css" rel="stylesheet" media="screen">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    
+    ga('create', '', '');
+    ga('send', 'pageview');
+</script>    </head>
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Spress</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+        <li>
+        <a href="/">
+            Home
+                    </a>
+    </li>
+        <li>
+        <a href="/download">
+            Download
+                    </a>
+    </li>
+        <li>
+        <a href="/docs/getting-started/">
+            Get started
+                    </a>
+    </li>
+        <li>
+        <a href="/docs">
+            Docs
+                    </a>
+    </li>
+        <li>
+        <a href="/add-ons">
+            Add-ons
+                            <i class="fa fa-cogs"></i>
+                    </a>
+    </li>
+        <li>
+        <a href="/blog">
+            Blog
+                    </a>
+    </li>
+        <li>
+        <a href="/about">
+            About
+                    </a>
+    </li>
+    </ul>
+        </div>
+    </div>
+</div>        
+        <div class="container container-small">
+    <div class="page-header h-shadow">
+        <h1>
+            Change log
+                        <small>Release history</small>
+                    </h1>
+    </div>
+    
+        
+<div class="row">
+    <div class="col-md-3">
+        <div class="list-group">
+            <a href="/about" class="list-group-item ">
+            About
+        </a>
+            <a href="/about/changelog" class="list-group-item active">
+            Changelog
+        </a>
+            <a href="/about/license" class="list-group-item ">
+            License
+        </a>
+    </div>
+    </div>
+    <div  id="changelog"  class="col-md-9">
+        <p>More information about the <a href="https://github.com/spress/Spress/releases">releases</a>.</p>
+
+<h2 id="2-2-0">2.2.0</h2>
+
+<p>Date: 2017-05-07</p>
+
+<ul>
+<li><span class="label label-success">New</span> Dropped the support for PHP 5.5. The minimum version is 5.6.</li>
+<li><span class="label label-default">Fixed</span> The <code>Spress-installer</code> plugin is included in the <code>composer.json</code> file when a new blank theme is created.</li>
+<li><span class="label label-default">Fixed</span> Fixed an issue when loading layouts and includes of the current theme.</li>
+<li><span class="label label-default">Fixed</span> Fixed an issue related with the presedence between the theme's assets and the site's assets.</li>
+<li><span class="label label-default">Fixed</span> Bug <a href="https://github.com/spress/Spress/issues/107">#107</a> fixed: ".htaccess not being included in build".</li>
+<li><span class="label label-default">Fixed</span> Fixed an issue related to the convertion to array of a <code>Finder</code> class in <code>FilesystemDataSource</code> class.</li>
+<li><span class="label label-primary">Improved</span> Updated <code>PluginManagerBuilder</code> class with support for loading several plugins
+from extra->spress_class attribute of a plugin's <code>composer.json</code> file.</li>
+<li><span class="label label-primary">Improved</span> Renamed some tests with a more descritive name.</li>
+<li><span class="label label-primary">Improved</span> Fixed some descriptions in commands.</li>
+<li><span class="label label-primary">Improved</span> Replaced the use of PHPUnit_Framework_TestCase class by TestCase.</li>
+<li><span class="label label-primary">Improved</span> Deleted the <code>.htaccess</code> value from <code>include</code> key of configuration files due to the fix <a href="https://github.com/spress/Spress/issues/107">#107</a>.</li>
+</ul>
+
+<h3 id="2-2-0-rc">2.2.0-rc</h3>
+
+<p>Date: 2017-01-15</p>
+
+<ul>
+<li><span class="label label-success">New</span> Support for themes. See the new feature <a href="https://github.com/spress/Spress/issues/98">#98</a>.</li>
+<li><span class="label label-success">New</span> Package manager with the following new commands: <code>new:theme</code>, <code>add:plugin</code>, <code>remove:plugin</code> and <code>update:plugin</code>. Additionaly, <code>new:site</code> command has been updated for scaffolding new sites using themes. See the new feature <a href="https://github.com/spress/Spress/issues/96">#96</a>.</li>
+<li><span class="label label-success">New</span> Allow default attributes on "pages" collection. See new feature <a href="https://github.com/spress/Spress/issues/93">#93</a>.</li>
+<li><span class="label label-success">New</span> New options for applying <code>avoid_renderizer</code> feature to type of files and files belong to a path (relative to <code>src/content</code> folder). See new feature <a href="https://github.com/spress/Spress/issues/91">#91</a>.</li>
+<li><span class="label label-success">New</span> Added a verbosity level param (optional) to  the <code>write</code> method of IOInterface.</li>
+<li><span class="label label-success">New</span> Added verbosity and very-verbosity level messages to the <code>ContentManager</code> class.</li>
+<li><span class="label label-success">New</span> Added support for overwriting messages to the output in IOInterface.</li>
+<li><span class="label label-success">New</span> Added support for ask choice questions in IOInterface.</li>
+<li><span class="label label-success">New</span> Added the method <code>getSpress</code> to <code>CommandEnvironmentInterface</code>.</li>
+<li><span class="label label-success">New</span> Updated to using Symfony 3.2 components.</li>
+<li><span class="label label-primary">Improved</span> The terms generated by TaxonomyGenerator for each item appears sorted.</li>
+<li><span class="label label-default">Fixed</span> Avoid an error using <code>--force</code> option of <code>new:site</code> command over a
+non-empty directory that contains "hidden" directories and files.</li>
+<li><span class="label label-default">Fixed</span> Fixed a bug related with the "pagination generator" and the draft posts. See bug #101.</li>
+<li><span class="label label-default">Fixed</span> Fixed the <code>askAndHideAnswer</code> method of <code>ConsoleIO</code> class to use the fallback argument.</li>
+</ul>
+
+<h2 id="2-1-3">2.1.3</h2>
+
+<p>Date: 2016-07-03</p>
+
+<ul>
+<li><span class="label label-success">New</span> Class <a href="https://github.com/spress/Spress/blob/master/src/Core/Support/FileInfo.php"><code>FileInfo</code></a> has been added to the support classes set of the core.</li>
+<li><span class="label label-success">New</span> New configuration value aimed to plugin manager builder for excluding directories in the disconvering class phase. Useful to avoid scaning test classes.</li>
+<li><span class="label label-default">Fixed</span> Fixed the truncated <code>title_path</code> attribute when the filename contains dots before the extension. More details in bug <a href="https://github.com/spress/Spress/issues/88">#88</a>.</li>
+<li><span class="label label-default">Fixed</span> The value of <code>title_path</code> is not altered when it is parsed by <code>FilesystemDataSource</code> class. More details in bug <a href="https://github.com/spress/Spress/issues/88">#88</a>.</li>
+<li><span class="label label-default">Fixed</span> If you set <code>preserve_path_title</code> attribute to <code>true</code> you will get the title parsed from the filename as-is (without the date part). Only <code>rawurlencode</code> function is applied. See PR <a href="https://github.com/spress/Spress/issues/90">#90</a>.</li>
+</ul>
+
+<h2 id="2-1-2">2.1.2</h2>
+
+<p>Date: 2016-05-23</p>
+
+<ul>
+<li><span class="label label-success">New</span> Two new methods have been added to <code>StringWrapper</code> class: <code>lower</code> and <code>upper</code> for converting a given string to lower-case and upper-case respectively using UTF-8 as encoding.</li>
+<li><span class="label label-default">Fixed</span> Bug <a href="https://github.com/spress/Spress/issues/80">#80</a> has been fixed: "<code>Composer install</code> fails if no namespace is specified in new plugin". See PR <a href="https://github.com/spress/Spress/issues/81">#81</a>.</li>
+<li><span class="label label-default">Fixed</span> Bug <a href="https://github.com/spress/Spress/issues/82">#82</a> has been fixed: "Substr <code>---</code> in yaml string cause builder crash".</li>
+<li><span class="label label-default">Fixed</span> Bug <a href="https://github.com/spress/Spress/issues/83">#83</a> has been fixed: "Same tags on different languages cause builder crash".</li>
+</ul>
+
+<h2 id="2-1-1">2.1.1</h2>
+
+<p>Date: 2016-04-12</p>
+
+<ul>
+<li><span class="label label-default">Fixed</span> Bug <a href="https://github.com/spress/Spress/issues/78">#78</a> has been fixed: "/:basename permalink variable contains <code>.html</code> when using <code>*.html.twig</code>". Related with feature <a href="https://github.com/spress/Spress/issues/73">#73</a>.</li>
+<li><span class="label label-default">Fixed</span> Bug <a href="https://github.com/spress/Spress/issues/79">#79</a> has been fixed: "Error loading plugin's dependencies with -s option at site:build command".</li>
+<li><span class="label label-primary">Improved</span> Clarified the message when <code>site:build</code> command is invoked against a non Spress site folder.</li>
+</ul>
+
+<h2 id="2-1-0">2.1.0</h2>
+
+<p>Date: 2016-03-26</p>
+
+<ul>
+<li><span class="label label-success">New</span> Support for calling to an existing command inside a command plugin. The <code>CommandEnvironmentInterface</code> interface has been added and <code>CommandPluginInterface</code> has been updated with <code>setCommandEnvironment</code> and <code>getCommandEnvironment</code> methods. See feature <a href="https://github.com/spress/Spress/issues/77">#77</a>.</li>
+<li><span class="label label-success">New</span> Sort items of a collection. See feature <a href="https://github.com/spress/Spress/issues/67">#67</a>.</li>
+<li><span class="label label-success">New</span> Support to extends TwigRenderizer with tags. See PR <a href="https://github.com/spress/Spress/issues/65">#65</a>.</li>
+<li><span class="label label-success">New</span> Each item of a sorted collection has <code>next</code> and <code>prior</code> relationships. At compile time, you have access to these through <code>page.relationships.next</code> and <code>page.relationships.prior</code> variables. See feature <a href="https://github.com/spress/Spress/issues/69">#69</a>.</li>
+<li><span class="label label-success">New</span> Relationship collection for items. A new class has been added: <code>RelationshipCollection</code>. A new method getRelationshipCollection has been added to <code>ItemIterface</code>.</li>
+<li><span class="label label-success">New</span> <code>MirrorConverter</code> class has been replaced by <code>MapConverter</code>. See feature <a href="https://github.com/spress/Spress/issues/73">#73</a>. Fixed ticket: <a href="https://github.com/spress/Spress/issues/28">#28</a> "Support .twig extention".</li>
+<li><span class="label label-success">New</span> Added <code>ItemCollection</code> class to Core support classes.</li>
+<li><span class="label label-success">New</span> Added <code>getCollections</code> method in <code>CollectionManager</code> class.</li>
+<li><span class="label label-success">New</span> Added <code>clearConverter</code> and <code>countConverter</code> methods in <code>ConverterManager</code> class.</li>
+<li><span class="label label-primary">Improved</span> Improved permalinks customizations. See PR <a href="https://github.com/spress/Spress/issues/64">#64</a>.</li>
+<li><span class="label label-primary">Improved</span> Eliminated unnecessary calls to <code>setItem</code> method of <code>SiteAttribute</code> class in <code>ContentManager</code> class.</li>
+<li><span class="label label-primary">Improved</span> The methods for managing the collection of plugins in <code>PluginManager</code> class have been moved to a <code>Collection</code> class.</li>
+<li><span class="label label-primary">Improved</span> The methods for managing the collection of collection-item in <code>CollectionManager</code> class have been moved to a <code>Collection</code> class.</li>
+<li><span class="label label-primary">Improved</span> Clarified the error message in case of denied permissions when renaming the temporal file in <code>SelfUpdateCommand</code> class.</li>
+<li><span class="label label-default">Fixed</span> Fixed the path available at <code>page.path</code> variable. Prior to this version, this variable contains the relative path to <code>src/content/</code> but with the filename extension changed by the Converter. Now, the original filename extension isn't altered. A new path snapshot has been created in <code>ItemIterface</code>.</li>
+</ul>
+
+<h2 id="2-0-2">2.0.2</h2>
+
+<p>Date: 2016-01-16</p>
+
+<ul>
+<li><span class="label label-success">New</span> <code>PluginTester</code> class has been added to the core for testing plugins easily.</li>
+<li><span class="label label-default">Fixed</span> Fixed an issue with the content retrieved by <code>after_render_page</code> event.</li>
+<li><span class="label label-default">Fixed</span> A constant name of <code>ItemInterface</code> has been changed: <code>SNAPSHOT_AFTER_PAGE</code> -> <code>SNAPSHOT_AFTER_RENDER_PAGE</code>.</li>
+</ul>
+
+<h2 id="2-0-1">2.0.1</h2>
+
+<p>Date: 2016-01-09</p>
+
+<ul>
+<li><span class="label label-primary">Improved</span> Normalized the directory separator to '/' irrespective of the operating system.</li>
+<li><span class="label label-primary">Improved</span> <a href="https://github.com/spress/Spress-theme-spresso/releases/tag/v2.0.1">Spresso theme</a> updated to 2.0.1.</li>
+<li><span class="label label-default">Fixed</span> Fixed the file's extension <code>twig.html</code> in configuration files.</li>
+<li><span class="label label-default">Fixed</span> Fixed the exception "A previous item exists with the same id" thrown by Taxonomy generator due to a key sensitive issue. A normalize method has been added. e.g: "news", "NEWS", " News " are the same term: "news".</li>
+<li><span class="label label-default">Fixed</span> Fixed the namespace of <code>AttributeValueException</code> at <code>PaginationGenerator</code> class.</li>
+</ul>
+
+<h2 id="2-0-0">2.0.0</h2>
+
+<p>Date: 2016-01-02</p>
+
+<ul>
+<li><span class="label label-success">New</span> <code>ConsoleIO</code> class uses <a href="http://symfony.com/blog/new-in-symfony-2-8-console-style-guide">Symfony CLI styles</a>.</li>
+<li><span class="label label-primary">Improved</span> 100% tests passed in HHVM.</li>
+<li><span class="label label-default">Fixed</span> Renamed the package name <code>yosymfony/spress-installer</code> to <code>spress/spress-installer</code>.</li>
+<li><span class="label label-default">Fixed</span> Fixed a race condition with the <code>url</code> attribute of items before dispatch <code>spress.before_render_blocks</code> event.</li>
+<li><span class="label label-default">Fixed</span> Questions made by commands are using <code>ConsoleIO</code> methods.</li>
+<li><span class="label label-default">Fixed</span> Fixed a bug with the built-in server by which a relative URL that contains a dot inside the trailing component throws a 404 not found error. e.g: <code>/doc/2.0</code>.</li>
+<li><span class="label label-default">Fixed</span> Added a default value for <code>$fallback</code> argument of <code>askHiddenResponseAndValidate</code> and <code>askAndHideAnswer</code> methods in <code>IOInterface</code>.</li>
+</ul>
+
+<h3 id="2-0-0-rc">2.0.0-rc</h3>
+
+<p>Date: 2015-12-07</p>
+
+<ul>
+<li><span class="label label-success">New</span> Added MemoryDataSource, a datasource for generating dynamic content.</li>
+<li><span class="label label-success">New</span> Support to sort items at <code>PaginationGenerator</code> with attributes <code>sort_by</code> and `sort_type. See <a href="https://github.com/spress/Spress/issues/61">#61</a>.</li>
+<li><span class="label label-success">New</span> Added <code>getGeneratorManager</code> method to <code>EnvironmentEvent</code> for managing generators at plugins.</li>
+<li><span class="label label-primary">Improved</span> Improved the way of generating the classname in PluginGenerator.</li>
+<li><span class="label label-primary">Improved</span> Minor changes over output styles.</li>
+<li><span class="label label-primary">Improved</span> Improved HttpServer with support to load internal resources (used with error page). Added a new hook: <code>handleOnAfterRequestFunction</code>. Bootstrap file has been included for using with internal pages like error page.</li>
+<li><span class="label label-primary">Improved</span> Minor improvements over the Spress application output.</li>
+<li><span class="label label-default">Fixed</span> Now, <code>slug</code> method transform dot characters into dash characters.</li>
+<li><span class="label label-default">Fixed</span> Fixed lifecycle: render phase starts after converter phase has been finished for all items.</li>
+<li><span class="label label-default">Fixed</span> Changed the method <code>remove</code> by <code>removeCollection</code> in CollectionManager class.</li>
+<li><span class="label label-default">Fixed</span> <code>PermalinkGenerator</code> adds an initial slash if the permalink doesn't start with it.</li>
+<li><span class="label label-default">Fixed</span> <code>MissingAttributeException</code> and <code>AttributeValueException</code> has been moved to <code>Core\ContentManager\Exception</code>.</li>
+<li><span class="label label-default">Fixed</span> <code>ConsoleIO</code> passed to <code>spress.io</code> key (DI container) when <code>SiteBuildCommand</code> builds <code>Spress instance</code>.</li>
+<li><span class="label label-default">Fixed</span> Updated <code>spress-installer</code> version to ~2.0 at <code>composer.json.twig</code>.</li>
+<li><span class="label label-default">Fixed</span> Fixed the message of the exception threw when a previous item exists.</li>
+<li><span class="label label-danger">Deleted</span> <code>ConfigValueException</code> has been deleted.</li>
+</ul>
+
+<h3 id="2-0-0-beta">2.0.0-beta</h3>
+
+<p>Date: 2015-10-15</p>
+
+<ul>
+<li><span class="label label-success">New</span> Added a new converter for Markdown: ParsedownConverter. This converter is based on <a href="http://parsedown.org/">Parsedown by Emanuil Rusev</a>. Deals with issue <a href="https://github.com/spress/Spress/issues/40">#40</a>.</li>
+<li><span class="label label-success">New</span> Added command plugins: a new kind of plugins witch provides subcommand for <code>spress</code> executable. See <a href="https://github.com/spress/Spress/issues/56">#56</a>.</li>
+<li><span class="label label-success">New</span> Added <code>self-update</code> command with an alias <code>selfupdate</code> for keeping Spress up to date. See <a href="https://github.com/spress/Spress/issues/60">#60</a>.</li>
+<li><span class="label label-success">New</span> Taxonomy generator for grouping content around a set of terms. See <a href="https://github.com/spress/Spress/issues/57">#57</a>.</li>
+<li><span class="label label-success">New</span> Modified RenderizerInterface for throwing a <code>Yosymfony\Spress\Core\ContentManager\Renderizer\Exception\RenderException</code> if an error occurred during redering the content. Method affected: <code>renderBlocks</code> and <code>renderPage</code>.</li>
+<li><span class="label label-success">New</span> Added a new special attributte <code>avoid_renderizer</code> for avoiding the renderizer phase over an item.</li>
+<li><span class="label label-primary">Improved</span> Additional autoload only be processed if exists a <code>composer.json</code> file in the root of the site folder.</li>
+<li><span class="label label-default">Fixed</span> The separator for tags and categories of <code>new:post</code> command has been changed from space to comma. See issue <a href="https://github.com/spress/Spress/issues/51">#51</a>.</li>
+<li><span class="label label-default">Fixed</span> New template for spress plugin scaffold (<code>new:plugin</code> command) - fixed for 2.0 release. See issue <a href="https://github.com/spress/Spress/issues/55">#55</a>.</li>
+<li><span class="label label-default">Fixed</span> The <code>setUp</code> method of <code>FilesystemDataWriter removes the whole content of the output dir but VCS files. This means that</code>site:build` command doesn't remove the VCS files.</li>
+<li><span class="label label-danger">Deleted</span> Deleted the <code>site:new</code> alias for command <code>new:site</code>.</li>
+</ul>
+
+<h3 id="2-0-0-alpha">2.0.0-alpha</h3>
+
+<p>Date: 2015-08-12</p>
+
+<ul>
+<li><span class="label label-success">New</span> Data-sources: (issue <a href="https://github.com/spress/Spress/issues/46">#46</a>) data sources can load site data from certain locations like filesystem or database.</li>
+<li><span class="label label-success">New</span> Site structure (issue <a href="https://github.com/spress/Spress/issues/41">#41</a>).</li>
+<li><span class="label label-success">New</span> Data-writer (issue <a href="https://github.com/spress/Spress/issues/44">#44</a>): The DataWriter's responsibility is to persist the content of the items.</li>
+<li><span class="label label-success">New</span> Collections (issue <a href="https://github.com/spress/Spress/issues/43">#43</a>): collections allow you to define a new type of document like page or post.</li>
+<li><span class="label label-success">New</span> Generators (issue <a href="https://github.com/spress/Spress/issues/45">#45</a>): Generators are used for generating new items of content.</li>
+<li><span class="label label-success">New</span> These events <code>spress.before_convert</code>, <code>spress.after_convert</code> receive a ContentEvent as an argument.</li>
+<li><span class="label label-success">New</span> Renderizer (issue <a href="https://github.com/spress/Spress/issues/48">#48</a>): Renderizer are responsible for formatting content.</li>
+<li><span class="label label-success">New</span> List of new events: <code>spress.before_render_blocks</code>, <code>spress.after_render_blocks</code>, <code>spress.before_render_page</code>, <code>spress.after_render_page</code>. See <a href="https://github.com/spress/Spress/issues/49">#49</a>.</li>
+<li><span class="label label-success">New</span> Established PHP 5.5 as minimum version (see <a href="https://github.com/spress/Spress/issues/42">#42</a>).</li>
+<li><span class="label label-success">New</span> List of new configuration attributes: <code>text_extensions</code>, <code>attribute_syntax</code>, <code>preserve_path_title</code>, <code>collections</code>, <code>data_sources</code>.</li>
+<li><span class="label label-primary">Improved</span> Updated Symfony componentes to 2.7.</li>
+<li><span class="label label-primary">Improved</span> Updated Markdown parser (michelf/php-markdown) from Michel Fortin.</li>
+<li><span class="label label-primary">Improved</span> Updated built-in theme Spresso to 2.0.</li>
+<li><span class="label label-danger">Deleted</span> Methods <code>initialize</code> and <code>getSupportExtension</code> of ConverterInterface have been deleted.</li>
+<li><span class="label label-danger">Deleted</span> TemplateManager class of plugin API.</li>
+<li><span class="label label-danger">Deleted</span> EnviromentEvent class.</li>
+<li><span class="label label-danger">Deleted</span> List of deleted events: <code>spress.after_convert_posts</code>, <code>spress.before_render_pagination</code>, <code>spress.after_render_pagination</code>, <code>spress.before_render</code>, <code>spress.after_render</code>. See <a href="https://github.com/spress/Spress/issues/49">#49</a>.</li>
+<li><span class="label label-danger">Deleted</span> List of configuration attributes (config.yml) deleted because they have been marked as deprecated: <code>baseurl</code>, <code>paginate</code>, <code>paginate_path</code>, <code>limit_posts</code>, <code>processable_ext</code>, <code>destination</code>, <code>posts</code>, <code>includes</code>, <code>layouts</code>, <code>plugins</code>.</li>
+</ul>
+
+<h2 id="1-1-1">1.1.1</h2>
+
+<p>Date: 2015-02-25</p>
+
+<ul>
+<li><span class="label label-primary">Improved</span> <a href="https://github.com/yosymfony/Spress-theme-spresso/releases/tag/v1.1.1">Spresso theme</a> updated to 1.1.1.</li>
+<li><span class="label label-primary">Improved</span> Dependencies have been updated.</li>
+</ul>
+
+<h2 id="1-1-0">1.1.0</h2>
+
+<p>Date: 2015-01-08</p>
+
+<ul>
+<li><span class="label label-default">Fixed</span> Bug <a href="https://github.com/spress/Spress/issues/30">#30</a>: Adding source parameter to config appears to not do anything.</li>
+<li><span class="label label-primary">Improved</span> Support for exceptions during parsing a site with <code>--server</code> and `--watch options.</li>
+<li><span class="label label-primary">Improved</span> <code>config.yml</code> is reloaded when rebuilding the site with watch mode enabled.</li>
+<li><span class="label label-primary">Improved</span> Spresso theme updated to 1.1.</li>
+<li><span class="label label-primary">Improved</span> Symfony components updated to 2.6.</li>
+</ul>
+
+<h3 id="1-1-0-rc-1">1.1.0-rc</h3>
+
+<p>Date: 2014-12-21</p>
+
+<ul>
+<li><span class="label label-success">New</span> variable: <code>server_watch_ext</code> at global configuration.</li>
+<li><span class="label label-default">Fixed</span> Default value for layout at new:post command assigned to null.</li>
+<li><span class="label label-default">Fixed</span> Fixed questions for tags and categories in new:post command.</li>
+<li><span class="label label-default">Fixed</span> Fixed new:post help message.</li>
+<li><span class="label label-default">Fixed</span> Added validators for command options.</li>
+<li><span class="label label-primary">Improved</span> Performance of combination --server and --watch options improved.</li>
+<li><span class="label label-primary">Improved</span> Deleted unused variables.</li>
+</ul>
+
+<h3 id="1-1-0-beta-2">1.1.0-beta.2</h3>
+
+<p>Date: 2014-11-21</p>
+
+<ul>
+<li><span class="label label-success">New</span> Issue <a href="https://github.com/spress/Spress/issues/17">#17</a>:
+<a href="/news/2014/10/28/new-in-spress-1-1-debug-mode/">Twig debug mode</a> through configuration.</li>
+<li><span class="label label-success">New</span> Two new scaffolding commands: <code>new:post</code> and <code>new:plugin</code>.</li>
+<li><span class="label label-success">New</span> Proposal <a href="https://github.com/spress/Spress/issues/22">#22</a>: Namespace "new" in commands for creating stuff.</li>
+<li><span class="label label-danger">Deprecated</span> The command <code>site:new</code> has been declared deprecated and replaced by <code>new:site</code>.</li>
+</ul>
+
+<h3 id="1-1-0-beta-1">1.1.0-beta.1</h3>
+
+<p>Date: 2014-10-19</p>
+
+<ul>
+<li><span class="label label-success">New</span> <a href="/news/2014/05/11/new-in-spress-1-1-io-api/">IO API</a> useful for interacting with the users.</li>
+<li><span class="label label-success">New</span> Proposal <a href="https://github.com/spress/Spress/issues/9">#9</a>: Support for environment configuration files. New key <code>env</code> for <code>config.yml</code>.</li>
+<li><span class="label label-success">New</span> PR <a href="https://github.com/spress/Spress/issues/12">#12</a>: Added ability to use multiple extensions on layouts.</li>
+<li><span class="label label-success">New</span> Proposal <a href="https://github.com/spress/Spress/issues/15">#15</a>: Built-in server and watch for changes.</li>
+<li><span class="label label-default">Fixed</span> Issue <a href="https://github.com/spress/Spress/issues/10">#10</a>: Classname with typo: EnviromentEvent. This class was replaced by EnvironmentEvent.</li>
+<li><span class="label label-default">Fixed</span> PR <a href="https://github.com/spress/Spress/issues/14">#14</a>: Changed Frontmatter regex pattern to allow for CRLF line endings.</li>
+<li><span class="label label-primary">Improved</span> Proposal <a href="https://github.com/spress/Spress/issues/13">#13</a>: Split Spress into Spress Core and its ecosystem.</li>
+<li><span class="label label-primary">Improved</span> Replaces all uses of deprecated method mergeWith from ConfigServiceProvider by union method.</li>
+<li><span class="label label-primary">Improved</span> Proposal <a href="https://github.com/spress/Spress/issues/11">#11</a>: Improve the plugins manager for writing plugins more easily.</li>
+<li><span class="label label-primary">Improved</span> Decoupled options for Plugin Manager.</li>
+<li><span class="label label-primary">Improved</span> PSR-4 for classloader.</li>
+<li><span class="label label-primary">Improved</span> Symfony components >= 2.4 and &lt; 3 in <code>composer.json</code>.</li>
+<li><span class="label label-primary">Improved</span> The default value for <code>url</code> key at global configuration is empty-string.</li>
+<li><span class="label label-primary">Improved</span> Documentation fixes.</li>
+<li><span class="label label-danger">Deprecated</span> The configuration options: <code>baseurl</code> and <code>relative_permalinks</code> has been declared  deprecated.</li>
+</ul>
+
+<h2 id="1-0-3">1.0.3</h2>
+
+<p>Date: 2014-05-22</p>
+
+<ul>
+<li><span class="label label-default">Fixed</span> bug <a href="https://github.com/yosymfony/Spress/issues/7">#7</a>: Error with Site Build.</li>
+<li><span class="label label-primary">Improved</span> Tested on PHP 5.6 (Travis CI).</li>
+</ul>
+
+<h2 id="1-0-2">1.0.2</h2>
+
+<p>Date: 2014-03-30</p>
+
+<ul>
+<li><span class="label label-default">Fixed</span> bug <a href="https://github.com/yosymfony/Spress/issues/6">#6</a>: Twig tags not rendered in posts located at variable <code>site.posts</code>.</li>
+<li><span class="label label-default">Fixed</span> bug <a href="https://github.com/yosymfony/Spress/issues/6">#6</a> with variables <code>site.categories</code> and <code>site.tags</code>.</li>
+<li><span class="label label-primary">Improved</span> Variables site.categories and site.tags have page-identifier as index of array.</li>
+<li><span class="label label-primary">Improved</span> Base implementation of ContentItemInterface created at ContentItem. The classes PageItem and PostItem extend from this.</li>
+</ul>
+
+<h2 id="1-0-1">1.0.1</h2>
+
+<p>Date: 2014-03-08</p>
+
+<ul>
+<li><span class="label label-success">New</span> events related with pagination phase (issue <a href="https://github.com/yosymfony/Spress/issues/3">#3</a>): <strong>spress.before_render_pagination</strong> and <strong>spress.after_render_pagination</strong>.</li>
+<li><span class="label label-primary">Improved</span> Payload argument of Render method (plugins TemplateManager) is optional.</li>
+<li><span class="label label-primary">Improved</span> pagination phase of posts.</li>
+<li><span class="label label-default">Fixed</span> bug <a href="https://github.com/yosymfony/Spress/issues/4">#4</a>: UrlGenerator always has ending slash.</li>
+<li><span class="label label-default">Fixed</span> the class loader path when Spress is installed as package.</li>
+</ul>
+
+<h2 id="1-0-0">1.0.0</h2>
+
+<p>Date: 2014-02-05</p>
+
+<ul>
+<li><span class="label label-success">New</span> Added template manager to the API plugins for rendering Twig templates (accessible from spress.start event).</li>
+<li><span class="label label-primary">Improved</span> the class loader of the site plugins.</li>
+<li><span class="label label-default">Fixed</span> documentation</li>
+</ul>
+
+<h3>1.0.0-rc.3</h3>
+
+<p>Date: 2014-01-12</p>
+
+<ul>
+<li><span class="label label-success">New</span> Support to <a href="https://getcomposer.org/">Composer</a> for spress site plugins.</li>
+<li><span class="label label-success">New</span> Install themes with Composer.</li>
+<li><span class="label label-success">New</span> Generate composer.json in a blank site.</li>
+<li><span class="label label-primary">Improved</span> the search of folders that starting with underscore.</li>
+<li><span class="label label-default">Fixed</span> the documentation.</li>
+<li><span class="label label-danger">Deleted</span> Spresso theme. Now is a package.</li>
+</ul>
+
+    </div>
+</div>
+</div>
+            
+        <footer id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class="list-inline">
+        <li>
+        <a href="https://gitter.im/spress/Spress">
+            Support
+                    </a>
+    </li>
+        <li>
+        <a href="/about/license">
+            License: MIT
+                    </a>
+    </li>
+        <li>
+        <a href="/about">
+            About
+                    </a>
+    </li>
+        <li>
+        <a href="http://yosymfony.com">
+            Yo! Symfony
+                    </a>
+    </li>
+    </ul>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <ul class="list-inline">
+        <li>
+        <a href="https://twitter.com/spress_cms">
+            <i class="fa fa-twitter fa-2x"></i>
+        </a>
+    </li>
+        
+        
+        
+        
+        <li>
+        <a href="https://github.com/spress">
+            <i class="fa fa-github fa-2x"></i>
+        </a>
+    </li>
+        
+        
+        <li>
+        <a href="https://www.youtube.com/user/yosymfony">
+            <i class="fa fa-youtube fa-2x"></i>
+        </a>
+    </li>
+    </ul>
+                    </div>
+                </div>
+                <p class="text-center">
+                    &copy; 2017 <a href="http://yosymfony.com">Yo! Symfony</a>.
+                    <span class="label label-default">Proudly powered by Spress</span>
+                </p>
+            </div>
+        </footer>
+    </body>
+</html>

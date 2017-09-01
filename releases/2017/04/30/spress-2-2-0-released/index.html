@@ -1,0 +1,278 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+<title>Spress 2.2.0 released &#8250; Spress blog</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Spress is a blog-aware application that transform your plain text files in static sites.">
+<meta name="author" content="Victor Puertas">
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:image" content="/assets/img/spress-logo.png">
+    <meta name="twitter:title" content="Spress 2.2.0 released">
+    <meta name="twitter:description" content="Spress is a blog-aware application that transform your plain text files in static sites.">
+    <meta name="twitter:creator" content="@spress_cms">
+
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Spress 2.2.0 released">
+<meta property="og:description" content="Spress is a blog-aware application that transform your plain text files in static sites.">
+<meta property="og:url" content="/releases/2017/04/30/spress-2-2-0-released">
+<meta property="og:site_name" content="The static site generator in PHP">
+
+<link href="/rss.xml" type="application/rss+xml" rel="alternate" title="The static site generator in PHP Feed">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/touch-icon-iphone.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/assets/img/touch-icon-ipad.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/assets/img/touch-icon-iphone-retina.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/assets/img/touch-icon-ipad-retina.png">
+
+
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet">
+<link href="/assets/css/blog/bootstrap.css" rel="stylesheet" media="screen">
+<link href="/assets/css/blog/style.css" rel="stylesheet" media="screen">
+
+    </head>
+    <body>
+        <div id="wrap">
+            <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Spress</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+        <li>
+        <a href="/">
+            Home
+                    </a>
+    </li>
+        <li>
+        <a href="/download">
+            Download
+                    </a>
+    </li>
+        <li>
+        <a href="/docs/getting-started/">
+            Get started
+                    </a>
+    </li>
+        <li>
+        <a href="/docs">
+            Docs
+                    </a>
+    </li>
+        <li>
+        <a href="/add-ons">
+            Add-ons
+                            <i class="fa fa-cogs"></i>
+                    </a>
+    </li>
+        <li>
+        <a href="/blog">
+            Blog
+                    </a>
+    </li>
+        <li>
+        <a href="/about">
+            About
+                    </a>
+    </li>
+    </ul>
+        </div>
+    </div>
+</div>            <div class="container">
+                    <article class="post">
+    <header>
+        <h1>
+            <a href="/releases/2017/04/30/spress-2-2-0-released">Spress 2.2.0 released</a>
+        </h1>
+    </header>
+    
+            <p>Hi community. After several months working on Spress 2.2.0, it is here with 11
+new features, 6 improvements and 8 fixes. The highlights of this release are
+the <a href="/docs/themes">support for themes</a>, a little package manager based on
+<a href="https://getcomposer.org/">Composer</a> and the <strong>jumps to PHP 5.6 dropping the
+support for 5.5</strong>. Additionally, an issue related with copying dot-files such as
+<code>.htaccess</code> into <code>build</code> directory has been fixed.</p>
+
+<h2>Themes</h2>
+
+<p>Themes let you create sites based on community-maintained templates. These ones
+package layouts, includes and assets in a way that can be
+<a href="/docs/themes/#how-themes-work">overridden by your site content</a>.
+Themes are published via <a href="https://packagist.org/">Packagist.org</a>.
+The <code>new:site</code> command has been updated to let you create a site based on any theme.
+Additionaly, a <code>new:theme</code> command has been added to facilitate the task of create
+a new theme. <a href="/docs/themes/#creating-a-new-theme">You can get more details about this one here</a>.</p>
+
+<p>
+<h2>The package manager</h2>
+
+<p>A little package manager based on Composer has been introduced in this version
+so that no external commands are needed to install plugins or themes.
+The <a href="https://github.com/spress/Spress-installer"><code>spress-installer</code> package has been updated</a>
+and 3 new commands has been added: <code>add:plugin</code>, <code>remove:plugin</code> and <code>update:plugin</code>.</p>
+
+<h2>The complete changelog:</h2>
+
+<ul>
+<li><span class="label label-success">New</span> Support for themes. See the new feature <a href="https://github.com/spress/Spress/issues/98">#98</a>.</li>
+<li><span class="label label-success">New</span> Package manager with the following new commands: <code>new:theme</code>, <code>add:plugin</code>, <code>remove:plugin</code> and <code>update:plugin</code>. Additionaly, <code>new:site</code> command has been updated for scaffolding new sites using themes. See the new feature <a href="https://github.com/spress/Spress/issues/96">#96</a>.</li>
+<li><span class="label label-success">New</span> Dropped the support for PHP 5.5. The minimum version is 5.6.</li>
+<li><span class="label label-success">New</span> Allow default attributes on "pages" collection. See new feature <a href="https://github.com/spress/Spress/issues/93">#93</a>.</li>
+<li><span class="label label-success">New</span> New options for applying <code>avoid_renderizer</code> feature to type of files and files belong to a path (relative to <code>src/content</code> folder). See new feature <a href="https://github.com/spress/Spress/issues/91">#91</a>.</li>
+<li><span class="label label-success">New</span> Added a verbosity level param (optional) to  the <code>write</code> method of IOInterface.</li>
+<li><span class="label label-success">New</span> Added verbosity and very-verbosity level messages to the <code>ContentManager</code> class.</li>
+<li><span class="label label-success">New</span> Added support for overwriting messages to the output in IOInterface.</li>
+<li><span class="label label-success">New</span> Added support for ask choice questions in IOInterface.</li>
+<li><span class="label label-success">New</span> Added the method <code>getSpress</code> to <code>CommandEnvironmentInterface</code>.</li>
+<li><span class="label label-success">New</span> Updated to using Symfony 3.2 components.</li>
+<li><span class="label label-primary">Improved</span> Updated <code>PluginManagerBuilder</code> class with support for loading several plugins
+from extra->spress_class attribute of a plugin's <code>composer.json</code> file.</li>
+<li><span class="label label-primary">Improved</span> Renamed some tests with a more descritive name.</li>
+<li><span class="label label-primary">Improved</span> Fixed some descriptions in commands.</li>
+<li><span class="label label-primary">Improved</span> Replaced the use of PHPUnit_Framework_TestCase class by TestCase.</li>
+<li><span class="label label-primary">Improved</span> Deleted the <code>.htaccess</code> value from <code>include</code> key of configuration files due to the fix <a href="https://github.com/spress/Spress/issues/107">#107</a>.</li>
+<li><span class="label label-primary">Improved</span> The terms generated by TaxonomyGenerator for each item appears sorted.</li>
+<li><span class="label label-default">Fixed</span> The <code>Spress-installer</code> plugin is included in the <code>composer.json</code> file when a new blank theme is created.</li>
+<li><span class="label label-default">Fixed</span> Fixed an issue when loading layouts and includes of the current theme.</li>
+<li><span class="label label-default">Fixed</span> Fixed an issue related with the presedence between the theme's assets and the site's assets.</li>
+<li><span class="label label-default">Fixed</span> Bug <a href="https://github.com/spress/Spress/issues/107">#107</a> fixed: ".htaccess not being included in build".</li>
+<li><span class="label label-default">Fixed</span> Fixed an issue related to the convertion to array of a <code>Finder</code> class in <code>FilesystemDataSource</code> class.</li>
+<li><span class="label label-default">Fixed</span> Avoid an error using <code>--force</code> option of <code>new:site</code> command over a
+non-empty directory that contains "hidden" directories and files.</li>
+<li><span class="label label-default">Fixed</span> Fixed a bug related with the "pagination generator" and the draft posts. See bug #101.</li>
+<li><span class="label label-default">Fixed</span> Fixed the <code>askAndHideAnswer</code> method of <code>ConsoleIO</code> class to use the fallback argument.</li>
+</ul>
+
+<h2>How to get this version?</h2>
+
+<p>You can download Spress from the <a href="/download">download page</a> or if you have a previous
+version installed you can run <code>self-update</code> command:</p>
+
+<pre><code>$ spress self-update
+</code></pre>
+
+        
+            <footer>    
+            <p>
+                Posted by Victor Puertas on <time pubdate="pubdate">2017-04-30</time>
+            </p>
+
+                        <ul class="list-unstyled">
+                                                    <li>
+                        <i class="fa fa-folder"></i>
+                                                    <a href="/blog/categories/releases">releases</a> 
+                                            </li>
+                            </ul>
+                    </footer>
+
+                    <section>
+                <h3>Comments</h3>
+                <div id="disqus_thread"></div>
+                <noscript>
+                    Please enable JavaScript to view the
+                    <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+                </noscript> 
+                <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            </section>
+            </article>
+            </div>
+        </div>
+            
+        <footer id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class="list-inline">
+        <li>
+        <a href="https://gitter.im/spress/Spress">
+            Support
+                    </a>
+    </li>
+        <li>
+        <a href="/about/license">
+            License: MIT
+                    </a>
+    </li>
+        <li>
+        <a href="/about">
+            About
+                    </a>
+    </li>
+        <li>
+        <a href="http://yosymfony.com">
+            Yo! Symfony
+                    </a>
+    </li>
+    </ul>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <ul class="list-inline">
+        <li>
+        <a href="https://twitter.com/spress_cms">
+            <i class="fa fa-twitter fa-2x"></i>
+        </a>
+    </li>
+        
+        
+        
+        
+        <li>
+        <a href="https://github.com/spress">
+            <i class="fa fa-github fa-2x"></i>
+        </a>
+    </li>
+        
+        
+        <li>
+        <a href="https://www.youtube.com/user/yosymfony">
+            <i class="fa fa-youtube fa-2x"></i>
+        </a>
+    </li>
+    </ul>                    </div>
+                </div>
+                <p class="text-center">
+                    <a href="https://github.com/yosymfony/Spress-theme-spresso" title="Spresso theme">
+                        <img src="/assets/img/spress-logo.png"/>
+                    </a>
+                </p>
+                <p class="text-center">
+                    &copy;
+                    2017
+                                            <a href="http://yosymfony.com">
+                            Yo! Symfony
+                        </a>
+                    .
+                    Powered by <a href="http://spress.yosymfony.com">Spress</a>.
+                </p>
+            </div>
+            <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    
+    ga('create', '', '');
+    ga('send', 'pageview');
+</script>                        <script type="text/javascript">
+            var disqus_shortname = 'yosymfony';
+            
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+            </footer>
+    </body>
+</html>

@@ -1,0 +1,462 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+<title>Spress &#8250; How it work?</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="How an static site generator work">
+<meta name="author" content="Victor Puertas">
+<meta name="generator" content="Spress v2.2.0">
+
+            <meta name="twitter:card" content="summary">
+        <meta name="twitter:image" content="/assets/img/spress-logo.png">
+    <meta name="twitter:title" content="How it work?">
+    <meta name="twitter:description" content="How an static site generator work">
+    <meta name="twitter:creator" content="@spress_cms">
+
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How it work?">
+<meta property="og:description" content="How an static site generator work">
+<meta property="og:url" content="/docs/1.0/how-it-work">
+<meta property="og:site_name" content="The static site generator in PHP">
+
+<link href="/rss.xml" type="application/rss+xml" rel="alternate" title="The static site generator in PHP Feed">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/touch-icon-iphone.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/assets/img/touch-icon-ipad.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/assets/img/touch-icon-iphone-retina.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/assets/img/touch-icon-ipad-retina.png">
+
+
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+<link href="/assets/css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="/assets/css/theme.css" rel="stylesheet" media="screen">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+
+   <link rel="stylesheet" href="//cdn.jsdelivr.net/highlight.js/9.0.0/styles/default.min.css">
+   <link rel="stylesheet" href="/assets/css/highlight-style.css">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    
+    ga('create', '', '');
+    ga('send', 'pageview');
+</script>    </head>
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Spress</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+        <li>
+        <a href="/">
+            Home
+                    </a>
+    </li>
+        <li>
+        <a href="/download">
+            Download
+                    </a>
+    </li>
+        <li>
+        <a href="/docs/getting-started/">
+            Get started
+                    </a>
+    </li>
+        <li>
+        <a href="/docs">
+            Docs
+                    </a>
+    </li>
+        <li>
+        <a href="/add-ons">
+            Add-ons
+                            <i class="fa fa-cogs"></i>
+                    </a>
+    </li>
+        <li>
+        <a href="/blog">
+            Blog
+                    </a>
+    </li>
+        <li>
+        <a href="/about">
+            About
+                    </a>
+    </li>
+    </ul>
+        </div>
+    </div>
+</div>        
+        <div class="container container-small">
+    <div class="page-header h-shadow">
+        <h1>
+            How it work?
+                    </h1>
+    </div>
+    
+    <div class="row">
+    <div class="col-md-3">
+        <div class="list-group">
+            <a href="/docs/1.0/getting-started" class="list-group-item ">
+            Getting started
+        </a>
+            <a href="/docs/1.0/how-it-work" class="list-group-item active">
+            How it work?
+        </a>
+            <a href="/docs/1.0/configuration" class="list-group-item ">
+            Configuration
+        </a>
+            <a href="/docs/1.0/variables" class="list-group-item ">
+            Variables
+        </a>
+            <a href="/docs/1.0/front-matter" class="list-group-item ">
+            Front-matter
+        </a>
+            <a href="/docs/1.0/writing-posts" class="list-group-item ">
+            Writing posts
+        </a>
+            <a href="/docs/1.0/creating-pages" class="list-group-item ">
+            Creating pages
+        </a>
+            <a href="/docs/1.0/permalinks" class="list-group-item ">
+            Permalinks
+        </a>
+            <a href="/docs/1.0/pagination" class="list-group-item ">
+            Pagination
+        </a>
+            <a href="/docs/1.0/themes" class="list-group-item ">
+            Themes
+        </a>
+            <a href="/docs/1.0/deployment-methods" class="list-group-item ">
+            Deployment methods
+        </a>
+    </div>
+    </div>
+    <div class="col-md-9">
+        <p>Spress is a static site generator, an application that take your site and 
+transform to final HTML ready to deploy in your hosting. By default, your
+content is generated in <code>_site</code> directory. You can create content using HTML or 
+Markdown syntax. Additionaly with <a href="/docs/1.0/developers/converters">converters</a> you 
+can add new type of content.</p>
+
+<h2>Site structure</h2>
+
+<p>This is the typical structure. The only mandatory file is <code>config.yml</code>.</p>
+
+<pre><code>.
+|- config.yml
+|- _includes/
+|- _layouts/
+|  |- default.html
+|  |- post.html
+|- _posts/
+|  |- 2013-12-23-example-post.md
+|- _plugins/
+|- _site/
+|- index.html
+</code></pre>
+
+<ul>
+<li><strong>config.yml</strong>: Store the configuration data. You can change the behaviour of 
+Spress or create custom variables.</li>
+<li><strong>_includes</strong>: There is a partials that can be used in the layouts, pages and posts.</li>
+<li><strong>_layouts</strong>: The layout files organize your content. In your post or page, 
+you can choose the layout in the <a href="/docs/1.0/front-matter">Front-matter</a>:</li>
+</ul>
+
+<pre><code>---
+layout: post
+---
+</code></pre>
+
+<ul>
+<li><strong>_posts</strong>: Store the blog posts files (if you want create a blog). The files
+have a special name format: <code>year-month-day-title.md</code>. In the Front-matter you 
+can change this properties:</li>
+</ul>
+
+<pre><code>---
+layout: post
+title: "Hello world"
+date: "2013-01-01"
+---
+</code></pre>
+
+<ul>
+<li><strong>_plugins</strong>: Extends the functionality of Spress. See <a href="/docs/1.0/developers">developers docs</a>.</li>
+<li><strong>_site</strong>: This is where the generated site will be placed.</li>
+</ul>
+
+<p>The directories that start with underscore are considered special directories and
+they not will be copied to generated site.</p>
+
+<h2>Page example</h2>
+
+<p>Below a example of a simple HTML page:</p>
+
+<pre><code>---
+layout: default
+name: "John"
+email: "john@example.com"
+---
+&lt;address&gt;
+  &lt;strong&gt;{{ page.name }}&lt;/strong&gt;&lt;br/&gt;
+  &lt;a href="mailto:{{ page.email }}"&gt;{{ page.email }}&lt;/a&gt;
+&lt;/address&gt;
+</code></pre>
+
+<p>The block delimited by triple-dashed lines is the Front-matter and uses 
+<a href="http://yaml.org">YAML</a> syntax. Inside it you can create a custom variables
+that can be accessible to you using Twig syntax: 
+<code>{{ page.your-variable-name }}</code>.</p>
+
+<div class="panel panel-default">
+  <div class="panel-body">
+    <div class="row">
+        <div class="col-md-1">
+            <i class="fa fa-bookmark-o fa-3x"></i>
+        </div>
+        <div class="col-md-11">
+            <p>
+    Spress uses <a href="http://twig.sensiolabs.org/">Twig</a> as template
+    engine. See its documentations for get more powerful
+    templates.
+</p>
+        </div>
+    </div>
+  </div>
+</div>
+
+<h2>Post example</h2>
+
+<pre><code>---
+layout: post
+---
+Hello. This is a post.
+</code></pre>
+
+<div class="panel panel-default">
+  <div class="panel-body">
+    <div class="row">
+        <div class="col-md-1">
+            <i class="fa fa-bookmark-o fa-3x"></i>
+        </div>
+        <div class="col-md-11">
+            <p>
+    <strong><a href="http://michelf.ca/projects/php-markdown/reference/">PHP-Markdown by Michael Fortin</a></strong> 
+    is the default Markdown engine. Spress uses 
+    <a href="http://michelf.ca/projects/php-markdown/extra/">Markdown extra flavour</a> for 
+    more rich Markdown.
+</p>
+        </div>
+    </div>
+  </div>
+</div>
+
+<h2>Spress commands</h2>
+
+<h3 id="site-new-command">new:site</h3>
+
+<p>Create a new site.</p>
+
+<div class="panel panel-default">
+  <div class="panel-body">
+    <div class="row">
+        <div class="col-md-1">
+            <i class="fa fa-bookmark-o fa-3x"></i>
+        </div>
+        <div class="col-md-11">
+            <p>
+   <strong>Since Spress 1.1.0</strong> <code>site:new</code> command has been
+   declared as deprecated and replaced by <code>new:site</code>.
+   The old command will be deleted in version 2.0.0.
+</p>
+        </div>
+    </div>
+  </div>
+</div>
+
+<p><code>new:site [path[="./"]] [template[="blank"]] [--force] [--all]</code></p>
+
+<ul>
+<li><code>template</code> Set the template for the site. Spresso is a built-in theme.</li>
+<li><code>--force</code> Force to use the path even though exists and it's not empty.</li>
+<li><code>--all</code> In blank template, creates the complete scaffold.</li>
+</ul>
+
+<p>E.g <code>$ spress new:site /your-site-dir spresso</code></p>
+
+<p>The prior example creates a new site using <a href="https://github.com/yosymfony/Spress-theme-spresso/">Spresso theme</a>.</p>
+
+<h3 id="site-build-command">site:build</h3>
+
+<p>Build your site in your configured destination, typically <code>_site</code>.</p>
+
+<p><code>site:build [-s|--source="./"] [--timezone="..."] [--env="dev"] [--server] [--watch] [--drafts] [--safe]</code></p>
+
+<ul>
+<li><code>--timezone</code> Set the timezone. E.g: "Europe/Madrid".
+<a href="http://www.php.net/manual/en/timezones.php">More timezones</a>.</li>
+<li><code>--env</code> Set the environment name <sup><span class="label label-success">New in 1.1.0</span></sup> <a href="/docs/1.0/configuration/#environment">More information</a>.</li>
+<li><code>--server</code>The built-in server <sup><span class="label label-success">New in 1.1.0</span></sup> will run by default at <code>http://localhost:4000</code>.</li>
+<li><code>--watch</code> Watch for changes and regenerate your site automatically. <sup><span class="label label-success">New in 1.1.0</span></sup></li>
+<li><code>--drafts</code> Include the draft post in the transformation.</li>
+<li><code>--safe</code> Disable all plugins.</li>
+</ul>
+
+<pre><code># Build source path:
+$ spress site:build -s /your-site-dir
+
+# Build default dir:
+$ cd /your-site-dir
+$ spress site:build
+
+# Built-in server and watch for changes
+$ cd /your-site-dir
+$ spress site:build --server --watch  # Go to http://localhost:4000
+
+# Only watch for changes an generate your site automatically into ./_site
+$ cd /your-site-dir
+$ spress site:build --watch
+
+# Using timezone:
+$ spress site:build -s /your-site-dir --timezone="Europe/Madrid"
+
+# Using production environment:
+$ spress site:build --env=prod
+
+# Plugins disabled:
+$ spress site:build --safe
+</code></pre>
+
+<h4>The output command:</h4>
+
+<pre><code>Starting...
+Total posts: 0
+Processed posts: 0
+Drafts post: 0
+Total pages: 17
+Processed pages: 10
+Other resources: 5
+</code></pre>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th class="col-sm-3">Name</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Total posts</td>
+            <td>Number of posts found at posts directory.</td>
+        </tr>
+        <tr>
+            <td>Processed posts</td>
+            <td>Number of posts with Front-matter.</td>
+        </tr>
+        <tr>
+            <td>Total pages</td>
+            <td>
+    Number of pages found at your site.
+    <strong>What's considered a page?</strong> 
+    Any file with extension registered in <code>processable_ext</code> key at the
+    configuration file or registered by a converters.
+</td>
+        </tr>
+        <tr>
+            <td>Processed pages</td>
+            <td>Number of pages with Front-matter.</td>
+        </tr>
+        <tr>
+            <td>Others resources</td>
+            <td>
+                Others files not procesable that will be verbatim copied
+                to the generated site.
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+    </div>
+</div>
+</div>
+            
+        <footer id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class="list-inline">
+        <li>
+        <a href="https://gitter.im/spress/Spress">
+            Support
+                    </a>
+    </li>
+        <li>
+        <a href="/about/license">
+            License: MIT
+                    </a>
+    </li>
+        <li>
+        <a href="/about">
+            About
+                    </a>
+    </li>
+        <li>
+        <a href="http://yosymfony.com">
+            Yo! Symfony
+                    </a>
+    </li>
+    </ul>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <ul class="list-inline">
+        <li>
+        <a href="https://twitter.com/spress_cms">
+            <i class="fa fa-twitter fa-2x"></i>
+        </a>
+    </li>
+        
+        
+        
+        
+        <li>
+        <a href="https://github.com/spress">
+            <i class="fa fa-github fa-2x"></i>
+        </a>
+    </li>
+        
+        
+        <li>
+        <a href="https://www.youtube.com/user/yosymfony">
+            <i class="fa fa-youtube fa-2x"></i>
+        </a>
+    </li>
+    </ul>
+                    </div>
+                </div>
+                <p class="text-center">
+                    &copy; 2017 <a href="http://yosymfony.com">Yo! Symfony</a>.
+                    <span class="label label-default">Proudly powered by Spress</span>
+                </p>
+            </div>
+        </footer>
+    </body>
+</html>

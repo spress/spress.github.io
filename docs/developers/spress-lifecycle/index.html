@@ -1,0 +1,241 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+<title>Spress &#8250; Developers &#8250; Lifecycle</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="How to Spress performs a site">
+<meta name="author" content="Victor Puertas">
+<meta name="generator" content="Spress v2.2.0">
+
+            <meta name="twitter:card" content="summary">
+        <meta name="twitter:image" content="/assets/img/spress-logo.png">
+    <meta name="twitter:title" content="Developers &#8250; Lifecycle">
+    <meta name="twitter:description" content="How to Spress performs a site">
+    <meta name="twitter:creator" content="@spress_cms">
+
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Developers &#8250; Lifecycle">
+<meta property="og:description" content="How to Spress performs a site">
+<meta property="og:url" content="/docs/developers/spress-lifecycle">
+<meta property="og:site_name" content="The static site generator in PHP">
+
+<link href="/rss.xml" type="application/rss+xml" rel="alternate" title="The static site generator in PHP Feed">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/touch-icon-iphone.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/assets/img/touch-icon-ipad.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/assets/img/touch-icon-iphone-retina.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/assets/img/touch-icon-ipad-retina.png">
+
+
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+<link href="/assets/css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="/assets/css/theme.css" rel="stylesheet" media="screen">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+
+   <link rel="stylesheet" href="//cdn.jsdelivr.net/highlight.js/9.0.0/styles/default.min.css">
+   <link rel="stylesheet" href="/assets/css/highlight-style.css">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    
+    ga('create', '', '');
+    ga('send', 'pageview');
+</script>    </head>
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Spress</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+        <li>
+        <a href="/">
+            Home
+                    </a>
+    </li>
+        <li>
+        <a href="/download">
+            Download
+                    </a>
+    </li>
+        <li>
+        <a href="/docs/getting-started/">
+            Get started
+                    </a>
+    </li>
+        <li>
+        <a href="/docs">
+            Docs
+                    </a>
+    </li>
+        <li>
+        <a href="/add-ons">
+            Add-ons
+                            <i class="fa fa-cogs"></i>
+                    </a>
+    </li>
+        <li>
+        <a href="/blog">
+            Blog
+                    </a>
+    </li>
+        <li>
+        <a href="/about">
+            About
+                    </a>
+    </li>
+    </ul>
+        </div>
+    </div>
+</div>        
+        <div class="container container-small">
+    <div class="page-header h-shadow">
+        <h1>
+            Lifecycle
+                        <small>Developers</small>
+                    </h1>
+    </div>
+    
+        
+    <div class="row">
+        <div class="col-md-3">
+            <div class="list-group">
+            <a href="/docs/developers" class="list-group-item ">
+            Creating a plugin
+        </a>
+            <a href="/docs/developers/spress-lifecycle" class="list-group-item active">
+            Lifecycle
+        </a>
+            <a href="/docs/developers/events-list" class="list-group-item ">
+            Events lists
+        </a>
+            <a href="/docs/developers/data-sources" class="list-group-item ">
+            Data sources
+        </a>
+            <a href="/docs/developers/converters" class="list-group-item ">
+            Converters
+        </a>
+            <a href="/docs/developers/generators" class="list-group-item ">
+            Generators
+        </a>
+            <a href="/docs/developers/renderizer" class="list-group-item ">
+            Renderizer
+        </a>
+            <a href="/docs/developers/data-writer" class="list-group-item ">
+            Data writer
+        </a>
+            <a href="/docs/developers/command-plugins" class="list-group-item ">
+            Command plugins
+        </a>
+            <a href="/docs/developers/io-api" class="list-group-item ">
+            IO API
+        </a>
+    </div>
+        </div>
+        <div class="col-md-9">
+        	<p class="text-right">
+	    		<i class="fa fa-github"></i>
+	    		<a href="https://github.com/yosymfony/Spress.yosymfony.com/edit/master/src/content/docs/developers/spress-lifecycle.md">
+	    			Edit this page on Github
+	    		</a>
+	    	</p>
+            <p>This article describes how to Spress perform a site:</p>
+
+<ol>
+<li>Reads the site configuration file: <code>config.yml</code>.</li>
+<li>Loads plugins from <code>./src/plugins</code> folder and for each calls to <code>initialize</code> method if <code>safe</code> mode is disbled.</li>
+<li>Dispatches <code>spress.start</code> event.</li>
+<li>Invokes <code>setUp</code> method of the <a href="/docs/developers/data-writer">data writer</a> registered. The default data writer cleans the <code>./build</code> folder.</li>
+<li>Invokes <code>clear</code> method of the <a href="/docs/developers/renderizer">Renderizer</a> registered.</li>
+<li>Loads the <a href="/docs/developers/data-sources">data sources</a> and for each calls to <code>getItems</code> method.</li>
+<li>Process <a href="/docs/developers/generators">generators</a>.</li>
+<li><a href="/docs/collections/#sort-items">Sorts items</a>. <span class="label label-success">Spress >= 2.1</span></li>
+<li>Sets the <code>next</code> and <code>prior</code> relationships of items belonging to sorted collections. <span class="label label-success">Spress >= 2.1</span></li>
+<li>Loads layouts and includes items: invokes <code>getLayouts</code> and <code>getIncludes</code> method of each data source.</li>
+<li>For each item Spress applies a <a href="/docs/developers/converters">converter</a> and dispatches the events <code>spress.before_convert</code> and <code>spress.after_convert</code>.</li>
+<li>Process permalinks of items.</li>
+<li>For each item without an attribute <code>avoid_renderizer: true</code> Spress applies a content renderer without layouts and dispatches the events <code>spress.before_render_blocks</code> and <code>spress.after_render_blocks</code>.</li>
+<li>For each item without the attribute <code>avoid_renderizer</code> Spress applies a content render and dispatches the events <code>spress.before_render</code> and <code>spress.after_render</code>. After a <code>spress.after_render</code> event the item is persisted using <code>write</code> method of the <a href="/docs/developers/data-writer">data writer</a> registered.</li>
+<li>Dispathes the event <code>spress.finish</code>.</li>
+</ol>
+
+        </div>
+    </div>
+</div>
+            
+        <footer id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class="list-inline">
+        <li>
+        <a href="https://gitter.im/spress/Spress">
+            Support
+                    </a>
+    </li>
+        <li>
+        <a href="/about/license">
+            License: MIT
+                    </a>
+    </li>
+        <li>
+        <a href="/about">
+            About
+                    </a>
+    </li>
+        <li>
+        <a href="http://yosymfony.com">
+            Yo! Symfony
+                    </a>
+    </li>
+    </ul>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <ul class="list-inline">
+        <li>
+        <a href="https://twitter.com/spress_cms">
+            <i class="fa fa-twitter fa-2x"></i>
+        </a>
+    </li>
+        
+        
+        
+        
+        <li>
+        <a href="https://github.com/spress">
+            <i class="fa fa-github fa-2x"></i>
+        </a>
+    </li>
+        
+        
+        <li>
+        <a href="https://www.youtube.com/user/yosymfony">
+            <i class="fa fa-youtube fa-2x"></i>
+        </a>
+    </li>
+    </ul>
+                    </div>
+                </div>
+                <p class="text-center">
+                    &copy; 2017 <a href="http://yosymfony.com">Yo! Symfony</a>.
+                    <span class="label label-default">Proudly powered by Spress</span>
+                </p>
+            </div>
+        </footer>
+    </body>
+</html>

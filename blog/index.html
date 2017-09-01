@@ -1,0 +1,297 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+<title>Welcome &#8250; Spress blog</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Spress is a blog-aware application that transform your plain text files in static sites.">
+<meta name="author" content="Victor Puertas">
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:image" content="/assets/img/spress-logo.png">
+    <meta name="twitter:title" content="Welcome">
+    <meta name="twitter:description" content="Spress is a blog-aware application that transform your plain text files in static sites.">
+    <meta name="twitter:creator" content="@spress_cms">
+
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Welcome">
+<meta property="og:description" content="Spress is a blog-aware application that transform your plain text files in static sites.">
+<meta property="og:url" content="/blog">
+<meta property="og:site_name" content="The static site generator in PHP">
+
+<link href="/rss.xml" type="application/rss+xml" rel="alternate" title="The static site generator in PHP Feed">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/touch-icon-iphone.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/assets/img/touch-icon-ipad.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/assets/img/touch-icon-iphone-retina.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/assets/img/touch-icon-ipad-retina.png">
+
+
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet">
+<link href="/assets/css/blog/bootstrap.css" rel="stylesheet" media="screen">
+<link href="/assets/css/blog/style.css" rel="stylesheet" media="screen">
+
+    </head>
+    <body>
+        <div id="wrap">
+            <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Spress</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+        <li>
+        <a href="/">
+            Home
+                    </a>
+    </li>
+        <li>
+        <a href="/download">
+            Download
+                    </a>
+    </li>
+        <li>
+        <a href="/docs/getting-started/">
+            Get started
+                    </a>
+    </li>
+        <li>
+        <a href="/docs">
+            Docs
+                    </a>
+    </li>
+        <li>
+        <a href="/add-ons">
+            Add-ons
+                            <i class="fa fa-cogs"></i>
+                    </a>
+    </li>
+        <li>
+        <a href="/blog">
+            Blog
+                    </a>
+    </li>
+        <li>
+        <a href="/about">
+            About
+                    </a>
+    </li>
+    </ul>
+        </div>
+    </div>
+</div>            <div class="container">
+                                <article class="post">
+    <header>
+        <h1>
+            <a href="/releases/2017/04/30/spress-2-2-0-released">Spress 2.2.0 released</a>
+        </h1>
+    </header>
+    
+            <p>Hi community. After several months working on Spress 2.2.0, it is here with 11
+new features, 6 improvements and 8 fixes. The highlights of this release are
+the <a href="/docs/themes">support for themes</a>, a little package manager based on
+<a href="https://getcomposer.org/">Composer</a> and the <strong>jumps to PHP 5.6 dropping the
+support for 5.5</strong>. Additionally, an issue related with copying dot-files such as
+<code>.htaccess</code> into <code>build</code> directory has been fixed.</p>
+
+<h2>Themes</h2>
+
+<p>Themes let you create sites based on community-maintained templates. These ones
+package layouts, includes and assets in a way that can be
+<a href="/docs/themes/#how-themes-work">overridden by your site content</a>.
+Themes are published via <a href="https://packagist.org/">Packagist.org</a>.
+The <code>new:site</code> command has been updated to let you create a site based on any theme.
+Additionaly, a <code>new:theme</code> command has been added to facilitate the task of create
+a new theme. <a href="/docs/themes/#creating-a-new-theme">You can get more details about this one here</a>.</p>
+
+
+                    <a href="/releases/2017/04/30/spress-2-2-0-released">Read more</a>
+                
+    </article>
+            <article class="post">
+    <header>
+        <h1>
+            <a href="/releases/2017/01/22/spress-2-2-0-rc-is-out-help-us-to-test">Spress 2.2.0-rc is out. Help us to test</a>
+        </h1>
+    </header>
+    
+            <p>Hello community. Last Monday 16th of January I released the first <a href="https://github.com/spress/Spress/releases/tag/v2.2.0-rc">RC of
+Spress 2.2.0</a>
+(I think this will be the only RC). We need help for testing the new features.
+This version comes with a few new features such as a <a href="https://github.com/spress/Spress/issues/96">package manager</a>, support for themes or the
+migration of Symfony components from 2.7 to 3.2. This migration could throw some
+excetions due to the deprecations introduced in Symfony Yaml component since version 2.8.
+In the coming days I'm going to update the documentation
+according to the new features. Additionaly, I'm going to review the themes
+of <a href="https://github.com/spress-add-ons">Spress add-ons organization on Github</a>.</p>
+
+
+                    <a href="/releases/2017/01/22/spress-2-2-0-rc-is-out-help-us-to-test">Read more</a>
+                
+    </article>
+            <article class="post">
+    <header>
+        <h1>
+            <a href="/news/2016/12/13/new-in-spress-2-2-0-themes-and-add-ons-manager">New in Spress 2.2.0: themes and add-ons manager</a>
+        </h1>
+    </header>
+    
+            <p>Hello everybody. The development of Spress 2.2.0 continues on its way and today
+I want to show you two new features: the support for themes and a new set of
+commands aimed to manage Spress's add-ons.</p>
+
+
+                    <a href="/news/2016/12/13/new-in-spress-2-2-0-themes-and-add-ons-manager">Read more</a>
+                
+    </article>
+            <article class="post">
+    <header>
+        <h1>
+            <a href="/news/2016/09/03/new-in-spress-2-2-0-avoid-renderizer-feature-for-type-of-files">New in Spress 2.2.0: "avoid_renderizer" feature for type of files</a>
+        </h1>
+    </header>
+    
+            <p>Hello community! Spress is on the way to 2.2.0 and today we want to unveil
+a <a href="https://github.com/spress/Spress/issues/91">new feature</a> for applying the <a href="docs/themes/#avoid-renderizer">"avoid_renderizer"</a>
+feature automatically to both certain type of files and files that belong to a path.
+The <code>avoid_renderizer</code> attribute let's avoid the <a href="/docs/developers/renderizer/">renderizer</a>
+comes into action with a file. Prior to Spress 2.2.0, you needed to put this attribute
+file by file. Now, you can set a filter in the <code>config.yml</code> file like the following:</p>
+
+<pre><code class="yaml"># config.yml
+avoid_renderizer:
+  filename_extensions: ['css', 'js']
+  paths: ['assets']
+</code></pre>
+
+<p>In the prior example, all files belonging to <code>assets</code> folder (this folder is relative
+to <code>src/content</code> path) or those with a filename's extension type <code>css</code> or <code>js</code>
+will receive an <code>avoid_renderizer: true</code> attribute unless otherwise expressly
+provided in a file.</p>
+
+<p>Spress comes with the following configuration by default:</p>
+
+<pre><code class="yaml">avoid_renderizer:
+  filename_extensions: ['css', 'js']
+  paths: ['assets', 'bower_components', 'node_modules']
+</code></pre>
+
+                
+    </article>
+            <article class="post">
+    <header>
+        <h1>
+            <a href="/plugin/news/2016/08/08/importing-posts-to-spress-from-wordpress-and-csv-files-is-now-possible-thanks-to-spress-import-plugin">Importing posts to Spress from Wordpress and CSV files is now possible thanks to Spress Import plugin</a>
+        </h1>
+    </header>
+    
+            <p><img class="img-responsive" src="/assets/img/wordpress-badges.jpg"></p>
+
+<p>Photo by <a href="https://flic.kr/p/5zPaP6">Cristian Labarca</a>.</p>
+
+<p>If you have a Wordpress blog hosted in Wordpress.com or installed in other web
+host and you are thinkig of migratting to a static site you are in luck because
+the brand-new <a href="https://github.com/spress/Spress-import">Spress Import plugin</a>
+can help you with that migration.</p>
+
+
+                    <a href="/plugin/news/2016/08/08/importing-posts-to-spress-from-wordpress-and-csv-files-is-now-possible-thanks-to-spress-import-plugin">Read more</a>
+                
+    </article>
+    
+    <ul class="pagination">
+		
+					<li><a href="/blog/page2">Older &raquo;</a></li>
+			</ul>
+
+            </div>
+        </div>
+            
+        <footer id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class="list-inline">
+        <li>
+        <a href="https://gitter.im/spress/Spress">
+            Support
+                    </a>
+    </li>
+        <li>
+        <a href="/about/license">
+            License: MIT
+                    </a>
+    </li>
+        <li>
+        <a href="/about">
+            About
+                    </a>
+    </li>
+        <li>
+        <a href="http://yosymfony.com">
+            Yo! Symfony
+                    </a>
+    </li>
+    </ul>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <ul class="list-inline">
+        <li>
+        <a href="https://twitter.com/spress_cms">
+            <i class="fa fa-twitter fa-2x"></i>
+        </a>
+    </li>
+        
+        
+        
+        
+        <li>
+        <a href="https://github.com/spress">
+            <i class="fa fa-github fa-2x"></i>
+        </a>
+    </li>
+        
+        
+        <li>
+        <a href="https://www.youtube.com/user/yosymfony">
+            <i class="fa fa-youtube fa-2x"></i>
+        </a>
+    </li>
+    </ul>                    </div>
+                </div>
+                <p class="text-center">
+                    <a href="https://github.com/yosymfony/Spress-theme-spresso" title="Spresso theme">
+                        <img src="/assets/img/spress-logo.png"/>
+                    </a>
+                </p>
+                <p class="text-center">
+                    &copy;
+                    2017
+                                            <a href="http://yosymfony.com">
+                            Yo! Symfony
+                        </a>
+                    .
+                    Powered by <a href="http://spress.yosymfony.com">Spress</a>.
+                </p>
+            </div>
+            <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    
+    ga('create', '', '');
+    ga('send', 'pageview');
+</script>                                </footer>
+    </body>
+</html>

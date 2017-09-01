@@ -1,0 +1,222 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+<title>Spress &#8250; Developers &#8250; Lifecycle</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="How Spress generates a site">
+<meta name="author" content="Victor Puertas">
+<meta name="generator" content="Spress v2.2.0">
+
+            <meta name="twitter:card" content="summary">
+        <meta name="twitter:image" content="/assets/img/spress-logo.png">
+    <meta name="twitter:title" content="Developers &#8250; Lifecycle">
+    <meta name="twitter:description" content="How Spress generates a site">
+    <meta name="twitter:creator" content="@spress_cms">
+
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Developers &#8250; Lifecycle">
+<meta property="og:description" content="How Spress generates a site">
+<meta property="og:url" content="/docs/1.0/developers/spress-lifecycle">
+<meta property="og:site_name" content="The static site generator in PHP">
+
+<link href="/rss.xml" type="application/rss+xml" rel="alternate" title="The static site generator in PHP Feed">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/touch-icon-iphone.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/assets/img/touch-icon-ipad.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/assets/img/touch-icon-iphone-retina.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/assets/img/touch-icon-ipad-retina.png">
+
+
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+<link href="/assets/css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="/assets/css/theme.css" rel="stylesheet" media="screen">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+
+   <link rel="stylesheet" href="//cdn.jsdelivr.net/highlight.js/9.0.0/styles/default.min.css">
+   <link rel="stylesheet" href="/assets/css/highlight-style.css">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    
+    ga('create', '', '');
+    ga('send', 'pageview');
+</script>    </head>
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Spress</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+        <li>
+        <a href="/">
+            Home
+                    </a>
+    </li>
+        <li>
+        <a href="/download">
+            Download
+                    </a>
+    </li>
+        <li>
+        <a href="/docs/getting-started/">
+            Get started
+                    </a>
+    </li>
+        <li>
+        <a href="/docs">
+            Docs
+                    </a>
+    </li>
+        <li>
+        <a href="/add-ons">
+            Add-ons
+                            <i class="fa fa-cogs"></i>
+                    </a>
+    </li>
+        <li>
+        <a href="/blog">
+            Blog
+                    </a>
+    </li>
+        <li>
+        <a href="/about">
+            About
+                    </a>
+    </li>
+    </ul>
+        </div>
+    </div>
+</div>        
+        <div class="container container-small">
+    <div class="page-header h-shadow">
+        <h1>
+            Lifecycle
+                        <small>Developers</small>
+                    </h1>
+    </div>
+    
+        
+    <div class="row">
+        <div class="col-md-3">
+            <div class="list-group">
+            <a href="/docs/1.0/developers" class="list-group-item ">
+            Creating a plugin
+        </a>
+            <a href="/docs/1.0/developers/spress-lifecycle" class="list-group-item active">
+            Lifecycle
+        </a>
+            <a href="/docs/1.0/developers/events-list" class="list-group-item ">
+            Events list
+        </a>
+            <a href="/docs/1.0/developers/converters" class="list-group-item ">
+            Converters
+        </a>
+            <a href="/docs/1.0/developers/extending-twig" class="list-group-item ">
+            Extending Twig
+        </a>
+            <a href="/docs/1.0/developers/io-api" class="list-group-item ">
+            IO API
+        </a>
+    </div>
+        </div>
+        <div class="col-md-9">
+            <p>This article describes how Spress generates a site.</p>
+
+<p>During its lifecycle Spress goes through following steps:</p>
+
+<ol>
+<li>Reads the site configuration file: <code>config.yml</code></li>
+<li>Cleans the site folder</li>
+<li>Loads plugins and <code>initialize</code> method for each one</li>
+<li>Dispatches <code>spress.start</code> event</li>
+<li>For each post Spress applies a converter and dispatches the events <code>spress.before_convert</code> and <code>spress.after_convert</code></li>
+<li>For each page Spress applies a converter and dispatches the events <code>spress.before_convert</code> and <code>spress.after_convert</code></li>
+<li>Dispatches <code>spress.after_convert_posts</code> event</li>
+<li>For each post Spress applies a render (Twig) and dispatches the events <code>spress.before_render</code> and <code>spress.after_render</code></li>
+<li>For each page Spress applies a render (Twig) and dispatches the events <code>spress.before_render</code> and <code>spress.after_render</code></li>
+<li>If pagination of posts is active, for each set of posts, Spress applies a render to the pagination template and dispatches the events <code>spress.before_render_pagination</code> and <code>spress.after_render_pagination</code></li>
+<li>Copies others not processable files to site <code>build</code> folder</li>
+<li>Dispatches the event <code>spress.finish</code></li>
+</ol>
+
+        </div>
+    </div>
+</div>
+            
+        <footer id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class="list-inline">
+        <li>
+        <a href="https://gitter.im/spress/Spress">
+            Support
+                    </a>
+    </li>
+        <li>
+        <a href="/about/license">
+            License: MIT
+                    </a>
+    </li>
+        <li>
+        <a href="/about">
+            About
+                    </a>
+    </li>
+        <li>
+        <a href="http://yosymfony.com">
+            Yo! Symfony
+                    </a>
+    </li>
+    </ul>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <ul class="list-inline">
+        <li>
+        <a href="https://twitter.com/spress_cms">
+            <i class="fa fa-twitter fa-2x"></i>
+        </a>
+    </li>
+        
+        
+        
+        
+        <li>
+        <a href="https://github.com/spress">
+            <i class="fa fa-github fa-2x"></i>
+        </a>
+    </li>
+        
+        
+        <li>
+        <a href="https://www.youtube.com/user/yosymfony">
+            <i class="fa fa-youtube fa-2x"></i>
+        </a>
+    </li>
+    </ul>
+                    </div>
+                </div>
+                <p class="text-center">
+                    &copy; 2017 <a href="http://yosymfony.com">Yo! Symfony</a>.
+                    <span class="label label-default">Proudly powered by Spress</span>
+                </p>
+            </div>
+        </footer>
+    </body>
+</html>

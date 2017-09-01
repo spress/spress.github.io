@@ -1,0 +1,521 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+<title>Spress &#8250; Developers &#8250; Create a plugin</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Getting started with Spress plugins">
+<meta name="author" content="Victor Puertas">
+<meta name="generator" content="Spress v2.2.0">
+
+            <meta name="twitter:card" content="summary">
+        <meta name="twitter:image" content="/assets/img/spress-logo.png">
+    <meta name="twitter:title" content="Developers &#8250; Create a plugin">
+    <meta name="twitter:description" content="Getting started with Spress plugins">
+    <meta name="twitter:creator" content="@spress_cms">
+
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Developers &#8250; Create a plugin">
+<meta property="og:description" content="Getting started with Spress plugins">
+<meta property="og:url" content="/docs/developers">
+<meta property="og:site_name" content="The static site generator in PHP">
+
+<link href="/rss.xml" type="application/rss+xml" rel="alternate" title="The static site generator in PHP Feed">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/touch-icon-iphone.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/assets/img/touch-icon-ipad.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/assets/img/touch-icon-iphone-retina.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/assets/img/touch-icon-ipad-retina.png">
+
+
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+<link href="/assets/css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="/assets/css/theme.css" rel="stylesheet" media="screen">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+
+   <link rel="stylesheet" href="//cdn.jsdelivr.net/highlight.js/9.0.0/styles/default.min.css">
+   <link rel="stylesheet" href="/assets/css/highlight-style.css">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    
+    ga('create', '', '');
+    ga('send', 'pageview');
+</script>    </head>
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Spress</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+        <li>
+        <a href="/">
+            Home
+                    </a>
+    </li>
+        <li>
+        <a href="/download">
+            Download
+                    </a>
+    </li>
+        <li>
+        <a href="/docs/getting-started/">
+            Get started
+                    </a>
+    </li>
+        <li>
+        <a href="/docs">
+            Docs
+                    </a>
+    </li>
+        <li>
+        <a href="/add-ons">
+            Add-ons
+                            <i class="fa fa-cogs"></i>
+                    </a>
+    </li>
+        <li>
+        <a href="/blog">
+            Blog
+                    </a>
+    </li>
+        <li>
+        <a href="/about">
+            About
+                    </a>
+    </li>
+    </ul>
+        </div>
+    </div>
+</div>        
+        <div class="container container-small">
+    <div class="page-header h-shadow">
+        <h1>
+            Creating a plugin
+                        <small>Developers</small>
+                    </h1>
+    </div>
+    
+        
+    <div class="row">
+        <div class="col-md-3">
+            <div class="list-group">
+            <a href="/docs/developers" class="list-group-item active">
+            Creating a plugin
+        </a>
+            <a href="/docs/developers/spress-lifecycle" class="list-group-item ">
+            Lifecycle
+        </a>
+            <a href="/docs/developers/events-list" class="list-group-item ">
+            Events lists
+        </a>
+            <a href="/docs/developers/data-sources" class="list-group-item ">
+            Data sources
+        </a>
+            <a href="/docs/developers/converters" class="list-group-item ">
+            Converters
+        </a>
+            <a href="/docs/developers/generators" class="list-group-item ">
+            Generators
+        </a>
+            <a href="/docs/developers/renderizer" class="list-group-item ">
+            Renderizer
+        </a>
+            <a href="/docs/developers/data-writer" class="list-group-item ">
+            Data writer
+        </a>
+            <a href="/docs/developers/command-plugins" class="list-group-item ">
+            Command plugins
+        </a>
+            <a href="/docs/developers/io-api" class="list-group-item ">
+            IO API
+        </a>
+    </div>
+        </div>
+        <div class="col-md-9">
+        	<p class="text-right">
+	    		<i class="fa fa-github"></i>
+	    		<a href="https://github.com/yosymfony/Spress.yosymfony.com/edit/master/src/content/docs/developers/index.md">
+	    			Edit this page on Github
+	    		</a>
+	    	</p>
+            <p>Spress can be extended by plugins located in <code>./src/plugins</code> folder.
+As of version 2.0.0 Spress can be extended with <a href="#command-plugin">command plugins</a>.
+Spress uses a events mechanic to dispatch events and plugins can add event listeners.
+It’s easy to manually create plugins but Spress provides a <code>new:plugin</code> generator command:</p>
+
+<pre><code>$ spress new:plugin
+</code></pre>
+
+<p>By default, the command is interactive. You will have to answer few questions
+to tweak the generation.</p>
+
+<p>The complete syntax of the command is:</p>
+
+<pre><code>new:plugin  [--name="..."] [--command-name="..."] [--command-description="..."]
+            [--command-help="..."] [--author="..."] [--email="..."]
+            [--description="..."] [--license="MIT"]
+</code></pre>
+
+<ul>
+<li><code>--name</code>: The name of the plugin should follow the pattern <code>vendor-name/plugin-name</code>.</li>
+<li><code>--command-name</code>: In case of you want to create a <a href="#command-plugin">command plugin</a> this is the name of the command.</li>
+<li><code>--command-description</code>: The description of command in case of command plugin.</li>
+<li><code>--command-help</code>: The description of command in case of command plugin.</li>
+<li><code>--author</code>: The author of the plugin.</li>
+<li><code>--email</code>: The Email of the author.</li>
+<li><code>--description</code>: The description of the plugin.</li>
+<li><code>--license</code>: The license of the plugin. MIT by default.</li>
+</ul>
+
+<p>Note that if you want to create a <a href="#command-plugin">command plugin</a>, <code>--command-name</code> is mandatory.</p>
+
+<h2 id="manual-plugins">Create a plugin manually</h2>
+
+<p>We recommend to use <code>new:plugin</code> command but if you want... you can do it by hand.
+It's recommended to create each plugin in a separate folder and with a
+<code>composer.json</code> file. With <a href="https://getcomposer.org">Composer</a>, you can create reusable plugins available to
+others using <a href="https://packagist.org/">packagist.org</a> and <a href="https://github.com/">Github</a>.
+Any file ending in <code>.php</code> inside <code>plugins</code> directory will be loaded before Spress
+generates your site.</p>
+
+<p>Here you can see an <a href="https://github.com/spress/Github-metadata-plugin">example</a> of a plugin.</p>
+
+<h3 id="plugin-skeleton">Plugin skeleton</h3>
+
+<p>This is the typical structure of a plugin:</p>
+
+<pre><code>site
+├── src
+└── plugins
+    ├── YourPluginName
+    │   ├── LICENSE
+    │   ├── YourPluginName.php
+    │   └── composer.json
+</code></pre>
+
+<h4 id="plugin-phpfile">Plugin PHP file</h4>
+
+<p>In your new plugin PHP file you need to create a <strong>class with the same name</strong> as the file.</p>
+
+<h4 id="composer-json">The <em>composer.json</em> file</h4>
+
+<p>The <code>composer.json</code> file contains information about your plugin like name,
+entry-point class or other libraries required by this one.</p>
+
+<pre><code>{
+    "name": "vendor/your-plugin-name",
+    "type": "spress-plugin",
+    "description": "your plugin description",
+    "keywords": ["spress", "plugin"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "your name",
+            "email": "your@email.com"
+        }
+    ],
+    "require": {
+        "spress/spress-installer": "~2.1"
+    }
+}
+</code></pre>
+
+<p>An overview of what main options mean:</p>
+
+<ul>
+<li><strong>type</strong>: This is the package type. For Spress plugins must be set to <code>spress-plugin</code>.</li>
+<li><strong>require</strong>: List of other packages required by the plugin. <strong>If you want to make
+a public plugin then you must add the <code>spress-installer</code> to the required list</strong>.</li>
+</ul>
+
+<p><strong>Get your plugin requirements and generate class-loader</strong></p>
+
+<p>Go to your site folder and run <code>spress update:plugin</code> command.</p>
+
+<h2 id="plugin">The plugin</h2>
+
+<p>A plugin class must implement <code>PluginInterface</code>.
+Required methods are:</p>
+
+<ul>
+<li><code>initialize</code> method where you add your events to event listener.</li>
+<li><code>getMetas</code> method returns an array with the plugins's metadata.</li>
+</ul>
+
+<h3 id="initialize-method">The <em>initialize</em> method</h3>
+
+<p>This method will be invoked at the beginning of the plugin's life cycle.
+You can use it like a plugin constructor to initialize internal variables.</p>
+
+<p>Below example uses closure to process event, but you can also use <a href="#class-methods">class methods</a> for your logic.</p>
+
+<pre><code>use Yosymfony\Spress\Core\Plugin\PluginInterface;
+use Yosymfony\Spress\Core\Plugin\EventSubscriber;
+use Yosymfony\Spress\Core\Plugin\Event\EnvironmentEvent;
+
+class YourPluginName implements PluginInterface
+{
+    public function initialize(EventSubscriber $subscriber)
+    {
+        $subscriber-&gt;addEventListener('spress.start',
+            function(EnvironmentEvent $event)
+            {
+                // Event's code
+            });
+    }
+
+    public function getMetas()
+    {
+        return [ "name" =&gt; "YourPluginName", ];
+    }
+}
+</code></pre>
+
+<p>The <code>addEventListener($eventName, $listener)</code> method adds a new listener to an event:</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th class="col-sm-2">Name</th>
+            <th>Type</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>$eventName</td>
+            <td>string</td>
+            <td>
+    The name of the event.
+    See <a href="/docs/developers/events-list">Events list</a>.
+</td>
+        </tr>
+        <tr>
+            <td>$listener</td>
+            <td>callable</td>
+            <td>
+                The listener of the event. It may be a closure function or a
+                function name.
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="getMetas">The <em>getMetas</em> method</h3>
+
+<p>This method returns an array with the plugins's metadata. List of the standard metas:</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th class="col-sm-2">Name</th>
+            <th>Type</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>name</td>
+            <td>string</td>
+            <td>
+                The name of the plugin.
+            </td>
+        </tr>
+        <tr>
+            <td>description</td>
+            <td>string</td>
+            <td>
+                A brief description of the plugin.
+            </td>
+        </tr>
+        <tr>
+            <td>author</td>
+            <td>string</td>
+            <td>
+                The author of the plugin.
+            </td>
+        </tr>
+        <tr>
+            <td>license</td>
+            <td>string</td>
+            <td>
+    The license of the plugin. The recommended notation for the most common licenses are
+    listed at <a href="https://spdx.org/licenses/">SPDX Open Source License Registry</a>.
+</td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="class-methods">Class methods to handle events</h3>
+
+<p>You can use class methods instead of closure function (recommended way):</p>
+
+<pre><code>use Yosymfony\Spress\Core\Plugin\PluginInterface;
+use Yosymfony\Spress\Core\Plugin\EventSubscriber;
+use Yosymfony\Spress\Core\Plugin\Event\EnvironmentEvent;
+
+class YourPluginName implements PluginInterface
+{
+    public function initialize(EventSubscriber $subscriber)
+    {
+        $subscriber-&gt;addEventListener('spress.start', 'onStart');
+    }
+
+    public function onStart(EnvironmentEvent $event)
+    {
+        // Code for handle event.
+    }    
+
+    public function getMetas()
+     {
+         return [ "name" =&gt; "YourPluginName", ];
+     }
+}
+</code></pre>
+
+<h2 id="command-plugin">Command plugin</h2>
+
+<p>Command plugins are a new kind of plugin which provide subcommands for spress executable (<code>.phar</code> file).
+For example command plugins are usefull for writing subcommands for handling i18n concerns.
+A command plugin must implement
+<a href="https://github.com/spress/Spress/blob/master/src/Plugin/CommandPluginInterface.php"><code>CommandPluginInterface</code></a>.</p>
+
+<p>Note that <code>CommanPluginInterface</code> is <strong>not part of Spress core</strong> only available using CLI interface.</p>
+
+<h3>Example</h3>
+
+<p>Below example is a command plugin created with <code>spress new:plugin</code> to provides <code>test:hello</code> subcommand.
+This one only print a hello message.</p>
+
+<pre><code>use Yosymfony\Spress\Core\IO\IOInterface;
+use Yosymfony\Spress\Plugin\CommandDefinition;
+use Yosymfony\Spress\Plugin\CommandPlugin;
+
+class Yosymfonytestplugin extends CommandPlugin
+{
+    /**
+     * Gets the command's definition.
+     *
+     * @return \Yosymfony\Spress\Plugin\CommandDefinition Definition of the command.
+     */
+    public function getCommandDefinition()
+    {
+        $definition = new CommandDefinition('test:hello');
+        $definition-&gt;setDescription('Say hello');
+        $definition-&gt;setHelp('');
+
+        return $definition;
+    }
+
+    /**
+     * Executes the current command.
+     *
+     * @param \Yosymfony\Spress\Core\IO\IOInterface $io Input/output interface.
+     * @param array $arguments Arguments passed to the command.
+     * @param array $options Options passed to the command.
+     *
+     * @return null|int null or 0 if everything went fine, or an error code.
+     */
+    public function executeCommand(IOInterface $io, array $arguments, array $options)
+    {
+        $io-&gt;write("Hello!");
+    }
+
+    /**
+     * Gets the metas of a plugin.
+     *
+     * @return array
+     */
+    public function getMetas()
+    {
+        return [
+            'name' =&gt; 'yosymfony/test-plugin',
+            'description' =&gt; '',
+            'author' =&gt; 'Yo! Symfony',
+            'license' =&gt; 'MIT',
+        ];
+    }
+}
+</code></pre>
+
+        </div>
+    </div>
+</div>
+            
+        <footer id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class="list-inline">
+        <li>
+        <a href="https://gitter.im/spress/Spress">
+            Support
+                    </a>
+    </li>
+        <li>
+        <a href="/about/license">
+            License: MIT
+                    </a>
+    </li>
+        <li>
+        <a href="/about">
+            About
+                    </a>
+    </li>
+        <li>
+        <a href="http://yosymfony.com">
+            Yo! Symfony
+                    </a>
+    </li>
+    </ul>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <ul class="list-inline">
+        <li>
+        <a href="https://twitter.com/spress_cms">
+            <i class="fa fa-twitter fa-2x"></i>
+        </a>
+    </li>
+        
+        
+        
+        
+        <li>
+        <a href="https://github.com/spress">
+            <i class="fa fa-github fa-2x"></i>
+        </a>
+    </li>
+        
+        
+        <li>
+        <a href="https://www.youtube.com/user/yosymfony">
+            <i class="fa fa-youtube fa-2x"></i>
+        </a>
+    </li>
+    </ul>
+                    </div>
+                </div>
+                <p class="text-center">
+                    &copy; 2017 <a href="http://yosymfony.com">Yo! Symfony</a>.
+                    <span class="label label-default">Proudly powered by Spress</span>
+                </p>
+            </div>
+        </footer>
+    </body>
+</html>

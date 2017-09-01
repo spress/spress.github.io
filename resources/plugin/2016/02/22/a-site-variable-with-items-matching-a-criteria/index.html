@@ -1,0 +1,369 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+<title>A site variable with items matching a criteria &#8250; Spress blog</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="How to expose a new site variable items that maching a criteria">
+<meta name="author" content="Victor Puertas">
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:image" content="/assets/img/spress-logo.png">
+    <meta name="twitter:title" content="A site variable with items matching a criteria">
+    <meta name="twitter:description" content="How to expose a new site variable items that maching a criteria">
+    <meta name="twitter:creator" content="@spress_cms">
+
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="A site variable with items matching a criteria">
+<meta property="og:description" content="How to expose a new site variable items that maching a criteria">
+<meta property="og:url" content="/resources/plugin/2016/02/22/a-site-variable-with-items-matching-a-criteria">
+<meta property="og:site_name" content="The static site generator in PHP">
+
+<link href="/rss.xml" type="application/rss+xml" rel="alternate" title="The static site generator in PHP Feed">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/touch-icon-iphone.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/assets/img/touch-icon-ipad.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/assets/img/touch-icon-iphone-retina.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/assets/img/touch-icon-ipad-retina.png">
+
+
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet">
+<link href="/assets/css/blog/bootstrap.css" rel="stylesheet" media="screen">
+<link href="/assets/css/blog/style.css" rel="stylesheet" media="screen">
+
+    </head>
+    <body>
+        <div id="wrap">
+            <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Spress</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+        <li>
+        <a href="/">
+            Home
+                    </a>
+    </li>
+        <li>
+        <a href="/download">
+            Download
+                    </a>
+    </li>
+        <li>
+        <a href="/docs/getting-started/">
+            Get started
+                    </a>
+    </li>
+        <li>
+        <a href="/docs">
+            Docs
+                    </a>
+    </li>
+        <li>
+        <a href="/add-ons">
+            Add-ons
+                            <i class="fa fa-cogs"></i>
+                    </a>
+    </li>
+        <li>
+        <a href="/blog">
+            Blog
+                    </a>
+    </li>
+        <li>
+        <a href="/about">
+            About
+                    </a>
+    </li>
+    </ul>
+        </div>
+    </div>
+</div>            <div class="container">
+                    <article class="post">
+    <header>
+        <h1>
+            <a href="/resources/plugin/2016/02/22/a-site-variable-with-items-matching-a-criteria">A site variable with items matching a criteria</a>
+        </h1>
+    </header>
+    
+            <p>There are certain situations in which it is necessary to have available a site variable (those that are accessible using <code>site.xxx</code>)
+with the items that matching certain criteria. In this post, I will explain how to expose a new site variable with
+items that contains an <code>categories</code> attribute.</p>
+
+<p>
+<p>The following code is a Spress plugin called <code>ThemeCategoryItems</code>. The data of items matching
+a criteria are accessible at <code>site.category_items</code>. This variable contains an array of elements
+with the typical data of an <a href="/docs/variables#page-variables">item</a>: id, url, collection... etc.</p>
+
+<p>Paste the following code into <code>src\plugins\ThemeCategoryItems.php</code> file:</p>
+
+<pre><code class="php">&lt;?php
+
+use Yosymfony\Spress\Core\DataSource\ItemInterface;
+use Yosymfony\Spress\Core\Plugin\PluginInterface;
+use Yosymfony\Spress\Core\Plugin\EventSubscriber;
+use Yosymfony\Spress\Core\Plugin\Event\EnvironmentEvent;
+use Yosymfony\Spress\Core\Plugin\Event\ContentEvent;
+use Yosymfony\Spress\Core\Plugin\Event\RenderEvent;
+
+class ThemeCategoryItems implements PluginInterface
+{
+    private $categoryItems = [];
+    private $items = [];
+    private $firstRenderEvent = true;
+
+    public function initialize(EventSubscriber $subscriber)
+    {
+        $subscriber-&gt;addEventListener('spress.start', 'onStart');
+        $subscriber-&gt;addEventListener('spress.after_convert', 'onAfterConvert');
+        $subscriber-&gt;addEventListener('spress.before_render_blocks', 'onBeforeRenderBlocks');
+        $subscriber-&gt;addEventListener('spress.after_render_blocks', 'onAfterRenderBlocks');
+    }
+
+    public function getMetas()
+    {
+        return [
+            'name' =&gt; 'theme/category-items',
+            'description' =&gt; 'Plutgin for expanding category aggregation',
+            'author' =&gt; 'Yo! Symfony',
+            'license' =&gt; 'MIT',
+        ];
+    }
+
+    public function onStart(EnvironmentEvent $event)
+    {
+        $configValues = $event-&gt;getConfigValues();
+        $configValues['category_items'] = &amp;$this-&gt;categoryItems;
+
+        $event-&gt;setConfigValues($configValues);
+    }
+
+    public function onAfterConvert(ContentEvent $event)
+    {
+        $attributes = $event-&gt;getAttributes();
+
+        if (isset($attributes['categories'])) {
+            $this-&gt;items[$event-&gt;getId()] = $event-&gt;getItem();
+        }
+    }
+
+    public function onBeforeRenderBlocks(RenderEvent $event)
+    {
+        if ($this-&gt;firstRenderEvent) {
+            $this-&gt;updateSiteVariables();
+            $this-&gt;firstRenderEvent = false;
+        }
+    }
+
+    public function onAfterRenderBlocks(RenderEvent $event)
+    {
+        if (isset($this-&gt;items[$event-&gt;getId()])) {
+            $this-&gt;updateSiteItem($event-&gt;getItem());
+        }
+    }
+
+    private function updateSiteVariables()
+    {
+        foreach ($this-&gt;items as $item) {
+            $this-&gt;updateSiteItem($item);
+        }
+    }
+
+    private function updateSiteItem($item)
+    {
+        $attributes = $item-&gt;getAttributes();
+        $attributes['id'] = $item-&gt;getId();
+        $attributes['content'] = $item-&gt;getContent();
+        $attributes['collection'] = $item-&gt;getCollection();
+        $attributes['path'] = $item-&gt;getPath(ItemInterface::SNAPSHOT_PATH_RELATIVE);
+
+        $this-&gt;categoryItems[$item-&gt;getId()] = $attributes;
+    }
+}
+</code></pre>
+
+<p>Next, I will to explains the key aspects of the prior plugin.</p>
+
+<p>In order to add a new site variable you need to get the configuration values and add a new one.
+Configuration values are availables in <a href="/docs/developers/events-list"><code>spress.start</code> event</a>.</p>
+
+<pre><code>public function onStart(EnvironmentEvent $event)
+{
+    $configValues = $event-&gt;getConfigValues();
+    $configValues['category_items'] = &amp;$this-&gt;categoryItems;
+
+    $event-&gt;setConfigValues($configValues);
+}
+</code></pre>
+
+<p>The variable <code>categoryItems</code> will contains the data of matched items. Note that is assigned as a pointer for
+keeping data up to date.</p>
+
+<p>The next snippet of code only be executed one time for updating <code>url</code> and <code>collection</code> attributes prior to render them.
+More details about <a href="/docs/developers/spress-lifecycle">Spress's lifecyle</a>.</p>
+
+<pre><code>public function onBeforeRenderBlocks(RenderEvent $event)
+{
+    if ($this-&gt;firstRenderEvent) {
+        $this-&gt;updateSiteVariables();
+        $this-&gt;firstRenderEvent = false;
+    }
+}
+</code></pre>
+
+<p>The goal of <code>updateSiteItem</code> method is to compose the attributes availables
+for each item in <code>categoryItems</code> array:</p>
+
+<pre><code>private function updateSiteItem($item)
+{
+    $attributes = $item-&gt;getAttributes();
+    $attributes['id'] = $item-&gt;getId();
+    $attributes['content'] = $item-&gt;getContent();
+    $attributes['collection'] = $item-&gt;getCollection();
+    $attributes['path'] = $item-&gt;getPath(ItemInterface::SNAPSHOT_PATH_RELATIVE);
+
+    $this-&gt;categoryItems[$item-&gt;getId()] = $attributes;
+}
+</code></pre>
+
+<h2>How access to the results?</h2>
+
+<p>In a page, paste the following code:</p>
+
+<p></p>
+
+<pre><code class="twig">&lt;ul&gt;
+{% for item in site.category_items %}
+    &lt;li&gt;&lt;a href="{{ item.url }}"&gt;{{ item.title }}&lt;/a&gt;&lt;/li&gt;
+{% endfor %}
+&lt;/ul&gt;
+</code></pre>
+
+<p></p>
+
+        
+            <footer>    
+            <p>
+                Posted by Victor Puertas on <time pubdate="pubdate">2016-02-22</time>
+            </p>
+
+                        <ul class="list-unstyled">
+                                                    <li>
+                        <i class="fa fa-folder"></i>
+                                                    <a href="/blog/categories/plugin">plugin</a>, 
+                                                    <a href="/blog/categories/resources">resources</a> 
+                                            </li>
+                            </ul>
+                    </footer>
+
+                    <section>
+                <h3>Comments</h3>
+                <div id="disqus_thread"></div>
+                <noscript>
+                    Please enable JavaScript to view the
+                    <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+                </noscript> 
+                <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            </section>
+            </article>
+            </div>
+        </div>
+            
+        <footer id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class="list-inline">
+        <li>
+        <a href="https://gitter.im/spress/Spress">
+            Support
+                    </a>
+    </li>
+        <li>
+        <a href="/about/license">
+            License: MIT
+                    </a>
+    </li>
+        <li>
+        <a href="/about">
+            About
+                    </a>
+    </li>
+        <li>
+        <a href="http://yosymfony.com">
+            Yo! Symfony
+                    </a>
+    </li>
+    </ul>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <ul class="list-inline">
+        <li>
+        <a href="https://twitter.com/spress_cms">
+            <i class="fa fa-twitter fa-2x"></i>
+        </a>
+    </li>
+        
+        
+        
+        
+        <li>
+        <a href="https://github.com/spress">
+            <i class="fa fa-github fa-2x"></i>
+        </a>
+    </li>
+        
+        
+        <li>
+        <a href="https://www.youtube.com/user/yosymfony">
+            <i class="fa fa-youtube fa-2x"></i>
+        </a>
+    </li>
+    </ul>                    </div>
+                </div>
+                <p class="text-center">
+                    <a href="https://github.com/yosymfony/Spress-theme-spresso" title="Spresso theme">
+                        <img src="/assets/img/spress-logo.png"/>
+                    </a>
+                </p>
+                <p class="text-center">
+                    &copy;
+                    2017
+                                            <a href="http://yosymfony.com">
+                            Yo! Symfony
+                        </a>
+                    .
+                    Powered by <a href="http://spress.yosymfony.com">Spress</a>.
+                </p>
+            </div>
+            <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    
+    ga('create', '', '');
+    ga('send', 'pageview');
+</script>                        <script type="text/javascript">
+            var disqus_shortname = 'yosymfony';
+            
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+            </footer>
+    </body>
+</html>

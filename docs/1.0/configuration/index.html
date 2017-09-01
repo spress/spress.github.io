@@ -1,0 +1,359 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+<title>Spress &#8250; Configuration of a Spress site</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Each Spress site have a configuration file with information for generating the site">
+<meta name="author" content="Victor Puertas">
+<meta name="generator" content="Spress v2.2.0">
+
+            <meta name="twitter:card" content="summary">
+        <meta name="twitter:image" content="/assets/img/spress-logo.png">
+    <meta name="twitter:title" content="Configuration of a Spress site">
+    <meta name="twitter:description" content="Each Spress site have a configuration file with information for generating the site">
+    <meta name="twitter:creator" content="@spress_cms">
+
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Configuration of a Spress site">
+<meta property="og:description" content="Each Spress site have a configuration file with information for generating the site">
+<meta property="og:url" content="/docs/1.0/configuration">
+<meta property="og:site_name" content="The static site generator in PHP">
+
+<link href="/rss.xml" type="application/rss+xml" rel="alternate" title="The static site generator in PHP Feed">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/touch-icon-iphone.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/assets/img/touch-icon-ipad.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/assets/img/touch-icon-iphone-retina.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/assets/img/touch-icon-ipad-retina.png">
+
+
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+<link href="/assets/css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="/assets/css/theme.css" rel="stylesheet" media="screen">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+
+   <link rel="stylesheet" href="//cdn.jsdelivr.net/highlight.js/9.0.0/styles/default.min.css">
+   <link rel="stylesheet" href="/assets/css/highlight-style.css">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    
+    ga('create', '', '');
+    ga('send', 'pageview');
+</script>    </head>
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Spress</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+        <li>
+        <a href="/">
+            Home
+                    </a>
+    </li>
+        <li>
+        <a href="/download">
+            Download
+                    </a>
+    </li>
+        <li>
+        <a href="/docs/getting-started/">
+            Get started
+                    </a>
+    </li>
+        <li>
+        <a href="/docs">
+            Docs
+                    </a>
+    </li>
+        <li>
+        <a href="/add-ons">
+            Add-ons
+                            <i class="fa fa-cogs"></i>
+                    </a>
+    </li>
+        <li>
+        <a href="/blog">
+            Blog
+                    </a>
+    </li>
+        <li>
+        <a href="/about">
+            About
+                    </a>
+    </li>
+    </ul>
+        </div>
+    </div>
+</div>        
+        <div class="container container-small">
+    <div class="page-header h-shadow">
+        <h1>
+            Configuration
+                    </h1>
+    </div>
+    
+    <div class="row">
+    <div class="col-md-3">
+        <div class="list-group">
+            <a href="/docs/1.0/getting-started" class="list-group-item ">
+            Getting started
+        </a>
+            <a href="/docs/1.0/how-it-work" class="list-group-item ">
+            How it work?
+        </a>
+            <a href="/docs/1.0/configuration" class="list-group-item active">
+            Configuration
+        </a>
+            <a href="/docs/1.0/variables" class="list-group-item ">
+            Variables
+        </a>
+            <a href="/docs/1.0/front-matter" class="list-group-item ">
+            Front-matter
+        </a>
+            <a href="/docs/1.0/writing-posts" class="list-group-item ">
+            Writing posts
+        </a>
+            <a href="/docs/1.0/creating-pages" class="list-group-item ">
+            Creating pages
+        </a>
+            <a href="/docs/1.0/permalinks" class="list-group-item ">
+            Permalinks
+        </a>
+            <a href="/docs/1.0/pagination" class="list-group-item ">
+            Pagination
+        </a>
+            <a href="/docs/1.0/themes" class="list-group-item ">
+            Themes
+        </a>
+            <a href="/docs/1.0/deployment-methods" class="list-group-item ">
+            Deployment methods
+        </a>
+    </div>
+    </div>
+    <div class="col-md-9">
+        <p>Your site have a <code>config.yml</code> file that let you change the default configuration
+of Spress and create new variables that will be accessible in your template with
+<code>{{ site.your_variable }}</code>. Some global variables like <code>timezone</code> or 
+<code>safe</code> can be specified in the <a href="/docs/1.0/how-it-work/#site-build-command">command line options or flags</a>.</p>
+
+<div class="panel panel-default">
+  <div class="panel-body">
+    <div class="row">
+        <div class="col-md-1">
+            <i class="fa fa-exclamation-triangle fa-3x color-red"></i>
+        </div>
+        <div class="col-md-11">
+            <p>
+    The configuration is <a href="http://yaml.org">YAML</a> file. Do not uses
+    tabs.
+</p>
+        </div>
+    </div>
+  </div>
+</div>
+
+<h2 id="environment">Environment configuration: development and production</h2>
+
+<p>The environment configuration <sup><span class="label label-success">New in 1.1.0</span></sup>
+is useful for writing configuration options for development and production environments. Each 
+Spress site has a <code>config.yml</code> file (mandatory) with the options for the default environment (dev).
+If you want set options for production environment you can to create a <code>config_prod.yml</code> file with
+the options that will be overrided in <code>config.yml</code>. The command line option <code>--env="dev"</code> let you
+to enable the environment.</p>
+
+<p>The pattern for environment configuration file is <code>config_{environment-name}.yml</code>.</p>
+
+<p>An example for production environment:</p>
+
+<pre><code>$ spress site:build --env=prod
+</code></pre>
+
+<p>More information and example available at this <a href="/news/2014/06/12/new-in-spress-1-1-environment-configurations/">blog post</a>.</p>
+
+<h2>Default configuration</h2>
+
+<p>Spress runs with the default configuration:</p>
+
+<pre><code>debug: false
+
+# Locations
+
+source: .
+destination: ./_site
+posts: ./_posts
+includes: ./_includes
+layouts: ./_layouts
+plugins: ./_plugins
+include: [.htaccess]
+
+# Reading
+
+env: 'dev'
+exclude: [composer.json]
+markdown_ext: [markdown,mkd,mkdn,md]
+processable_ext: [html,htm,xml,js,css]
+layout_ext: [html.twig,twig,html]
+permalink: pretty
+relative_permalinks: true
+drafts: false
+
+# Outputting
+
+url: ''                                 # e.g: http://mydomain.local:4000
+paginate: 0
+paginate_path: 'page:num'
+limit_posts: 0
+timezone: null                          # e.g. Europe/Madrid
+safe: false
+
+# Serving
+host: '0.0.0.0'
+port: 4000
+
+# Deprecated:
+
+baseurl: '/'
+</code></pre>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th class="col-sm-2">Name</th>
+            <th>Type</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>include</td>
+            <td>array</td>
+            <td>Force to include files or directories.</td>
+        </tr>
+        <tr>
+            <td>exclude</td>
+            <td>array</td>
+            <td>Force to exclude files or directories.</td>
+        </tr>
+        <tr>
+            <td>markdown_ext</td>
+            <td>array</td>
+            <td>
+                For Markdown converter, this is a file extension that
+                will be considered as Markdown file.
+            </td>
+        </tr>
+        <tr>
+            <td>processable_ext</td>
+            <td>array</td>
+            <td>File extension that will be considered like processable.</td>
+        </tr>
+        <tr>
+            <td>drafts</td>
+            <td>boolean</td>
+            <td>Include drafts in the generated site.</td>
+        </tr>
+        <tr>
+            <td>safe</span></td>
+            <td>boolean</span></td>
+            <td>Disable site plugins.</td>
+        </tr>
+        <tr>
+            <td>timezone</td>
+            <td>string</td>
+            <td>
+    Set the Timezone. See 
+    <a href="http://www.php.net/manual/en/timezones.php">more timezones in PHP</a>.
+</td>
+        </tr>
+    </tbody>
+</table>
+
+<h3>Processable extensions</h3>
+
+<p>Processable extension indicates the cadidate files that may be processed.<br />
+The final value is the union between <code>processable_ext</code> key and the extension 
+registered by converters.</p>
+
+    </div>
+</div>
+</div>
+            
+        <footer id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class="list-inline">
+        <li>
+        <a href="https://gitter.im/spress/Spress">
+            Support
+                    </a>
+    </li>
+        <li>
+        <a href="/about/license">
+            License: MIT
+                    </a>
+    </li>
+        <li>
+        <a href="/about">
+            About
+                    </a>
+    </li>
+        <li>
+        <a href="http://yosymfony.com">
+            Yo! Symfony
+                    </a>
+    </li>
+    </ul>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <ul class="list-inline">
+        <li>
+        <a href="https://twitter.com/spress_cms">
+            <i class="fa fa-twitter fa-2x"></i>
+        </a>
+    </li>
+        
+        
+        
+        
+        <li>
+        <a href="https://github.com/spress">
+            <i class="fa fa-github fa-2x"></i>
+        </a>
+    </li>
+        
+        
+        <li>
+        <a href="https://www.youtube.com/user/yosymfony">
+            <i class="fa fa-youtube fa-2x"></i>
+        </a>
+    </li>
+    </ul>
+                    </div>
+                </div>
+                <p class="text-center">
+                    &copy; 2017 <a href="http://yosymfony.com">Yo! Symfony</a>.
+                    <span class="label label-default">Proudly powered by Spress</span>
+                </p>
+            </div>
+        </footer>
+    </body>
+</html>

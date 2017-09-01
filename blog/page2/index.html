@@ -1,0 +1,301 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+<title>Welcome &#8250; Spress blog</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Spress is a blog-aware application that transform your plain text files in static sites.">
+<meta name="author" content="Victor Puertas">
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:image" content="/assets/img/spress-logo.png">
+    <meta name="twitter:title" content="Welcome">
+    <meta name="twitter:description" content="Spress is a blog-aware application that transform your plain text files in static sites.">
+    <meta name="twitter:creator" content="@spress_cms">
+
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Welcome">
+<meta property="og:description" content="Spress is a blog-aware application that transform your plain text files in static sites.">
+<meta property="og:url" content="/blog/page2">
+<meta property="og:site_name" content="The static site generator in PHP">
+
+<link href="/rss.xml" type="application/rss+xml" rel="alternate" title="The static site generator in PHP Feed">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/touch-icon-iphone.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/assets/img/touch-icon-ipad.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/assets/img/touch-icon-iphone-retina.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/assets/img/touch-icon-ipad-retina.png">
+
+
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet">
+<link href="/assets/css/blog/bootstrap.css" rel="stylesheet" media="screen">
+<link href="/assets/css/blog/style.css" rel="stylesheet" media="screen">
+
+    </head>
+    <body>
+        <div id="wrap">
+            <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Spress</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+        <li>
+        <a href="/">
+            Home
+                    </a>
+    </li>
+        <li>
+        <a href="/download">
+            Download
+                    </a>
+    </li>
+        <li>
+        <a href="/docs/getting-started/">
+            Get started
+                    </a>
+    </li>
+        <li>
+        <a href="/docs">
+            Docs
+                    </a>
+    </li>
+        <li>
+        <a href="/add-ons">
+            Add-ons
+                            <i class="fa fa-cogs"></i>
+                    </a>
+    </li>
+        <li>
+        <a href="/blog">
+            Blog
+                    </a>
+    </li>
+        <li>
+        <a href="/about">
+            About
+                    </a>
+    </li>
+    </ul>
+        </div>
+    </div>
+</div>            <div class="container">
+                                <article class="post">
+    <header>
+        <h1>
+            <a href="/releases/2016/07/03/spress-2-1-3-released">Spress 2.1.3 released</a>
+        </h1>
+    </header>
+    
+            <p>Hello community. A new maintenance release of Spress has been released. The highlights
+this time have been a fix related with the content of <code>title_path</code> attribute
+in case of filenames with dots before extension (previously, the value of this attribute appears truncated).
+Additionally, the value of <code>title_path</code> will no longer be altered by <code>FilesystemDataSource</code>
+class, only <code>rawurlencode</code> function is applied. If you have a file called
+<code>02-02-spress-2.1.1-released.md</code> then the value of <code>title_path</code> will be
+<code>spress-2.1.1-released</code> instead of <code>spress-2-1-1-released</code>.</p>
+
+<p>Another improvement has been the <a href="/docs/configuration/#plugin_manager_builder">option for avoid scanning certains directories</a>
+such as <code>tests</code> when the plugin manager is loading classes in order to detect
+which of those are plugins.</p>
+
+<p>The complete changelog:</p>
+
+<ul>
+<li><span class="label label-success">New</span> Class <code>FileInfo</code> has been added to the support classes set of the core.</li>
+<li><span class="label label-success">New</span> New configuration value aimed to plugin manager builder for excluding directories in the disconvering class phase. Useful to avoid scaning test classes.</li>
+<li><span class="label label-default">Fixed</span> Fixed the truncated <code>title_path</code> attribute when the filename contains dots before the extension. More details in bug #88.</li>
+<li><span class="label label-default">Fixed</span> The value of <code>title_path</code> is not altered when it is parsed by <code>FilesystemDataSource</code> class. More details in bug #88.</li>
+<li><span class="label label-default">Fixed</span> If you set <code>preserve_path_title</code> attribute to <code>true</code> you will get the title parsed from the filename as-is (without the date part). Only <code>rawurlencode</code> function is applied. See PR #90.</li>
+</ul>
+
+
+                    <a href="/releases/2016/07/03/spress-2-1-3-released">Read more</a>
+                
+    </article>
+            <article class="post">
+    <header>
+        <h1>
+            <a href="/releases/2016/05/23/spress-2-1-2-released">Spress 2.1.2 released</a>
+        </h1>
+    </header>
+    
+            <p>Hello. A new maintenance release of Spress has been released with some bug fixes.</p>
+
+<p>The complete changelog:</p>
+
+<ul>
+<li><span class="label label-success">New</span> Two new methods have been added to StringWrapper class: <code>lower</code> and <code>upper</code> for cingonvert a given string to lower-case and upper-case respectively using UTF-8 as encoding.</li>
+<li><span class="label label-default">Fixed</span> Bug <a href="https://github.com/spress/Spress/issues/80">#80</a> has been fixed: "<code>Composer install</code> fails if no namespace is specified in new plugin". See PR <a href="https://github.com/spress/Spress/issues/81">#81</a>.</li>
+<li><span class="label label-default">Fixed</span> Bug <a href="https://github.com/spress/Spress/issues/82">#82</a> has been fixed: "Substr <code>---</code> in yaml string cause builder crash".</li>
+<li><span class="label label-default">Fixed</span> Bug <a href="https://github.com/spress/Spress/issues/83">#83</a> has been fixed: "Same tags on different languages cause builder crash".</li>
+</ul>
+
+
+                    <a href="/releases/2016/05/23/spress-2-1-2-released">Read more</a>
+                
+    </article>
+            <article class="post">
+    <header>
+        <h1>
+            <a href="/releases/2016/04/12/spress-2-1-1-released">Spress 2.1.1 released</a>
+        </h1>
+    </header>
+    
+            <p>Hi Spress folks! The first maintenance release of Spress 2.1 has been released with two bug fixes.</p>
+
+<p>The complete changelog:</p>
+
+<ul>
+<li><span class="label label-default">Fixed</span> Bug <a href="https://github.com/spress/Spress/issues/78">#78</a> has been fixed: "/:basename permalink variable contains .html when using *.html.twig". Related with feature <a href="https://github.com/spress/Spress/issues/73">#73</a>.</li>
+<li><span class="label label-default">Fixed</span> Bug <a href="https://github.com/spress/Spress/issues/79">#79</a> has been fixed: "Error loading plugin's dependencies with -s option at site:build command".</li>
+<li><span class="label label-primary">Improved</span> Clarified the message when <code>site:build</code> command is invoked against a non Spress site folder.</li>
+</ul>
+
+
+                    <a href="/releases/2016/04/12/spress-2-1-1-released">Read more</a>
+                
+    </article>
+            <article class="post">
+    <header>
+        <h1>
+            <a href="/releases/2016/03/26/spress-2-1-0-released">Spress 2.1.0 released</a>
+        </h1>
+    </header>
+    
+            <p>Hi community. To make your weekend all the better, we have just released Spress 2.1.0
+with many features and improvements.</p>
+
+<h2>Key features</h2>
+
+<ul>
+<li><span class="label label-success">New</span> <strong>Sorted items in <a href="/docs/collections/#sort-items">collections</a></strong>. Feature thanks to <a href="https://github.com/jjk-jacky">jjk-jacky</a>.</li>
+<li><span class="label label-success">New</span> <strong>Attributes referring to the <a href="/docs/collections/#relationships">previous and next items in a sorted collection</a></strong>. Feature thanks to <a href="https://github.com/jjk-jacky">jjk-jacky</a>.</li>
+<li><span class="label label-success">New</span> <strong>Calling an existing command</strong> in <a href="/docs/developers/command-plugins/#calling-command">command plugins</a>.</li>
+<li><span class="label label-success">New</span> <strong>Support for extending Spress with Twig tags.</strong> Contributed by <a href="https://github.com/jjk-jacky">jjk-jacky</a> in <a href="https://github.com/spress/Spress/pull/65">#65</a>.</li>
+<li><span class="label label-success">New</span> <strong>Support <code>.twig</code> extention</strong>. This feature lets you work more appropriately with pages using IDEs such as PHPStorm. Feature thanks to <a href="https://github.com/peterfox">peterfox</a>.</li>
+<li><span class="label label-primary">Improved</span> <strong>Improved permalinks customizations</strong>. Contributed by <a href="https://github.com/jjk-jacky">jjk-jacky</a> in <a href="https://github.com/spress/Spress/pull/64">#65</a>.</li>
+<li><span class="label label-default">Fixed</span> Fixed the path available at <code>page.path</code> variable. Prior to this version, this variable contains the relative path to <code>src/content/</code> but with the filename extension changed by the <a href="/docs/developers/converters/">Converter</a>. Now, the original filename extension isn't altered.</li>
+</ul>
+
+
+                    <a href="/releases/2016/03/26/spress-2-1-0-released">Read more</a>
+                
+    </article>
+            <article class="post">
+    <header>
+        <h1>
+            <a href="/resources/plugin/2016/02/22/a-site-variable-with-items-matching-a-criteria">A site variable with items matching a criteria</a>
+        </h1>
+    </header>
+    
+            <p>There are certain situations in which it is necessary to have available a site variable (those that are accessible using <code>site.xxx</code>)
+with the items that matching certain criteria. In this post, I will explain how to expose a new site variable with
+items that contains an <code>categories</code> attribute.</p>
+
+
+                    <a href="/resources/plugin/2016/02/22/a-site-variable-with-items-matching-a-criteria">Read more</a>
+                
+    </article>
+    
+    <ul class="pagination">
+					<li>
+                <a class="prev" href="/blog">
+                    &laquo; Newer
+                </a>
+            </li>
+		
+					<li><a href="/blog/page3">Older &raquo;</a></li>
+			</ul>
+
+            </div>
+        </div>
+            
+        <footer id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class="list-inline">
+        <li>
+        <a href="https://gitter.im/spress/Spress">
+            Support
+                    </a>
+    </li>
+        <li>
+        <a href="/about/license">
+            License: MIT
+                    </a>
+    </li>
+        <li>
+        <a href="/about">
+            About
+                    </a>
+    </li>
+        <li>
+        <a href="http://yosymfony.com">
+            Yo! Symfony
+                    </a>
+    </li>
+    </ul>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <ul class="list-inline">
+        <li>
+        <a href="https://twitter.com/spress_cms">
+            <i class="fa fa-twitter fa-2x"></i>
+        </a>
+    </li>
+        
+        
+        
+        
+        <li>
+        <a href="https://github.com/spress">
+            <i class="fa fa-github fa-2x"></i>
+        </a>
+    </li>
+        
+        
+        <li>
+        <a href="https://www.youtube.com/user/yosymfony">
+            <i class="fa fa-youtube fa-2x"></i>
+        </a>
+    </li>
+    </ul>                    </div>
+                </div>
+                <p class="text-center">
+                    <a href="https://github.com/yosymfony/Spress-theme-spresso" title="Spresso theme">
+                        <img src="/assets/img/spress-logo.png"/>
+                    </a>
+                </p>
+                <p class="text-center">
+                    &copy;
+                    2017
+                                            <a href="http://yosymfony.com">
+                            Yo! Symfony
+                        </a>
+                    .
+                    Powered by <a href="http://spress.yosymfony.com">Spress</a>.
+                </p>
+            </div>
+            <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    
+    ga('create', '', '');
+    ga('send', 'pageview');
+</script>                                </footer>
+    </body>
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+<title>Spress 2.0.0-beta is here &#8250; Spress blog</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Spress 2.0.0-beta a development preview relase with several new features like taxonomy generator or command plugins">
+<meta name="author" content="Victor Puertas">
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:image" content="/assets/img/spress-logo.png">
+    <meta name="twitter:title" content="Spress 2.0.0-beta is here">
+    <meta name="twitter:description" content="Spress 2.0.0-beta a development preview relase with several new features like taxonomy generator or command plugins">
+    <meta name="twitter:creator" content="@spress_cms">
+
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Spress 2.0.0-beta is here">
+<meta property="og:description" content="Spress 2.0.0-beta a development preview relase with several new features like taxonomy generator or command plugins">
+<meta property="og:url" content="/releases/2015/10/18/spress-2-0-0-beta-is-here">
+<meta property="og:site_name" content="The static site generator in PHP">
+
+<link href="/rss.xml" type="application/rss+xml" rel="alternate" title="The static site generator in PHP Feed">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/touch-icon-iphone.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/assets/img/touch-icon-ipad.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/assets/img/touch-icon-iphone-retina.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/assets/img/touch-icon-ipad-retina.png">
+
+
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet">
+<link href="/assets/css/blog/bootstrap.css" rel="stylesheet" media="screen">
+<link href="/assets/css/blog/style.css" rel="stylesheet" media="screen">
+
+    </head>
+    <body>
+        <div id="wrap">
+            <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Spress</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+        <li>
+        <a href="/">
+            Home
+                    </a>
+    </li>
+        <li>
+        <a href="/download">
+            Download
+                    </a>
+    </li>
+        <li>
+        <a href="/docs/getting-started/">
+            Get started
+                    </a>
+    </li>
+        <li>
+        <a href="/docs">
+            Docs
+                    </a>
+    </li>
+        <li>
+        <a href="/add-ons">
+            Add-ons
+                            <i class="fa fa-cogs"></i>
+                    </a>
+    </li>
+        <li>
+        <a href="/blog">
+            Blog
+                    </a>
+    </li>
+        <li>
+        <a href="/about">
+            About
+                    </a>
+    </li>
+    </ul>
+        </div>
+    </div>
+</div>            <div class="container">
+                    <article class="post">
+    <header>
+        <h1>
+            <a href="/releases/2015/10/18/spress-2-0-0-beta-is-here">Spress 2.0.0-beta is here</a>
+        </h1>
+    </header>
+    
+            <p>Today is a great day because <a href="/about/changelog/#2-0-0-beta">Spress 2.0.0-beta</a> is here. In this release we have included
+new features such as command plugins (a new kind o plugin), a new Markdown converter based on 
+<a href="http://parsedown.org/">Parsedown</a> a parser 2-3 times faster than
+<a href="https://michelf.ca/projects/php-markdown/">Michel Fortin's parser</a> implementation or the the expected
+taxonomy generator.</p>
+
+<h2>The highlight of this release</h2>
+
+<ul>
+<li><strong>Command plugins</strong>: a new kind of plugins witch provides subcommand for <code>spress</code> executable.</li>
+<li><strong>self-update command</strong>: a new command for keeping Spress up to date.</li>
+<li><strong>Taxonomy generator</strong> for grouping content around a set of terms.</li>
+<li>Added a new special attributte <code>avoid_renderizer</code> for avoiding the renderizer phase over an item of content. See <a href="https://github.com/spress/Spress/issues/59">#59</a>.</li>
+<li>Deleted the <code>site:new</code> alias for command <code>new:site</code>.</li>
+</ul>
+
+<p>
+<h3>Command plugins</h3>
+
+<p>Command plugins lets you create plugins that provide subcommands for <code>spress</code> executable. For example they are
+usefull for writing subcommands for handling <a href="https://en.wikipedia.org/wiki/Internationalization_and_localization">i18n</a>
+concerns.</p>
+
+<p>How to create a command plugin?</p>
+
+<pre><code>$ spress new:plugin
+</code></pre>
+
+<h3>self-update command</h3>
+
+<p>Keeping Spress up to date is straightforward as of this release. To update to the next
+Spress 2.0.0-rc just type <code>spress self-update</code> or <code>spress selfupdate</code></p>
+
+<h3>Taxonomy generator</h3>
+
+<p><a href="https://github.com/spress/Spress/issues/45">Generators</a> are a new feature of Spress 2.0.0
+for generating new items of content. Useful for pagination or as in this case for generating
+the taxonomy items. See the feature <a href="https://github.com/spress/Spress/issues/57">#57</a>
+for more details about how to use.</p>
+
+<h2>How to get this version?</h2>
+
+<pre><code>$ curl -LOS https://github.com/spress/Spress/releases/download/v2.0.0-beta/spress.phar
+</code></pre>
+
+<p>Next release will be the <em>release candidate</em>. If you notice any problems, please open a
+<a href="https://github.com/spress/Spress/issues">issue</a> on Github or join us on <a href="https://gitter.im/spress/Spress">Gitter</a>.</p>
+
+<p>Enjoy it!</p>
+
+        
+            <footer>    
+            <p>
+                Posted by Victor Puertas on <time pubdate="pubdate">2015-10-18</time>
+            </p>
+
+                        <ul class="list-unstyled">
+                                                    <li>
+                        <i class="fa fa-folder"></i>
+                                                    <a href="/blog/categories/releases">releases</a> 
+                                            </li>
+                            </ul>
+                    </footer>
+
+                    <section>
+                <h3>Comments</h3>
+                <div id="disqus_thread"></div>
+                <noscript>
+                    Please enable JavaScript to view the
+                    <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+                </noscript> 
+                <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            </section>
+            </article>
+            </div>
+        </div>
+            
+        <footer id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class="list-inline">
+        <li>
+        <a href="https://gitter.im/spress/Spress">
+            Support
+                    </a>
+    </li>
+        <li>
+        <a href="/about/license">
+            License: MIT
+                    </a>
+    </li>
+        <li>
+        <a href="/about">
+            About
+                    </a>
+    </li>
+        <li>
+        <a href="http://yosymfony.com">
+            Yo! Symfony
+                    </a>
+    </li>
+    </ul>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <ul class="list-inline">
+        <li>
+        <a href="https://twitter.com/spress_cms">
+            <i class="fa fa-twitter fa-2x"></i>
+        </a>
+    </li>
+        
+        
+        
+        
+        <li>
+        <a href="https://github.com/spress">
+            <i class="fa fa-github fa-2x"></i>
+        </a>
+    </li>
+        
+        
+        <li>
+        <a href="https://www.youtube.com/user/yosymfony">
+            <i class="fa fa-youtube fa-2x"></i>
+        </a>
+    </li>
+    </ul>                    </div>
+                </div>
+                <p class="text-center">
+                    <a href="https://github.com/yosymfony/Spress-theme-spresso" title="Spresso theme">
+                        <img src="/assets/img/spress-logo.png"/>
+                    </a>
+                </p>
+                <p class="text-center">
+                    &copy;
+                    2017
+                                            <a href="http://yosymfony.com">
+                            Yo! Symfony
+                        </a>
+                    .
+                    Powered by <a href="http://spress.yosymfony.com">Spress</a>.
+                </p>
+            </div>
+            <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    
+    ga('create', '', '');
+    ga('send', 'pageview');
+</script>                        <script type="text/javascript">
+            var disqus_shortname = 'yosymfony';
+            
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+            </footer>
+    </body>
+</html>

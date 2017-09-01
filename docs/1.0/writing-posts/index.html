@@ -1,0 +1,324 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+<title>Spress &#8250; Writing posts</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="How to write a post for Spress">
+<meta name="author" content="Victor Puertas">
+<meta name="generator" content="Spress v2.2.0">
+
+            <meta name="twitter:card" content="summary">
+        <meta name="twitter:image" content="/assets/img/spress-logo.png">
+    <meta name="twitter:title" content="Writing posts">
+    <meta name="twitter:description" content="How to write a post for Spress">
+    <meta name="twitter:creator" content="@spress_cms">
+
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Writing posts">
+<meta property="og:description" content="How to write a post for Spress">
+<meta property="og:url" content="/docs/1.0/writing-posts">
+<meta property="og:site_name" content="The static site generator in PHP">
+
+<link href="/rss.xml" type="application/rss+xml" rel="alternate" title="The static site generator in PHP Feed">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/touch-icon-iphone.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/assets/img/touch-icon-ipad.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/assets/img/touch-icon-iphone-retina.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/assets/img/touch-icon-ipad-retina.png">
+
+
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+<link href="/assets/css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="/assets/css/theme.css" rel="stylesheet" media="screen">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+
+   <link rel="stylesheet" href="//cdn.jsdelivr.net/highlight.js/9.0.0/styles/default.min.css">
+   <link rel="stylesheet" href="/assets/css/highlight-style.css">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    
+    ga('create', '', '');
+    ga('send', 'pageview');
+</script>    </head>
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Spress</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+        <li>
+        <a href="/">
+            Home
+                    </a>
+    </li>
+        <li>
+        <a href="/download">
+            Download
+                    </a>
+    </li>
+        <li>
+        <a href="/docs/getting-started/">
+            Get started
+                    </a>
+    </li>
+        <li>
+        <a href="/docs">
+            Docs
+                    </a>
+    </li>
+        <li>
+        <a href="/add-ons">
+            Add-ons
+                            <i class="fa fa-cogs"></i>
+                    </a>
+    </li>
+        <li>
+        <a href="/blog">
+            Blog
+                    </a>
+    </li>
+        <li>
+        <a href="/about">
+            About
+                    </a>
+    </li>
+    </ul>
+        </div>
+    </div>
+</div>        
+        <div class="container container-small">
+    <div class="page-header h-shadow">
+        <h1>
+            Writing posts
+                    </h1>
+    </div>
+    
+    <div class="row">
+    <div class="col-md-3">
+        <div class="list-group">
+            <a href="/docs/1.0/getting-started" class="list-group-item ">
+            Getting started
+        </a>
+            <a href="/docs/1.0/how-it-work" class="list-group-item ">
+            How it work?
+        </a>
+            <a href="/docs/1.0/configuration" class="list-group-item ">
+            Configuration
+        </a>
+            <a href="/docs/1.0/variables" class="list-group-item ">
+            Variables
+        </a>
+            <a href="/docs/1.0/front-matter" class="list-group-item ">
+            Front-matter
+        </a>
+            <a href="/docs/1.0/writing-posts" class="list-group-item active">
+            Writing posts
+        </a>
+            <a href="/docs/1.0/creating-pages" class="list-group-item ">
+            Creating pages
+        </a>
+            <a href="/docs/1.0/permalinks" class="list-group-item ">
+            Permalinks
+        </a>
+            <a href="/docs/1.0/pagination" class="list-group-item ">
+            Pagination
+        </a>
+            <a href="/docs/1.0/themes" class="list-group-item ">
+            Themes
+        </a>
+            <a href="/docs/1.0/deployment-methods" class="list-group-item ">
+            Deployment methods
+        </a>
+    </div>
+    </div>
+    <div class="col-md-9">
+        <p>Posts are plain texts files using <a href="http://daringfireball.net/projects/markdown/syntax">Markdown</a>
+syntax stored at <code>_posts</code> folder. It’s easy to manually create posts
+but Spress provides a <code>new:post</code> command: <sup><span class="label label-success">New in 1.1.0</span></sup></p>
+
+<pre><code>$ spress new:post
+</code></pre>
+
+<p>By default, the command interacts with the user to tweak the generation.
+The complete syntax of the command is:</p>
+
+<pre><code>new:post [--title="..."] [--layout="default"] [--date="..."] [--tags="..."] [--categories="..."]
+</code></pre>
+
+<p>Any passed option will be used as a default value for the interaction.</p>
+
+<ul>
+<li><code>--tags</code>: Tags list separed by white spaces.</li>
+<li><code>--categories</code>: Categories list separed by white spaces.</li>
+</ul>
+
+<p>An example of a post using <code>default</code> layout:</p>
+
+<pre><code>---
+layout: default
+---
+This is a post. You can mixing text and HTML like this:
+&lt;a href="{{ site.url }}"/about/&gt;About me&lt;/a&gt;.
+
+Uses variables in Markdown link:
+[Home](&lt;{{ site.url }}&gt;)
+</code></pre>
+
+<p>If your post is a draft, set <code>draft</code> variable to true in the Front-matter:</p>
+
+<pre><code>---
+draft: true
+---
+</code></pre>
+
+<p>The draft posts don't be included by defatult in the result site. If you want
+draft posts included, use the flag <code>--drafts</code> with <code>site:build</code> command.</p>
+
+<h2>Creating a post file manually</h2>
+
+<p>Your posts files are located in <code>_posts</code> folder. A post file have a special
+name format: <code>year-month-day-title.md</code> (<code>.md</code> is the file extension).</p>
+
+<ul>
+<li><strong>year</strong>: Four-digit number.</li>
+<li><strong>month</strong>: Two-digit number.</li>
+<li><strong>day</strong>: Two-digit number.</li>
+<li><strong>title</strong>: The title without spaces and only can have URL valid characters.</li>
+</ul>
+
+<p>Example of valid posts files:</p>
+
+<ul>
+<li>2013-12-01-my-first-post.md</li>
+<li>2013-11-01-what-is-new.md</li>
+</ul>
+
+<div class="panel panel-default">
+  <div class="panel-body">
+    <div class="row">
+        <div class="col-md-1">
+            <i class="fa fa-bookmark-o fa-3x"></i>
+        </div>
+        <div class="col-md-11">
+            <p>
+    The default Markdown file extensions are 
+    <strong>markdown, mkd, mkdn</strong> or <strong>md</strong>.
+</p>
+        </div>
+    </div>
+  </div>
+</div>
+
+<h3>Categories from the directory structure</h3>
+
+<p>The categories of a post can be set from the Front-matter or deducted from the
+directory structure. At the below example, <code>2013-11-01-what-is-new.md</code> will have 
+<strong>news</strong> category assigned because the post is stored at <code>news</code> folder:</p>
+
+<pre><code>_posts
+| |- 2013-12-01-my-first-post.md
+| |- news
+| | |- 2013-11-01-what-is-new.md
+</code></pre>
+
+<h3>Creating categories from the Front-matter</h3>
+
+<p>Instead of placing posts inside of folders you can specify your categories using
+<code>categories</code> variable in the Front-matter:</p>
+
+<pre><code>---
+categories: [news, releases]
+---
+</code></pre>
+
+<h3>Tags</h3>
+
+<p>Multiple tags can be added to a post using <code>tags</code> variable in the Front-matter:</p>
+
+<pre><code>---
+tags: [tech, twitter]
+---
+</code></pre>
+
+    </div>
+</div>
+</div>
+            
+        <footer id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class="list-inline">
+        <li>
+        <a href="https://gitter.im/spress/Spress">
+            Support
+                    </a>
+    </li>
+        <li>
+        <a href="/about/license">
+            License: MIT
+                    </a>
+    </li>
+        <li>
+        <a href="/about">
+            About
+                    </a>
+    </li>
+        <li>
+        <a href="http://yosymfony.com">
+            Yo! Symfony
+                    </a>
+    </li>
+    </ul>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <ul class="list-inline">
+        <li>
+        <a href="https://twitter.com/spress_cms">
+            <i class="fa fa-twitter fa-2x"></i>
+        </a>
+    </li>
+        
+        
+        
+        
+        <li>
+        <a href="https://github.com/spress">
+            <i class="fa fa-github fa-2x"></i>
+        </a>
+    </li>
+        
+        
+        <li>
+        <a href="https://www.youtube.com/user/yosymfony">
+            <i class="fa fa-youtube fa-2x"></i>
+        </a>
+    </li>
+    </ul>
+                    </div>
+                </div>
+                <p class="text-center">
+                    &copy; 2017 <a href="http://yosymfony.com">Yo! Symfony</a>.
+                    <span class="label label-default">Proudly powered by Spress</span>
+                </p>
+            </div>
+        </footer>
+    </body>
+</html>

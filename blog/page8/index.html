@@ -1,0 +1,234 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+<title>Welcome &#8250; Spress blog</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Spress is a blog-aware application that transform your plain text files in static sites.">
+<meta name="author" content="Victor Puertas">
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:image" content="/assets/img/spress-logo.png">
+    <meta name="twitter:title" content="Welcome">
+    <meta name="twitter:description" content="Spress is a blog-aware application that transform your plain text files in static sites.">
+    <meta name="twitter:creator" content="@spress_cms">
+
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Welcome">
+<meta property="og:description" content="Spress is a blog-aware application that transform your plain text files in static sites.">
+<meta property="og:url" content="/blog/page8">
+<meta property="og:site_name" content="The static site generator in PHP">
+
+<link href="/rss.xml" type="application/rss+xml" rel="alternate" title="The static site generator in PHP Feed">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/touch-icon-iphone.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/assets/img/touch-icon-ipad.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/assets/img/touch-icon-iphone-retina.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/assets/img/touch-icon-ipad-retina.png">
+
+
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet">
+<link href="/assets/css/blog/bootstrap.css" rel="stylesheet" media="screen">
+<link href="/assets/css/blog/style.css" rel="stylesheet" media="screen">
+
+    </head>
+    <body>
+        <div id="wrap">
+            <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Spress</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+        <li>
+        <a href="/">
+            Home
+                    </a>
+    </li>
+        <li>
+        <a href="/download">
+            Download
+                    </a>
+    </li>
+        <li>
+        <a href="/docs/getting-started/">
+            Get started
+                    </a>
+    </li>
+        <li>
+        <a href="/docs">
+            Docs
+                    </a>
+    </li>
+        <li>
+        <a href="/add-ons">
+            Add-ons
+                            <i class="fa fa-cogs"></i>
+                    </a>
+    </li>
+        <li>
+        <a href="/blog">
+            Blog
+                    </a>
+    </li>
+        <li>
+        <a href="/about">
+            About
+                    </a>
+    </li>
+    </ul>
+        </div>
+    </div>
+</div>            <div class="container">
+                                <article class="post">
+    <header>
+        <h1>
+            <a href="/resources/2014/02/23/how-to-create-a-contact-form-in-spress">How to create a contact form in Spress?</a>
+        </h1>
+    </header>
+    
+            <p>It's probably that soon or later you need to integrate a contact
+form in your site. To do it, you can use <a href="http://getsimpleform.com/">Get simple form</a>
+service that allows you setup forms with any kind of data. To use this service only
+requires a token that you will receive by email.</p>
+
+<pre><code>&lt;form action="http://getsimpleform.com/messages?form_api_token=&lt;form_api_token&gt;" method="post"&gt;
+
+    &lt;!-- 
+        the redirect_to is optional, the form will 
+        redirect to the referrer on submission 
+    --&gt;
+    &lt;input type='hidden' name='redirect_to' 
+        value='&lt;e.g. http://yoursite.com/thank-you.html&gt;' /&gt;
+
+    &lt;!-- all your input fields here.... --&gt;
+    &lt;input type='text' name='test' /&gt;
+
+    &lt;input type='submit' value='Test form' /&gt;
+&lt;/form&gt;
+</code></pre>
+
+<p>The above code shows us how to setup a form. The hidden field <strong>redirect_to</strong> allows us
+set a redirect URL for when the form is submitted. For each form submitted you receive a email.</p>
+
+                
+    </article>
+            <article class="post">
+    <header>
+        <h1>
+            <a href="/releases/2014/02/08/spress-1-0-0-arrived">Spress 1.0.0 arrived</a>
+        </h1>
+    </header>
+    
+            <p>After 3 <em>releases candidate</em>, the first stable version arrived. With this release you can
+extend Spress with plugins and create themes that can be published at the
+<a href="{{ site.url }}/add-ons">add-ons</a> page (you only need to send a tweet to
+<a href="http://twitter.com/spress_cms/">@spress_cms</a> or <a href="http://twitter.com/yosymfony/">@yosymfony</a>).</p>
+
+<p>I'm starting to think in the new features of the next release and any suggestion
+will be welcome. If you have some stuff, you can open a issue at
+<a href="https://github.com/yosymfony/Spress/issues">Github page</a>.</p>
+
+                
+    </article>
+    
+    <ul class="pagination">
+					<li>
+                <a class="prev" href="/blog/page7">
+                    &laquo; Newer
+                </a>
+            </li>
+		
+			</ul>
+
+            </div>
+        </div>
+            
+        <footer id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class="list-inline">
+        <li>
+        <a href="https://gitter.im/spress/Spress">
+            Support
+                    </a>
+    </li>
+        <li>
+        <a href="/about/license">
+            License: MIT
+                    </a>
+    </li>
+        <li>
+        <a href="/about">
+            About
+                    </a>
+    </li>
+        <li>
+        <a href="http://yosymfony.com">
+            Yo! Symfony
+                    </a>
+    </li>
+    </ul>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <ul class="list-inline">
+        <li>
+        <a href="https://twitter.com/spress_cms">
+            <i class="fa fa-twitter fa-2x"></i>
+        </a>
+    </li>
+        
+        
+        
+        
+        <li>
+        <a href="https://github.com/spress">
+            <i class="fa fa-github fa-2x"></i>
+        </a>
+    </li>
+        
+        
+        <li>
+        <a href="https://www.youtube.com/user/yosymfony">
+            <i class="fa fa-youtube fa-2x"></i>
+        </a>
+    </li>
+    </ul>                    </div>
+                </div>
+                <p class="text-center">
+                    <a href="https://github.com/yosymfony/Spress-theme-spresso" title="Spresso theme">
+                        <img src="/assets/img/spress-logo.png"/>
+                    </a>
+                </p>
+                <p class="text-center">
+                    &copy;
+                    2017
+                                            <a href="http://yosymfony.com">
+                            Yo! Symfony
+                        </a>
+                    .
+                    Powered by <a href="http://spress.yosymfony.com">Spress</a>.
+                </p>
+            </div>
+            <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    
+    ga('create', '', '');
+    ga('send', 'pageview');
+</script>                                </footer>
+    </body>
+</html>

@@ -1,0 +1,383 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+<title>Spress &#8250; Blog migrations</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Import your blog from Wordpress or CSV files to Spress">
+<meta name="author" content="Victor Puertas">
+<meta name="generator" content="Spress v2.2.0">
+
+            <meta name="twitter:card" content="summary">
+        <meta name="twitter:image" content="/assets/img/spress-logo.png">
+    <meta name="twitter:title" content="Blog migrations">
+    <meta name="twitter:description" content="Import your blog from Wordpress or CSV files to Spress">
+    <meta name="twitter:creator" content="@spress_cms">
+
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Blog migrations">
+<meta property="og:description" content="Import your blog from Wordpress or CSV files to Spress">
+<meta property="og:url" content="/docs/blog-migrations">
+<meta property="og:site_name" content="The static site generator in PHP">
+
+<link href="/rss.xml" type="application/rss+xml" rel="alternate" title="The static site generator in PHP Feed">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/touch-icon-iphone.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/assets/img/touch-icon-ipad.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/assets/img/touch-icon-iphone-retina.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/assets/img/touch-icon-ipad-retina.png">
+
+
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+<link href="/assets/css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="/assets/css/theme.css" rel="stylesheet" media="screen">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+
+   <link rel="stylesheet" href="//cdn.jsdelivr.net/highlight.js/9.0.0/styles/default.min.css">
+   <link rel="stylesheet" href="/assets/css/highlight-style.css">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    
+    ga('create', '', '');
+    ga('send', 'pageview');
+</script>    </head>
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Spress</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+        <li>
+        <a href="/">
+            Home
+                    </a>
+    </li>
+        <li>
+        <a href="/download">
+            Download
+                    </a>
+    </li>
+        <li>
+        <a href="/docs/getting-started/">
+            Get started
+                    </a>
+    </li>
+        <li>
+        <a href="/docs">
+            Docs
+                    </a>
+    </li>
+        <li>
+        <a href="/add-ons">
+            Add-ons
+                            <i class="fa fa-cogs"></i>
+                    </a>
+    </li>
+        <li>
+        <a href="/blog">
+            Blog
+                    </a>
+    </li>
+        <li>
+        <a href="/about">
+            About
+                    </a>
+    </li>
+    </ul>
+        </div>
+    </div>
+</div>        
+        <div class="container container-small">
+    <div class="page-header h-shadow">
+        <h1>
+            Blog migrations
+                        <small>Importing your blog to Spress</small>
+                    </h1>
+    </div>
+    
+    <div class="row">
+    <div class="col-md-3">
+        <div class="list-group">
+            <a href="/docs/getting-started" class="list-group-item ">
+            Getting started
+        </a>
+            <a href="/docs/how-it-works" class="list-group-item ">
+            How it works?
+        </a>
+            <a href="/docs/configuration" class="list-group-item ">
+            Configuration
+        </a>
+            <a href="/docs/variables" class="list-group-item ">
+            Variables
+        </a>
+            <a href="/docs/attributes" class="list-group-item ">
+            Attributes
+        </a>
+            <a href="/docs/collections" class="list-group-item ">
+            Collections
+        </a>
+            <a href="/docs/creating-pages" class="list-group-item ">
+            Creating pages
+        </a>
+            <a href="/docs/writing-posts" class="list-group-item ">
+            Writing posts
+        </a>
+            <a href="/docs/permalinks" class="list-group-item ">
+            Permalinks
+        </a>
+            <a href="/docs/pagination" class="list-group-item ">
+            Pagination
+        </a>
+            <a href="/docs/taxonomies" class="list-group-item ">
+            Taxonomies
+        </a>
+            <a href="/docs/themes" class="list-group-item ">
+            Themes
+        </a>
+            <a href="/docs/plugins" class="list-group-item ">
+            Plugins
+        </a>
+            <a href="/docs/deployment-methods" class="list-group-item ">
+            Deployment methods
+        </a>
+            <a href="/docs/blog-migrations" class="list-group-item active">
+            Blog migrations
+        </a>
+            <a href="/docs/migrating-1.x-to-2.x" class="list-group-item ">
+            Migrating from 1.x to 2.x
+        </a>
+    </div>
+    </div>
+    <div class="col-md-9">
+    	<p class="text-right">
+    		<i class="fa fa-github"></i>
+    		<a href="https://github.com/yosymfony/Spress.yosymfony.com/edit/master/src/content/docs/blog-migrations.md">
+    			Edit this page on Github
+    		</a>
+    	</p>
+        <p><a href="https://github.com/spress/Spress-import">Import plugin</a> let you import posts and pages from others platforms to a Spress site.</p>
+
+<h2>Platforms supported</h2>
+
+<ul>
+<li><a href="#csv-files">CSV files</a>.</li>
+<li><a href="#wordpress">Wordpress WXR files</a>.</li>
+</ul>
+
+<h2>How to install?</h2>
+
+<ol>
+<li>Go to <code>your-spress-site/</code> folder.</li>
+<li>Run <code>composer require spress/spress-import</code>.</li>
+<li>When you run <code>spress</code> command, import commands will be displayed under <code>import</code> namespace.</li>
+</ol>
+
+<h3>Requirements</h3>
+
+<ul>
+<li><a href="http://spress.yosymfony.com">Spress</a> >= 2.1.3.</li>
+</ul>
+
+<p>Note that each importer could have additional requirements.</p>
+
+<h2>How to use?</h2>
+
+<p>See the concrete provider.</p>
+
+<h2>Source permalinks</h2>
+
+<p>Import plugin tries to preserve the source permalink of each item. To reach that
+goal, this plugin adds the following attributes: <code>permalink</code> and <code>no_html_extension</code>.</p>
+
+<p>e.g: for an item with the following permalink at source: <code>http://acme.com/what-is-new-this-time</code>
+the front matter block generated will be:</p>
+
+<pre><code class="yaml">---
+permalink: '/what-is-new-this-time'
+no_html_extension: true
+---
+</code></pre>
+
+<h3 id="csv-files">Import from CSV files</h3>
+
+<p>This command imports posts from a CSV file with a
+<a href="#csv-structure">structure described below</a>.</p>
+
+<h4 id="csv-structure">CSV structure</h4>
+
+<p>Your CSV file will be read in with the following columns:</p>
+
+<ol>
+<li><strong>title</strong></li>
+<li><strong>permalink</strong></li>
+<li><strong>content</strong></li>
+<li><strong>published_at</strong></li>
+<li><strong>categories</strong> (optional): a list of terms separated by semicolon. e.g:
+"news;events".</li>
+<li><strong>tags</strong> (optional): a list of terms separated by semicolon.</li>
+<li><strong>markup</strong> (optional) markup language used in content. e.g: "md", "html".
+"md" by default. This value will be used as filename's extension of the imported item.</li>
+</ol>
+
+<h4>import:csv command</h4>
+
+<p>The sign of <code>import:csv</code> command is the following:</p>
+
+<pre><code class="bash">import:csv [--dry-run] [--post-layout POST-LAYOUT] [--not-replace-urls]
+[--not-header] [--delimiter-character DELIMITER-CHARACTER]
+[--enclosure-character ENCLOSURE-CHARACTER]
+[--terms_delimiter_character TERMS-DELIMITER-CHARACTER] [--] &lt;file&gt;
+</code></pre>
+
+<p>Example of use:</p>
+
+<pre><code class="bash">$ spress import:csv /path-to/post.csv --post-layout=post
+</code></pre>
+
+<h5>Options</h5>
+
+<ul>
+<li><code>--dry-run</code>: This option displays the items imported without actually modifying your site.</li>
+<li><code>--post-layout</code>: Layout applied to posts. e.g: <code>--post-layout=post</code>.</li>
+<li><code>--not-replace-urls</code>: Avoids to replace URLs in posts by local Spress URLs.</li>
+<li><code>--not-header</code>: First row won't be treated as header.</li>
+<li><code>--delimiter-character</code>: Sets the delimiter character. character <code>,</code> by default.</li>
+<li><code>--enclosure-character</code>: Sets the enclousure character. character <code>"</code> by default.</li>
+<li><code>--terms_delimiter_character</code>: Sets the delimiter character applied to terms in categories and tags columns.</li>
+</ul>
+
+<h5>Item attributes</h5>
+
+<p>List of attributes added by this provider to each item:</p>
+
+<ul>
+<li><code>categories</code>: list of terms that represents the categories.</li>
+<li><code>tags</code>: lists of terms that represents the tags.</li>
+</ul>
+
+<h3 id="wordpress">Migration from Wordpress</h3>
+
+<p>This command imports posts from a WXR file generated by Wordpress
+(community and dot com).</p>
+
+<h4>How to generate the WXR file?</h4>
+
+<p>The WXR file is a XML file generated by Wordpress to backup all of your blog
+content (posts, pages or comments to name just a few).
+This feature is supported by both <a href="https://codex.wordpress.org/Tools_Export_Screen">Wordpress</a> and <a href="https://en.support.wordpress.com/export/#export-your-content-to-another-blog-or-platform">Wordpress.com</a>.</p>
+
+<h4>import:wordpress command</h4>
+
+<p>The sign of <code>import:wordpress</code> command is the following:</p>
+
+<pre><code class="bash">import:wordpress [--dry-run] [--post-layout POST-LAYOUT]
+[--fetch-images] [--not-replace-urls] [--assets-dir ASSETS-DIR] [--] &lt;file&gt;
+</code></pre>
+
+<p>Example of use:</p>
+
+<pre><code class="bash">$ spress import:wordpress /path-to/my-wxr-file.xml --post-layout=post
+</code></pre>
+
+<h5>Options</h5>
+
+<ul>
+<li><code>--dry-run</code>: This option displays the items imported without actually modifying your site.</li>
+<li><code>--post-layout</code>: Layout applied to posts. e.g: <code>--post-layout=post</code>.</li>
+<li><code>--fetch-images</code>: Fetch images used in the Wordpress blog.</li>
+<li><code>--not-replace-urls</code>: Avoids to replace Wordpress URLs in posts by local Spress URLs.</li>
+<li><code>--assets-dir</code>: Relative folder to <code>src</code> directory. <code>content/assets</code> by default.</li>
+</ul>
+
+<h5>Item attributes</h5>
+
+<p>List of attributes added by this provider to each item:</p>
+
+<ul>
+<li><code>author</code>: The author of the post.</li>
+<li><code>excerpt</code>: The snippet of the post.</li>
+<li><code>categories</code>: list of terms that represents the categories.</li>
+<li><code>tags</code>: lists of terms that represents the tags.</li>
+</ul>
+
+    </div>
+</div>
+</div>
+            
+        <footer id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class="list-inline">
+        <li>
+        <a href="https://gitter.im/spress/Spress">
+            Support
+                    </a>
+    </li>
+        <li>
+        <a href="/about/license">
+            License: MIT
+                    </a>
+    </li>
+        <li>
+        <a href="/about">
+            About
+                    </a>
+    </li>
+        <li>
+        <a href="http://yosymfony.com">
+            Yo! Symfony
+                    </a>
+    </li>
+    </ul>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <ul class="list-inline">
+        <li>
+        <a href="https://twitter.com/spress_cms">
+            <i class="fa fa-twitter fa-2x"></i>
+        </a>
+    </li>
+        
+        
+        
+        
+        <li>
+        <a href="https://github.com/spress">
+            <i class="fa fa-github fa-2x"></i>
+        </a>
+    </li>
+        
+        
+        <li>
+        <a href="https://www.youtube.com/user/yosymfony">
+            <i class="fa fa-youtube fa-2x"></i>
+        </a>
+    </li>
+    </ul>
+                    </div>
+                </div>
+                <p class="text-center">
+                    &copy; 2017 <a href="http://yosymfony.com">Yo! Symfony</a>.
+                    <span class="label label-default">Proudly powered by Spress</span>
+                </p>
+            </div>
+        </footer>
+    </body>
+</html>

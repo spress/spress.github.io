@@ -1,0 +1,510 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+<title>Spress &#8250; How it works?</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="How a static site generator works">
+<meta name="author" content="Victor Puertas">
+<meta name="generator" content="Spress v2.2.0">
+
+            <meta name="twitter:card" content="summary">
+        <meta name="twitter:image" content="/assets/img/spress-logo.png">
+    <meta name="twitter:title" content="How it works?">
+    <meta name="twitter:description" content="How a static site generator works">
+    <meta name="twitter:creator" content="@spress_cms">
+
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How it works?">
+<meta property="og:description" content="How a static site generator works">
+<meta property="og:url" content="/docs/how-it-works">
+<meta property="og:site_name" content="The static site generator in PHP">
+
+<link href="/rss.xml" type="application/rss+xml" rel="alternate" title="The static site generator in PHP Feed">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/touch-icon-iphone.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/assets/img/touch-icon-ipad.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/assets/img/touch-icon-iphone-retina.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/assets/img/touch-icon-ipad-retina.png">
+
+
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+<link href="/assets/css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="/assets/css/theme.css" rel="stylesheet" media="screen">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+
+   <link rel="stylesheet" href="//cdn.jsdelivr.net/highlight.js/9.0.0/styles/default.min.css">
+   <link rel="stylesheet" href="/assets/css/highlight-style.css">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    
+    ga('create', '', '');
+    ga('send', 'pageview');
+</script>    </head>
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Spress</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+        <li>
+        <a href="/">
+            Home
+                    </a>
+    </li>
+        <li>
+        <a href="/download">
+            Download
+                    </a>
+    </li>
+        <li>
+        <a href="/docs/getting-started/">
+            Get started
+                    </a>
+    </li>
+        <li>
+        <a href="/docs">
+            Docs
+                    </a>
+    </li>
+        <li>
+        <a href="/add-ons">
+            Add-ons
+                            <i class="fa fa-cogs"></i>
+                    </a>
+    </li>
+        <li>
+        <a href="/blog">
+            Blog
+                    </a>
+    </li>
+        <li>
+        <a href="/about">
+            About
+                    </a>
+    </li>
+    </ul>
+        </div>
+    </div>
+</div>        
+        <div class="container container-small">
+    <div class="page-header h-shadow">
+        <h1>
+            How it works?
+                    </h1>
+    </div>
+    
+    <div class="row">
+    <div class="col-md-3">
+        <div class="list-group">
+            <a href="/docs/getting-started" class="list-group-item ">
+            Getting started
+        </a>
+            <a href="/docs/how-it-works" class="list-group-item active">
+            How it works?
+        </a>
+            <a href="/docs/configuration" class="list-group-item ">
+            Configuration
+        </a>
+            <a href="/docs/variables" class="list-group-item ">
+            Variables
+        </a>
+            <a href="/docs/attributes" class="list-group-item ">
+            Attributes
+        </a>
+            <a href="/docs/collections" class="list-group-item ">
+            Collections
+        </a>
+            <a href="/docs/creating-pages" class="list-group-item ">
+            Creating pages
+        </a>
+            <a href="/docs/writing-posts" class="list-group-item ">
+            Writing posts
+        </a>
+            <a href="/docs/permalinks" class="list-group-item ">
+            Permalinks
+        </a>
+            <a href="/docs/pagination" class="list-group-item ">
+            Pagination
+        </a>
+            <a href="/docs/taxonomies" class="list-group-item ">
+            Taxonomies
+        </a>
+            <a href="/docs/themes" class="list-group-item ">
+            Themes
+        </a>
+            <a href="/docs/plugins" class="list-group-item ">
+            Plugins
+        </a>
+            <a href="/docs/deployment-methods" class="list-group-item ">
+            Deployment methods
+        </a>
+            <a href="/docs/blog-migrations" class="list-group-item ">
+            Blog migrations
+        </a>
+            <a href="/docs/migrating-1.x-to-2.x" class="list-group-item ">
+            Migrating from 1.x to 2.x
+        </a>
+    </div>
+    </div>
+    <div class="col-md-9">
+    	<p class="text-right">
+    		<i class="fa fa-github"></i>
+    		<a href="https://github.com/yosymfony/Spress.yosymfony.com/edit/master/src/content/docs/how-it-works.md">
+    			Edit this page on Github
+    		</a>
+    	</p>
+        <p>Spress is a static site generator, an application that takes your site and
+transforms it to final HTML ready to deploy on your hosting. Your content is
+generated at <code>./build</code> folder. You can create content using HTML or
+Markdown syntax. Additionally, with <a href="/docs/developers/converters">converters</a>, you
+can add new types of content.</p>
+
+<h2 id="site-structure">Site structure</h2>
+
+<p>This is the typical structure of a Spress site:</p>
+
+<pre><code>.
+├── build
+├── src
+│   ├── content
+│   │   ├── posts
+│   │   │   ├── 2017-01-01-welcome-new-year.md
+|   |   ├── assets
+|   |   |   ├── mystyles.css
+│   │   ├── index.html
+│   │   ├── ...
+│   ├── includes
+│   ├── layouts
+│   ├── plugins
+|   ├── themes
+|   |   ├── theme01
+├── composer.json
+└── config.yml
+</code></pre>
+
+<ul>
+<li><strong>config.yml</strong>: Contains the configuration data. You can change the behaviour of
+Spress or create custom variables.</li>
+<li><strong>composer.json</strong>: Contains information about plugins and themes required by your site.
+See <strong><a href="#add-plugin">add:plugin</a></strong>, <strong><a href="#remove-plugin">remove:plugin</a></strong>,
+<strong><a href="#update-plugin">update:plugin</a></strong> commands.</li>
+<li><strong>./src/includes</strong>: Contains partials that can be used in the layouts, pages and posts.</li>
+<li><strong>./src/layouts</strong>: Contains layout files used to organize your content. In your post or page,
+you can choose the layout in the <a href="/docs/attributes/#front-matter">Front matter</a>:</li>
+<li><strong>./src/content</strong>: The main content of your site are located in this folder.</li>
+<li><strong>./src/content/posts</strong>: Contains the blog posts files. Files located at this folder</li>
+<li><strong>./src/content/assets</strong>: Contains the assets of your site: <code>css</code>, <code>js</code> files for instance.
+are under <code>posts</code> <a href="docs/collections">collection</a> and they have a special name format: <code>year-month-day-title.md</code>.
+The Front matter of each file let you change these properties.</li>
+<li><strong>./src/plugins</strong>: Extends the functionality of Spress. See <a href="/docs/developers">developer docs</a>.</li>
+<li><strong>./src/themes</strong>: Themes of the site. See <a href="docs/themes">themes</a>.</li>
+<li><strong>./build</strong>: This is where the generated site will be placed.</li>
+</ul>
+
+<h2 id="page-example">A page example</h2>
+
+<p>Below is an example of a simple page written using Markdown:</p>
+
+<p></p>
+
+<pre><code>---
+layout: default
+name: "John"
+---
+Welcome {{ page.name }}
+-----------------------
+
+This is an example page.
+</code></pre>
+
+<p></p>
+
+<p>The block delimited by triple-dashed lines is the Front matter and uses <a href="http://yaml.org">YAML</a> syntax.
+Inside it you can create custom <a href="/docs/attributes">attributes</a> that are available as variables in page
+content with Twig syntax: <code>{{ page.your-variable-name }}</code>.</p>
+
+<div class="panel panel-default">
+  <div class="panel-body">
+    <div class="row">
+        <div class="col-md-1">
+            <i class="fa fa-bookmark-o fa-3x"></i>
+        </div>
+        <div class="col-md-11">
+            <p>
+    Spress uses <a href="http://twig.sensiolabs.org/">Twig</a> as default <a href="/docs/developers/renderizer">renderizer</a>
+    (template engine). See its documentation to get more powerful
+    templates.
+</p>
+        </div>
+    </div>
+  </div>
+</div>
+
+<h3>Pretty URLs</h3>
+
+<p>Spress has the ability to generate friendly URL’s by converting files like <code>welcome.md</code> to <code>/welcome/index.html</code>.
+See <a href="/docs/permalinks">permalink</a> documentation.</p>
+
+<h2 id="spress-commands">Spress commands</h2>
+
+<h3 id="site-build-command">site:build</h3>
+
+<p>Build your site in your <code>build</code> folder.</p>
+
+<pre><code class="bash">site:build [-s|--source="./"] [--timezone="..."] [--env="dev"] [--server] [--watch] [--drafts] [--safe]
+</code></pre>
+
+<ul>
+<li><code>--timezone</code> Set the timezone. E.g: "Europe/Madrid".
+<a href="http://www.php.net/manual/en/timezones.php">More timezones</a>.</li>
+<li><code>--env</code> Set the environment name. <a href="/docs/configuration/#environment">More information</a>.</li>
+<li><code>--server</code> The built-in server will run by default at <code>http://localhost:4000</code>.</li>
+<li><code>--watch</code> Watch for changes and regenerate your site automatically.</li>
+<li><code>--drafts</code> Include the draft post in the transformation.</li>
+<li><code>--safe</code> Disable all plugins.</li>
+</ul>
+
+<pre><code class="bash"># Build site with source path defined:
+$ spress site:build -s /your-site-dir
+
+# Build site with default dir:
+$ cd /your-site-dir
+$ spress site:build
+
+# Build site and run built-in server and watch for file changes
+$ cd /your-site-dir
+$ spress site:build --server --watch  # Go to http://localhost:4000
+
+# Build site and watch for changes (regenerated automatically into ./build)
+$ cd /your-site-dir
+$ spress site:build --watch
+
+# Build site using specific timezone:
+$ spress site:build -s /your-site-dir --timezone="Europe/Madrid"
+
+# Build site using production environment:
+$ spress site:build --env=prod
+
+# Build site with plugins disabled:
+$ spress site:build --safe
+</code></pre>
+
+<h3 id="new-site-command">new:site</h3>
+
+<p>Create a new site.</p>
+
+<pre><code class="bash">new:site [path[="./"]] [template[="blank"]] [--force] [--all]
+</code></pre>
+
+<ul>
+<li><code>template</code> Set the template for the site. Spresso is a built-in theme.</li>
+<li><code>--force</code> Force to use the path even though it exists and it's not empty.</li>
+<li><code>--all</code> In blank template, creates the complete scaffold.</li>
+</ul>
+
+<p>E.g <code>$ spress new:site /your-site-dir spress/spress-theme-spresso</code></p>
+
+<p>Additionally, a concrete version of the theme can be set:</p>
+
+<p><code>$ spress new:site /your-site-dir spress/spress-theme-spresso:2.1.0</code></p>
+
+<p>The prior example creates a new site using <a href="https://github.com/spress/Spress-theme-spresso">Spresso theme</a>.</p>
+
+<h3 id="new-post">new:post</h3>
+
+<p>The <code>new:post</code> command helps you generates new posts.
+By default, the command interacts with the developer to tweak the generation.
+Any passed option will be used as a default value for the interaction.</p>
+
+<pre><code class="bash">new:post [--title="..."] [--layout="default"] [--date="..."]
+      [--tags="..."] [--categories="..."]`
+</code></pre>
+
+<ul>
+<li><code>--title</code>: The title of the post.</li>
+<li><code>--layout</code>: The layout of the post.</li>
+<li><code>--date</code>: The date assigned to the post.</li>
+<li><code>--tags</code>: Comma separated list of tags.</li>
+<li><code>--categories</code>: Comma separated list of categories.</li>
+</ul>
+
+<h3 id="new-plugin">new:plugin</h3>
+
+<p>Crate a new plugin. See the documentation at <a href="/docs/developers">developers doc</a>.</p>
+
+<h3 id="new-theme">new:theme</h3>
+
+<p><span class="label label-success">Spress >= 2.2</span>
+Create a new theme that could be based on another one preexists.</p>
+
+<pre><code class="bash">new:theme [--repository] [--prefer-source] [--dev] [--no-scripts]
+    [--prefer-lock] [--force] [--] [&lt;path&gt;] [&lt;package&gt;]
+</code></pre>
+
+<ul>
+<li><code>--repository</code>: Pick a different repository (as url or json config) to look for the theme package.</li>
+<li><code>--prefer-source</code>: Forces installation of the theme from package sources when possible, including VCS information.</li>
+<li><code>--dev</code>: Enables installation of dev-require packages of the theme.</li>
+<li><code>--no-scripts</code>: Skips the execution of all scripts defined in <code>composer.json</code> file.</li>
+<li><code>--prefer-lock</code>: If there is a <code>composer.lock</code> file in the theme, Spress will use the exact version declared in that.</li>
+<li><code>--force</code>: Force creation even if path already exists.</li>
+<li><code>path</code>: Path of the new theme. Current folder by default.</li>
+<li><code>package</code>: The name of the theme package. <code>blank</code> by default.</li>
+</ul>
+
+<p>e.g: creating a theme based on Spresso</p>
+
+<pre><code class="bash">$ spress new:theme mysite spress/spress-theme-spresso
+</code></pre>
+
+<p>e.g: creating a blank theme:</p>
+
+<pre><code class="bash">$ spress new:theme mysite
+</code></pre>
+
+<h3 id="add-plugin">add:plugin</h3>
+
+<p><span class="label label-success">Spress >= 2.2</span>
+Adds plugins and themes to the <code>composer.json</code> file of the current directory and
+installs them.</p>
+
+<pre><code class="bash">add:plugin [--prefer-source] [--dry-run] [--dev] [--no-scripts] [--] &lt;packages&gt;
+</code></pre>
+
+<ul>
+<li><code>--prefer-source</code>: Forces installation of the plugins from package sources when possible, including VCS information.</li>
+<li><code>--dry-run</code>: Outputs the operations but will not execute anything.</li>
+<li><code>--dev</code>: Enables installation of dev-require packages of the plugin.</li>
+<li><code>--no-scripts</code>: Skips the execution of all scripts defined in <code>composer.json</code> file.</li>
+<li><code>packages</code>: List of packages that should be added.</li>
+</ul>
+
+<p>e.g:</p>
+
+<pre><code>$ spress add:plugin spress/github-metadata-plugin
+</code></pre>
+
+<h3 id="remove-plugin">remove:plugin</h3>
+
+<p><span class="label label-success">Spress >= 2.2</span>
+Removes plugins and themes from the <code>composer.json</code> file of the current directory.</p>
+
+<pre><code class="bash">remove:plugin [--dev] [--no-scripts] [--] &lt;packages&gt;
+</code></pre>
+
+<ul>
+<li><code>--dev</code>: Remove packages from <code>require-dev</code> section.</li>
+<li><code>--no-scripts</code>: Skips the execution of all scripts defined in <code>composer.json</code> file.</li>
+<li><code>packages</code>: List of packages that should be removed.</li>
+</ul>
+
+<p>e.g:</p>
+
+<pre><code>$ spress remove:plugin spress/github-metadata-plugin
+</code></pre>
+
+<h3 id="update-plugin">update:plugin</h3>
+
+<p><span class="label label-success">Spress >= 2.2</span>
+Update plugins and themes by the latest version.</p>
+
+<pre><code class="bash">update:plugin [--prefer-source] [--dry-run] [--dev] [--no-scripts] [--prefer-lock] [--] [&lt;packages&gt;]
+</code></pre>
+
+<ul>
+<li><code>--prefer-source</code>: Forces installation of the plugins from package sources when possible, including VCS information.</li>
+<li><code>--dry-run</code>: Outputs the operations but will not execute anything.</li>
+<li><code>--dev</code>: Enables installation of dev-require packages of the plugin.</li>
+<li><code>--no-scripts</code>: Skips the execution of all scripts defined in <code>composer.json</code> file.</li>
+<li><code>packages</code>: List of packages that should be updated.</li>
+</ul>
+
+<pre><code>$ spress remove:plugin spress/github-metadata-plugin "spress/spress-theme-spresso:&gt;=2.1"
+</code></pre>
+
+<h3 id="self-update">self-update</h3>
+
+<p><code>self-update</code> or <code>selfupdate</code> command replace your <code>spress.phar</code> by the latest version.</p>
+
+    </div>
+</div>
+</div>
+            
+        <footer id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class="list-inline">
+        <li>
+        <a href="https://gitter.im/spress/Spress">
+            Support
+                    </a>
+    </li>
+        <li>
+        <a href="/about/license">
+            License: MIT
+                    </a>
+    </li>
+        <li>
+        <a href="/about">
+            About
+                    </a>
+    </li>
+        <li>
+        <a href="http://yosymfony.com">
+            Yo! Symfony
+                    </a>
+    </li>
+    </ul>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <ul class="list-inline">
+        <li>
+        <a href="https://twitter.com/spress_cms">
+            <i class="fa fa-twitter fa-2x"></i>
+        </a>
+    </li>
+        
+        
+        
+        
+        <li>
+        <a href="https://github.com/spress">
+            <i class="fa fa-github fa-2x"></i>
+        </a>
+    </li>
+        
+        
+        <li>
+        <a href="https://www.youtube.com/user/yosymfony">
+            <i class="fa fa-youtube fa-2x"></i>
+        </a>
+    </li>
+    </ul>
+                    </div>
+                </div>
+                <p class="text-center">
+                    &copy; 2017 <a href="http://yosymfony.com">Yo! Symfony</a>.
+                    <span class="label label-default">Proudly powered by Spress</span>
+                </p>
+            </div>
+        </footer>
+    </body>
+</html>

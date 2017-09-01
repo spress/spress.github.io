@@ -1,0 +1,557 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+<title>Spress &#8250; Variables</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Standard variables of Spress">
+<meta name="author" content="Victor Puertas">
+<meta name="generator" content="Spress v2.2.0">
+
+            <meta name="twitter:card" content="summary">
+        <meta name="twitter:image" content="/assets/img/spress-logo.png">
+    <meta name="twitter:title" content="Variables">
+    <meta name="twitter:description" content="Standard variables of Spress">
+    <meta name="twitter:creator" content="@spress_cms">
+
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Variables">
+<meta property="og:description" content="Standard variables of Spress">
+<meta property="og:url" content="/docs/variables">
+<meta property="og:site_name" content="The static site generator in PHP">
+
+<link href="/rss.xml" type="application/rss+xml" rel="alternate" title="The static site generator in PHP Feed">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/touch-icon-iphone.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/assets/img/touch-icon-ipad.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/assets/img/touch-icon-iphone-retina.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/assets/img/touch-icon-ipad-retina.png">
+
+
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+<link href="/assets/css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="/assets/css/theme.css" rel="stylesheet" media="screen">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+
+   <link rel="stylesheet" href="//cdn.jsdelivr.net/highlight.js/9.0.0/styles/default.min.css">
+   <link rel="stylesheet" href="/assets/css/highlight-style.css">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    
+    ga('create', '', '');
+    ga('send', 'pageview');
+</script>    </head>
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Spress</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+        <li>
+        <a href="/">
+            Home
+                    </a>
+    </li>
+        <li>
+        <a href="/download">
+            Download
+                    </a>
+    </li>
+        <li>
+        <a href="/docs/getting-started/">
+            Get started
+                    </a>
+    </li>
+        <li>
+        <a href="/docs">
+            Docs
+                    </a>
+    </li>
+        <li>
+        <a href="/add-ons">
+            Add-ons
+                            <i class="fa fa-cogs"></i>
+                    </a>
+    </li>
+        <li>
+        <a href="/blog">
+            Blog
+                    </a>
+    </li>
+        <li>
+        <a href="/about">
+            About
+                    </a>
+    </li>
+    </ul>
+        </div>
+    </div>
+</div>        
+        <div class="container container-small">
+    <div class="page-header h-shadow">
+        <h1>
+            Variables
+                    </h1>
+    </div>
+    
+    <div class="row">
+    <div class="col-md-3">
+        <div class="list-group">
+            <a href="/docs/getting-started" class="list-group-item ">
+            Getting started
+        </a>
+            <a href="/docs/how-it-works" class="list-group-item ">
+            How it works?
+        </a>
+            <a href="/docs/configuration" class="list-group-item ">
+            Configuration
+        </a>
+            <a href="/docs/variables" class="list-group-item active">
+            Variables
+        </a>
+            <a href="/docs/attributes" class="list-group-item ">
+            Attributes
+        </a>
+            <a href="/docs/collections" class="list-group-item ">
+            Collections
+        </a>
+            <a href="/docs/creating-pages" class="list-group-item ">
+            Creating pages
+        </a>
+            <a href="/docs/writing-posts" class="list-group-item ">
+            Writing posts
+        </a>
+            <a href="/docs/permalinks" class="list-group-item ">
+            Permalinks
+        </a>
+            <a href="/docs/pagination" class="list-group-item ">
+            Pagination
+        </a>
+            <a href="/docs/taxonomies" class="list-group-item ">
+            Taxonomies
+        </a>
+            <a href="/docs/themes" class="list-group-item ">
+            Themes
+        </a>
+            <a href="/docs/plugins" class="list-group-item ">
+            Plugins
+        </a>
+            <a href="/docs/deployment-methods" class="list-group-item ">
+            Deployment methods
+        </a>
+            <a href="/docs/blog-migrations" class="list-group-item ">
+            Blog migrations
+        </a>
+            <a href="/docs/migrating-1.x-to-2.x" class="list-group-item ">
+            Migrating from 1.x to 2.x
+        </a>
+    </div>
+    </div>
+    <div class="col-md-9">
+    	<p class="text-right">
+    		<i class="fa fa-github"></i>
+    		<a href="https://github.com/yosymfony/Spress.yosymfony.com/edit/master/src/content/docs/variables.md">
+    			Edit this page on Github
+    		</a>
+    	</p>
+        <p>Spress exposes several variables containing site data.</p>
+
+<h2 id="global-variables">Global</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th class="col-sm-2">Name</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><a href="#site-variables">site</a></td>
+            <td>
+    Contains site information and site configuration read from <code>config.yml</code>.
+</td>
+        </tr>
+        <tr>
+            <td><a href="#page-variables">page</a></td>
+            <td>Page specific data with variables declared at Front matter and metadata files.</td>
+        </tr>
+        <tr>
+            <td><a href="#spress-variables">spress</a></td>
+            <td>Contains information about Spress itself.</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="site-variables">Site variables</h2>
+
+<p>Example of access with Twig: <code>{{ site.categories }}</code>.</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th class="col-sm-2">Name</th>
+            <th>Type</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>collections</td>
+            <td>array</td>
+            <td>
+    List of all collections. Each element of this list is of type <a href="#collection-variables">collection</a>.
+    The key of each element is the collection's name.
+</td>
+        </tr>
+        <tr>
+            <td>time</td>
+            <td>string</td>
+            <td>Timestamp when spress command was run.</td>
+        </tr>
+        <tr>
+            <td>categories</td>
+            <td>array</td>
+            <td>
+    List of <a href="/docs/writing-posts">post</a> groups by categories.
+    E.g: <code>site.cagetories.news</code> get all posts with <code>news</code>
+    category. Each element of this list is of type <a href="#page-variables">page</a>.
+    Posts are located at <code>src/content/posts</code>.
+</td>
+        </tr>
+        <tr>
+            <td>tags</td>
+            <td>array</td>
+            <td>
+    List of <a href="/docs/writing-posts">post</a> groups by tags.
+    E.g: <code>site.tags.car</code> get all posts with <code>car</code>
+    tag. Each element of this list is of type <a href="#page-variables">page</a>.
+    Posts are located at <code>src/content/posts</code>.
+</td>
+        </tr>
+        <tr>
+            <td>your-variable-name</td>
+            <td></td>
+            <td>
+    Your custom variables in <code>config.yml</code> are available here.
+    Example: <code>{{ site.your-variable-name }}</code>.
+</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="collection-variables">Collection variables</h2>
+
+<p>Example of access with Twig: <code>{{ site.collections.collection-name.path }}</code>.</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th class="col-sm-2">Name</th>
+            <th>Type</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>path</td>
+            <td>string</td>
+            <td>
+    The collection's relative path to <code>src/content</code> folder.
+</td>
+        </tr>
+        <tr>
+            <td>output</td>
+            <td>boolean</td>
+            <td>
+    With a <code>true</code> value the collection's item will be output as individual file.
+</td>
+        </tr>
+         <tr>
+            <td>your-variable-name</td>
+            <td></td>
+            <td>
+    Your custom variables declared at the collection definition are available here.
+    Example: <code>{{ site.collection-name.your-variable-name }}</code>.
+</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="page-variables">Page variables</h2>
+
+<p>Page variables point to the current item in which Spress is working on.
+Example of access with Twig: <code>{{ page.id }}</code>.</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th class="col-sm-2">Name</th>
+            <th>Type</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>id</td>
+            <td>string</td>
+            <td>Identifier unique to the item.</td>
+        </tr>
+        <tr>
+            <td>collection</td>
+            <td>string</td>
+            <td>The name of the collection assigned to the item.</td>
+        </tr>
+        <tr>
+            <td>mtime</td>
+            <td>string</td>
+            <td>
+    The modified time in <a href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a>
+    format.
+</td>
+        </tr>
+        <tr>
+            <td>filename</td>
+            <td>string</td>
+            <td>The name of the file.</td>
+        </tr>
+        <tr>
+            <td>extension</td>
+            <td>string</td>
+            <td>The extension of the file.</td>
+        </tr>
+        <tr>
+            <td>path</td>
+            <td>string</td>
+            <td>
+    The relative path to <code>/src/content</code> folder. e.g: <code>about/index.html</code>.
+</td>
+        </tr>
+        <tr>
+            <td>url</td>
+            <td>string</td>
+            <td>
+    The URL of the page without the domain, but with a leading slash. e.g: <code>/about/changelog/</code>.
+</td>
+        </tr>
+        <tr>
+            <td>content</td>
+            <td>string</td>
+            <td>Compiled content.</td>
+        </tr>
+        <tr>
+            <td>relationships</td>
+            <td>array</td>
+            <td>
+    <span class="label label-success">Spress >= 2.1</span>
+    Only available in items belonging to a sorted <a href="/docs/collections/">collection</a>.
+    Contains items related to the current item. Each relationship of this array
+    contains a set of items. <a href="/docs/collections/#relationships">Here's an example</a>.
+</td>
+        </tr>
+    </tbody>
+</table>
+
+<h3> Additional variables for files with <code>yyyy-mm-dd-title</code> pattern</h3>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th class="col-sm-2">Name</th>
+            <th>Type</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>title</td>
+            <td>string</td>
+            <td>The title of the page.</td>
+        </tr>
+        <tr>
+            <td>title_path</td>
+            <td>string</td>
+            <td>
+    The title obtained from filename. e.g: "hola user" from <code>2015-12-08-hola-user.md</code>.
+</td>
+        </tr>
+        <tr>
+            <td>date</td>
+            <td>string</td>
+            <td>
+    The date assigned to the post in 
+    <a href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a>
+    format.
+</td>
+        </tr>
+    </tbody>
+</table>
+
+<h3> Additional variables for Posts</h3>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th class="col-sm-2">Name</th>
+            <th>Type</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>categories</td>
+            <td>array</td>
+            <td>List of post categories.</td>
+        </tr>
+        <tr>
+            <td>tags</td>
+            <td>array</td>
+            <td>List of post tags.</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="spress-variables">Spress variables</h2>
+
+<p>Example of access with Twig: <code>{{ spress.version }}</code>.</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th class="col-sm-2">Name</th>
+            <th>Type</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>version</td>
+            <td>string</td>
+            <td>Current version. e.g: 2.0.1-rc</td>
+        </tr>
+        <tr>
+            <td>version_id</td>
+            <td>string</td>
+            <td>
+                Version ID. e.g: 20001
+            </td>
+        </tr>
+        <tr>
+            <td>major_version</td>
+            <td>string</td>
+            <td>
+                Major version. e.g: 2.
+            </td>
+        </tr>
+        <tr>
+            <td>minor_version</td>
+            <td>string</td>
+            <td>
+                Minor version. e.g: 0.
+            </td>
+        </tr>
+        <tr>
+            <td>release_version</td>
+            <td>string</td>
+            <td>
+                Release version. e.g: 1.
+            </td>
+        </tr>
+        <tr>
+            <td>extra_version</td>
+            <td>string</td>
+            <td>
+                Extra information about the relese. e.g: rc.
+            </td>
+        </tr>
+        <tr>
+            <td>external</td>
+            <td>array</td>
+            <td>
+                External variables passed to Spress prior to compiling the site.
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+    </div>
+</div>
+</div>
+            
+        <footer id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class="list-inline">
+        <li>
+        <a href="https://gitter.im/spress/Spress">
+            Support
+                    </a>
+    </li>
+        <li>
+        <a href="/about/license">
+            License: MIT
+                    </a>
+    </li>
+        <li>
+        <a href="/about">
+            About
+                    </a>
+    </li>
+        <li>
+        <a href="http://yosymfony.com">
+            Yo! Symfony
+                    </a>
+    </li>
+    </ul>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <ul class="list-inline">
+        <li>
+        <a href="https://twitter.com/spress_cms">
+            <i class="fa fa-twitter fa-2x"></i>
+        </a>
+    </li>
+        
+        
+        
+        
+        <li>
+        <a href="https://github.com/spress">
+            <i class="fa fa-github fa-2x"></i>
+        </a>
+    </li>
+        
+        
+        <li>
+        <a href="https://www.youtube.com/user/yosymfony">
+            <i class="fa fa-youtube fa-2x"></i>
+        </a>
+    </li>
+    </ul>
+                    </div>
+                </div>
+                <p class="text-center">
+                    &copy; 2017 <a href="http://yosymfony.com">Yo! Symfony</a>.
+                    <span class="label label-default">Proudly powered by Spress</span>
+                </p>
+            </div>
+        </footer>
+    </body>
+</html>

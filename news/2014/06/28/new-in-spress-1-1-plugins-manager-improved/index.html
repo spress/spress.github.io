@@ -1,0 +1,306 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+<title>New in Spress 1.1: Plugins manager improved &#8250; Spress blog</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The plugins manager has been improved for Spress 1.1.0">
+<meta name="author" content="Victor Puertas">
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:image" content="/assets/img/spress-logo.png">
+    <meta name="twitter:title" content="New in Spress 1.1: Plugins manager improved">
+    <meta name="twitter:description" content="The plugins manager has been improved for Spress 1.1.0">
+    <meta name="twitter:creator" content="@spress_cms">
+
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="New in Spress 1.1: Plugins manager improved">
+<meta property="og:description" content="The plugins manager has been improved for Spress 1.1.0">
+<meta property="og:url" content="/news/2014/06/28/new-in-spress-1-1-plugins-manager-improved">
+<meta property="og:site_name" content="The static site generator in PHP">
+
+<link href="/rss.xml" type="application/rss+xml" rel="alternate" title="The static site generator in PHP Feed">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/touch-icon-iphone.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/assets/img/touch-icon-ipad.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/assets/img/touch-icon-iphone-retina.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/assets/img/touch-icon-ipad-retina.png">
+
+
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet">
+<link href="/assets/css/blog/bootstrap.css" rel="stylesheet" media="screen">
+<link href="/assets/css/blog/style.css" rel="stylesheet" media="screen">
+
+    </head>
+    <body>
+        <div id="wrap">
+            <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Spress</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+        <li>
+        <a href="/">
+            Home
+                    </a>
+    </li>
+        <li>
+        <a href="/download">
+            Download
+                    </a>
+    </li>
+        <li>
+        <a href="/docs/getting-started/">
+            Get started
+                    </a>
+    </li>
+        <li>
+        <a href="/docs">
+            Docs
+                    </a>
+    </li>
+        <li>
+        <a href="/add-ons">
+            Add-ons
+                            <i class="fa fa-cogs"></i>
+                    </a>
+    </li>
+        <li>
+        <a href="/blog">
+            Blog
+                    </a>
+    </li>
+        <li>
+        <a href="/about">
+            About
+                    </a>
+    </li>
+    </ul>
+        </div>
+    </div>
+</div>            <div class="container">
+                    <article class="post">
+    <header>
+        <h1>
+            <a href="/news/2014/06/28/new-in-spress-1-1-plugins-manager-improved">New in Spress 1.1: Plugins manager improved</a>
+        </h1>
+    </header>
+    
+            <p>The plugins manager has been <a href="https://github.com/yosymfony/Spress/issues/11">improved</a> for the next
+Spress 1.1.0. Prior to version 1.1.0 for each Plugin was necessary a <code>composer.json</code> file. Now this file is optional
+and you can use it for distributable plugins with <a href="https://packagist.org/">Packagist</a> or for plugins
+with namespace.</p>
+
+<p>
+<h2>The structure of a plugin</h2>
+
+<p>The basic structure of a plugin:</p>
+
+<pre><code>_plugins/
+|- YourPlugin.php
+</code></pre>
+
+<p>Create a plugin at the root without <code>composer.json</code> file and without touch the <em>classloader</em> is
+easy. Plugins can be placed in a sub folder and it's recommended. The aspect of your plugin file is this:</p>
+
+<pre><code>use Yosymfony\Spress\Plugin\Plugin;
+use Yosymfony\Spress\Plugin\Event;
+use Yosymfony\Spress\Plugin\EventSubscriber;
+
+class YourPlugin extends Plugin
+{
+    public function initialize(EventSubscriber $subscriber)
+    {
+       $subscriber-&gt;addEventListener('spress.start', 'onStart');
+    }
+
+    public function onStart(Event\EnvironmentEvent $event)
+    {
+
+    }
+}
+</code></pre>
+
+<h2>Distributable plugin with Packagist</h2>
+
+<p>If you want to create a distributable plugin with Packagist, you need to add a <code>composer.json</code> file.
+This is the common case for reusable plugins but you can to distribute your plugin with manual download
+to <code>_plugins</code> folder of a site.</p>
+
+<pre><code>_plugins/
+|- YourPlugin
+|  |- YourPlugin.php
+|  |- composer.json
+</code></pre>
+
+<p>The aspect of your <code>composer.json</code> is like this:</p>
+
+<pre><code>{
+    "name": "vendor/YourPlugin",
+    "type": "spress-plugin",
+    "description": "The description",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Victor Puertas",
+            "email": "vpgugr@gmail.com",
+            "homepage": "http://yosymfony.com"
+        }
+    ],
+    "require": {
+        "yosymfony/spress-installer": "~1.0"
+    },
+    "extra": {
+        "spress_name": "Your-plugin"
+    }
+}
+</code></pre>
+
+<p>I should also like to point out the optionality of <code>spress_class</code> key at <code>extra</code> option. In prior versions
+this key was mandatory. Now you can to use this key to set up the entry-point of your plugins if you are using
+namespaces.</p>
+
+<h2>Early access</h2>
+
+<p>If you want get early access to Spress 1.1.0 you can clone the repository:
+<code>$ git clone https://github.com/yosymfony/Spress.git</code> or using Composer command:</p>
+
+<p>Create a <code>composer.json</code> file in your project root:</p>
+
+<pre><code>{
+    "require": {
+        "yosymfony/spress": "1.1.*@dev"
+    }
+}
+</code></pre>
+
+<p>and install:</p>
+
+<pre><code>php composer.phar install
+</code></pre>
+
+        
+            <footer>    
+            <p>
+                Posted by Victor Puertas on <time pubdate="pubdate">2014-06-28</time>
+            </p>
+
+                        <ul class="list-unstyled">
+                                                    <li>
+                        <i class="fa fa-folder"></i>
+                                                    <a href="/blog/categories/news">news</a> 
+                                            </li>
+                            </ul>
+                    </footer>
+
+                    <section>
+                <h3>Comments</h3>
+                <div id="disqus_thread"></div>
+                <noscript>
+                    Please enable JavaScript to view the
+                    <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+                </noscript> 
+                <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            </section>
+            </article>
+            </div>
+        </div>
+            
+        <footer id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class="list-inline">
+        <li>
+        <a href="https://gitter.im/spress/Spress">
+            Support
+                    </a>
+    </li>
+        <li>
+        <a href="/about/license">
+            License: MIT
+                    </a>
+    </li>
+        <li>
+        <a href="/about">
+            About
+                    </a>
+    </li>
+        <li>
+        <a href="http://yosymfony.com">
+            Yo! Symfony
+                    </a>
+    </li>
+    </ul>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <ul class="list-inline">
+        <li>
+        <a href="https://twitter.com/spress_cms">
+            <i class="fa fa-twitter fa-2x"></i>
+        </a>
+    </li>
+        
+        
+        
+        
+        <li>
+        <a href="https://github.com/spress">
+            <i class="fa fa-github fa-2x"></i>
+        </a>
+    </li>
+        
+        
+        <li>
+        <a href="https://www.youtube.com/user/yosymfony">
+            <i class="fa fa-youtube fa-2x"></i>
+        </a>
+    </li>
+    </ul>                    </div>
+                </div>
+                <p class="text-center">
+                    <a href="https://github.com/yosymfony/Spress-theme-spresso" title="Spresso theme">
+                        <img src="/assets/img/spress-logo.png"/>
+                    </a>
+                </p>
+                <p class="text-center">
+                    &copy;
+                    2017
+                                            <a href="http://yosymfony.com">
+                            Yo! Symfony
+                        </a>
+                    .
+                    Powered by <a href="http://spress.yosymfony.com">Spress</a>.
+                </p>
+            </div>
+            <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    
+    ga('create', '', '');
+    ga('send', 'pageview');
+</script>                        <script type="text/javascript">
+            var disqus_shortname = 'yosymfony';
+            
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+            </footer>
+    </body>
+</html>

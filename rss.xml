@@ -1,0 +1,869 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>The static site generator in PHP</title>
+        <link></link>
+        <description>RSS feed for The static site generator in PHP</description>
+        <atom:link href="/rss.xml" rel="self" type="application/rss+xml" />
+                    <item>
+                <title>Spress 2.2.0 released</title>
+                <description>
+                    <![CDATA[<p>Hi community. After several months working on Spress 2.2.0, it is here with 11
+new features, 6 improvements and 8 fixes. The highlights of this release are
+the <a href="/docs/themes">support for themes</a>, a little package manager based on
+<a href="https://getcomposer.org/">Composer</a> and the <strong>jumps to PHP 5.6 dropping the
+support for 5.5</strong>. Additionally, an issue related with copying dot-files such as
+<code>.htaccess</code> into <code>build</code> directory has been fixed.</p>
+
+<h2>Themes</h2>
+
+<p>Themes let you create sites based on community-maintained templates. These ones
+package layouts, includes and assets in a way that can be
+<a href="/docs/themes/#how-themes-work">overridden by your site content</a>.
+Themes are published via <a href="https://packagist.org/">Packagist.org</a>.
+The <code>new:site</code> command has been updated to let you create a site based on any theme.
+Additionaly, a <code>new:theme</code> command has been added to facilitate the task of create
+a new theme. <a href="/docs/themes/#creating-a-new-theme">You can get more details about this one here</a>.</p>
+
+
+                    <a href="/releases/2017/04/30/spress-2-2-0-released">Read more</a>]]>
+                </description>
+                <link>/releases/2017/04/30/spress-2-2-0-released</link>
+                <pubDate>Sun, 30 Apr 2017 00:00:00 +0000</pubDate>
+                <guid>/releases/2017/04/30/spress-2-2-0-released</guid>
+            </item>
+                    <item>
+                <title>Spress 2.2.0-rc is out. Help us to test</title>
+                <description>
+                    <![CDATA[<p>Hello community. Last Monday 16th of January I released the first <a href="https://github.com/spress/Spress/releases/tag/v2.2.0-rc">RC of
+Spress 2.2.0</a>
+(I think this will be the only RC). We need help for testing the new features.
+This version comes with a few new features such as a <a href="https://github.com/spress/Spress/issues/96">package manager</a>, support for themes or the
+migration of Symfony components from 2.7 to 3.2. This migration could throw some
+excetions due to the deprecations introduced in Symfony Yaml component since version 2.8.
+In the coming days I'm going to update the documentation
+according to the new features. Additionaly, I'm going to review the themes
+of <a href="https://github.com/spress-add-ons">Spress add-ons organization on Github</a>.</p>
+
+
+                    <a href="/releases/2017/01/22/spress-2-2-0-rc-is-out-help-us-to-test">Read more</a>]]>
+                </description>
+                <link>/releases/2017/01/22/spress-2-2-0-rc-is-out-help-us-to-test</link>
+                <pubDate>Sun, 22 Jan 2017 00:00:00 +0000</pubDate>
+                <guid>/releases/2017/01/22/spress-2-2-0-rc-is-out-help-us-to-test</guid>
+            </item>
+                    <item>
+                <title>New in Spress 2.2.0: themes and add-ons manager</title>
+                <description>
+                    <![CDATA[<p>Hello everybody. The development of Spress 2.2.0 continues on its way and today
+I want to show you two new features: the support for themes and a new set of
+commands aimed to manage Spress's add-ons.</p>
+
+
+                    <a href="/news/2016/12/13/new-in-spress-2-2-0-themes-and-add-ons-manager">Read more</a>]]>
+                </description>
+                <link>/news/2016/12/13/new-in-spress-2-2-0-themes-and-add-ons-manager</link>
+                <pubDate>Tue, 13 Dec 2016 00:00:00 +0000</pubDate>
+                <guid>/news/2016/12/13/new-in-spress-2-2-0-themes-and-add-ons-manager</guid>
+            </item>
+                    <item>
+                <title>New in Spress 2.2.0: "avoid_renderizer" feature for type of files</title>
+                <description>
+                    <![CDATA[<p>Hello community! Spress is on the way to 2.2.0 and today we want to unveil
+a <a href="https://github.com/spress/Spress/issues/91">new feature</a> for applying the <a href="docs/themes/#avoid-renderizer">"avoid_renderizer"</a>
+feature automatically to both certain type of files and files that belong to a path.
+The <code>avoid_renderizer</code> attribute let's avoid the <a href="/docs/developers/renderizer/">renderizer</a>
+comes into action with a file. Prior to Spress 2.2.0, you needed to put this attribute
+file by file. Now, you can set a filter in the <code>config.yml</code> file like the following:</p>
+
+<pre><code class="yaml"># config.yml
+avoid_renderizer:
+  filename_extensions: ['css', 'js']
+  paths: ['assets']
+</code></pre>
+
+<p>In the prior example, all files belonging to <code>assets</code> folder (this folder is relative
+to <code>src/content</code> path) or those with a filename's extension type <code>css</code> or <code>js</code>
+will receive an <code>avoid_renderizer: true</code> attribute unless otherwise expressly
+provided in a file.</p>
+
+<p>Spress comes with the following configuration by default:</p>
+
+<pre><code class="yaml">avoid_renderizer:
+  filename_extensions: ['css', 'js']
+  paths: ['assets', 'bower_components', 'node_modules']
+</code></pre>
+
+                    <a href="/news/2016/09/03/new-in-spress-2-2-0-avoid-renderizer-feature-for-type-of-files">Read more</a>]]>
+                </description>
+                <link>/news/2016/09/03/new-in-spress-2-2-0-avoid-renderizer-feature-for-type-of-files</link>
+                <pubDate>Sat, 03 Sep 2016 00:00:00 +0000</pubDate>
+                <guid>/news/2016/09/03/new-in-spress-2-2-0-avoid-renderizer-feature-for-type-of-files</guid>
+            </item>
+                    <item>
+                <title>Importing posts to Spress from Wordpress and CSV files is now possible thanks to Spress Import plugin</title>
+                <description>
+                    <![CDATA[<p><img class="img-responsive" src="/assets/img/wordpress-badges.jpg"></p>
+
+<p>Photo by <a href="https://flic.kr/p/5zPaP6">Cristian Labarca</a>.</p>
+
+<p>If you have a Wordpress blog hosted in Wordpress.com or installed in other web
+host and you are thinkig of migratting to a static site you are in luck because
+the brand-new <a href="https://github.com/spress/Spress-import">Spress Import plugin</a>
+can help you with that migration.</p>
+
+
+                    <a href="/plugin/news/2016/08/08/importing-posts-to-spress-from-wordpress-and-csv-files-is-now-possible-thanks-to-spress-import-plugin">Read more</a>]]>
+                </description>
+                <link>/plugin/news/2016/08/08/importing-posts-to-spress-from-wordpress-and-csv-files-is-now-possible-thanks-to-spress-import-plugin</link>
+                <pubDate>Mon, 08 Aug 2016 00:00:00 +0000</pubDate>
+                <guid>/plugin/news/2016/08/08/importing-posts-to-spress-from-wordpress-and-csv-files-is-now-possible-thanks-to-spress-import-plugin</guid>
+            </item>
+                    <item>
+                <title>Spress 2.1.3 released</title>
+                <description>
+                    <![CDATA[<p>Hello community. A new maintenance release of Spress has been released. The highlights
+this time have been a fix related with the content of <code>title_path</code> attribute
+in case of filenames with dots before extension (previously, the value of this attribute appears truncated).
+Additionally, the value of <code>title_path</code> will no longer be altered by <code>FilesystemDataSource</code>
+class, only <code>rawurlencode</code> function is applied. If you have a file called
+<code>02-02-spress-2.1.1-released.md</code> then the value of <code>title_path</code> will be
+<code>spress-2.1.1-released</code> instead of <code>spress-2-1-1-released</code>.</p>
+
+<p>Another improvement has been the <a href="/docs/configuration/#plugin_manager_builder">option for avoid scanning certains directories</a>
+such as <code>tests</code> when the plugin manager is loading classes in order to detect
+which of those are plugins.</p>
+
+<p>The complete changelog:</p>
+
+<ul>
+<li><span class="label label-success">New</span> Class <code>FileInfo</code> has been added to the support classes set of the core.</li>
+<li><span class="label label-success">New</span> New configuration value aimed to plugin manager builder for excluding directories in the disconvering class phase. Useful to avoid scaning test classes.</li>
+<li><span class="label label-default">Fixed</span> Fixed the truncated <code>title_path</code> attribute when the filename contains dots before the extension. More details in bug #88.</li>
+<li><span class="label label-default">Fixed</span> The value of <code>title_path</code> is not altered when it is parsed by <code>FilesystemDataSource</code> class. More details in bug #88.</li>
+<li><span class="label label-default">Fixed</span> If you set <code>preserve_path_title</code> attribute to <code>true</code> you will get the title parsed from the filename as-is (without the date part). Only <code>rawurlencode</code> function is applied. See PR #90.</li>
+</ul>
+
+
+                    <a href="/releases/2016/07/03/spress-2-1-3-released">Read more</a>]]>
+                </description>
+                <link>/releases/2016/07/03/spress-2-1-3-released</link>
+                <pubDate>Sun, 03 Jul 2016 00:00:00 +0000</pubDate>
+                <guid>/releases/2016/07/03/spress-2-1-3-released</guid>
+            </item>
+                    <item>
+                <title>Spress 2.1.2 released</title>
+                <description>
+                    <![CDATA[<p>Hello. A new maintenance release of Spress has been released with some bug fixes.</p>
+
+<p>The complete changelog:</p>
+
+<ul>
+<li><span class="label label-success">New</span> Two new methods have been added to StringWrapper class: <code>lower</code> and <code>upper</code> for cingonvert a given string to lower-case and upper-case respectively using UTF-8 as encoding.</li>
+<li><span class="label label-default">Fixed</span> Bug <a href="https://github.com/spress/Spress/issues/80">#80</a> has been fixed: "<code>Composer install</code> fails if no namespace is specified in new plugin". See PR <a href="https://github.com/spress/Spress/issues/81">#81</a>.</li>
+<li><span class="label label-default">Fixed</span> Bug <a href="https://github.com/spress/Spress/issues/82">#82</a> has been fixed: "Substr <code>---</code> in yaml string cause builder crash".</li>
+<li><span class="label label-default">Fixed</span> Bug <a href="https://github.com/spress/Spress/issues/83">#83</a> has been fixed: "Same tags on different languages cause builder crash".</li>
+</ul>
+
+
+                    <a href="/releases/2016/05/23/spress-2-1-2-released">Read more</a>]]>
+                </description>
+                <link>/releases/2016/05/23/spress-2-1-2-released</link>
+                <pubDate>Mon, 23 May 2016 00:00:00 +0000</pubDate>
+                <guid>/releases/2016/05/23/spress-2-1-2-released</guid>
+            </item>
+                    <item>
+                <title>Spress 2.1.1 released</title>
+                <description>
+                    <![CDATA[<p>Hi Spress folks! The first maintenance release of Spress 2.1 has been released with two bug fixes.</p>
+
+<p>The complete changelog:</p>
+
+<ul>
+<li><span class="label label-default">Fixed</span> Bug <a href="https://github.com/spress/Spress/issues/78">#78</a> has been fixed: "/:basename permalink variable contains .html when using *.html.twig". Related with feature <a href="https://github.com/spress/Spress/issues/73">#73</a>.</li>
+<li><span class="label label-default">Fixed</span> Bug <a href="https://github.com/spress/Spress/issues/79">#79</a> has been fixed: "Error loading plugin's dependencies with -s option at site:build command".</li>
+<li><span class="label label-primary">Improved</span> Clarified the message when <code>site:build</code> command is invoked against a non Spress site folder.</li>
+</ul>
+
+
+                    <a href="/releases/2016/04/12/spress-2-1-1-released">Read more</a>]]>
+                </description>
+                <link>/releases/2016/04/12/spress-2-1-1-released</link>
+                <pubDate>Tue, 12 Apr 2016 00:00:00 +0000</pubDate>
+                <guid>/releases/2016/04/12/spress-2-1-1-released</guid>
+            </item>
+                    <item>
+                <title>Spress 2.1.0 released</title>
+                <description>
+                    <![CDATA[<p>Hi community. To make your weekend all the better, we have just released Spress 2.1.0
+with many features and improvements.</p>
+
+<h2>Key features</h2>
+
+<ul>
+<li><span class="label label-success">New</span> <strong>Sorted items in <a href="/docs/collections/#sort-items">collections</a></strong>. Feature thanks to <a href="https://github.com/jjk-jacky">jjk-jacky</a>.</li>
+<li><span class="label label-success">New</span> <strong>Attributes referring to the <a href="/docs/collections/#relationships">previous and next items in a sorted collection</a></strong>. Feature thanks to <a href="https://github.com/jjk-jacky">jjk-jacky</a>.</li>
+<li><span class="label label-success">New</span> <strong>Calling an existing command</strong> in <a href="/docs/developers/command-plugins/#calling-command">command plugins</a>.</li>
+<li><span class="label label-success">New</span> <strong>Support for extending Spress with Twig tags.</strong> Contributed by <a href="https://github.com/jjk-jacky">jjk-jacky</a> in <a href="https://github.com/spress/Spress/pull/65">#65</a>.</li>
+<li><span class="label label-success">New</span> <strong>Support <code>.twig</code> extention</strong>. This feature lets you work more appropriately with pages using IDEs such as PHPStorm. Feature thanks to <a href="https://github.com/peterfox">peterfox</a>.</li>
+<li><span class="label label-primary">Improved</span> <strong>Improved permalinks customizations</strong>. Contributed by <a href="https://github.com/jjk-jacky">jjk-jacky</a> in <a href="https://github.com/spress/Spress/pull/64">#65</a>.</li>
+<li><span class="label label-default">Fixed</span> Fixed the path available at <code>page.path</code> variable. Prior to this version, this variable contains the relative path to <code>src/content/</code> but with the filename extension changed by the <a href="/docs/developers/converters/">Converter</a>. Now, the original filename extension isn't altered.</li>
+</ul>
+
+
+                    <a href="/releases/2016/03/26/spress-2-1-0-released">Read more</a>]]>
+                </description>
+                <link>/releases/2016/03/26/spress-2-1-0-released</link>
+                <pubDate>Sat, 26 Mar 2016 00:00:00 +0000</pubDate>
+                <guid>/releases/2016/03/26/spress-2-1-0-released</guid>
+            </item>
+                    <item>
+                <title>A site variable with items matching a criteria</title>
+                <description>
+                    <![CDATA[<p>There are certain situations in which it is necessary to have available a site variable (those that are accessible using <code>site.xxx</code>)
+with the items that matching certain criteria. In this post, I will explain how to expose a new site variable with
+items that contains an <code>categories</code> attribute.</p>
+
+
+                    <a href="/resources/plugin/2016/02/22/a-site-variable-with-items-matching-a-criteria">Read more</a>]]>
+                </description>
+                <link>/resources/plugin/2016/02/22/a-site-variable-with-items-matching-a-criteria</link>
+                <pubDate>Mon, 22 Feb 2016 00:00:00 +0000</pubDate>
+                <guid>/resources/plugin/2016/02/22/a-site-variable-with-items-matching-a-criteria</guid>
+            </item>
+                    <item>
+                <title>Spress 2.0.2 released</title>
+                <description>
+                    <![CDATA[<p>A new maintenance release of Spress 2.0 is out with a fix for an issue with the content
+retrieved by <code>getContent</code> method of <code>after_render_page</code> event.</p>
+
+<p>The complete changelog:</p>
+
+<ul>
+<li><span class="label label-success">New</span> <code>PluginTester</code> class has been added to the core for testing plugins easily.</li>
+<li><span class="label label-default">Fixed</span> Fixed an issue with the content retrieved by <code>after_render_page</code> event.</li>
+<li><span class="label label-default">Fixed</span> A constant name of <code>ItemInterface</code> has been changed: <code>SNAPSHOT_AFTER_PAGE</code> -> <code>SNAPSHOT_AFTER_RENDER_PAGE</code>.</li>
+</ul>
+
+
+                    <a href="/releases/2016/01/16/spress-2-0-2-released">Read more</a>]]>
+                </description>
+                <link>/releases/2016/01/16/spress-2-0-2-released</link>
+                <pubDate>Sat, 16 Jan 2016 00:00:00 +0000</pubDate>
+                <guid>/releases/2016/01/16/spress-2-0-2-released</guid>
+            </item>
+                    <item>
+                <title>Spress 2.0.1 released with better support for Windows users</title>
+                <description>
+                    <![CDATA[<p>A new maintenance release of Spress 2.0 is out with a few fixes and improvements.</p>
+
+<p>The complete changelog:</p>
+
+<ul>
+<li><span class="label label-primary">Improved</span> Normalized the directory separator to <code>/</code> irrespective of the operating system.</li>
+<li><span class="label label-primary">Improved</span> <a href="https://github.com/spress/Spress-theme-spresso/releases/tag/v2.0.1">Spresso theme</a> updated to 2.0.1.</li>
+<li><span class="label label-default">Fixed</span> Fixed the file's extension <code>twig.html</code> in configuration files.</li>
+<li><span class="label label-default">Fixed</span> Fixed the exception "A previous item exists with the same id" thrown by Taxonomy generator due to a key sensitive issue. A normalize method has been added. e.g: "news", "NEWS", " News " are the same term: "news".</li>
+<li><span class="label label-default">Fixed</span> Fixed the namespace of <code>AttributeValueException</code> at <code>PaginationGenerator</code> class.</li>
+</ul>
+
+
+                    <a href="/releases/2016/01/09/spress-2-0-1-released-with-better-support-for-windows-users">Read more</a>]]>
+                </description>
+                <link>/releases/2016/01/09/spress-2-0-1-released-with-better-support-for-windows-users</link>
+                <pubDate>Sat, 09 Jan 2016 00:00:00 +0000</pubDate>
+                <guid>/releases/2016/01/09/spress-2-0-1-released-with-better-support-for-windows-users</guid>
+            </item>
+                    <item>
+                <title>Spress 2.0.0 released</title>
+                <description>
+                    <![CDATA[<p>After ten months working on the new major version of Spress at last is out. The code of
+Spress 2.0.0 has been written from the ground up to incorporate new features like <strong>data sources</strong>
+or <strong>generators</strong> . This version marks the end-of-life for Spress 1.x. See the
+<a href="/docs/migrating-1.x-to-2.x">migration page</a> for more details.</p>
+
+<p>The list of the most important changes since RC are available at the <a href="/about/changelog/#2-0-0">changelog page</a>.
+The documentation for Spress 2 is available at <a href="/docs">docs</a> pages. Documentation for Spress 1.x is available
+<a href="/docs/1.0">here</a>.</p>
+
+<h2>Key features</h2>
+
+<ul>
+<li>A new <a href="/docs/how-it-works/#site-structure">site structure</a>.</li>
+<li><a href="/docs/collections">Collections</a>.</li>
+<li><a href="/docs/developers/data-sources">Data sources</a>.</li>
+<li><a href="/docs/developers/generators">Generators</a>.</li>
+<li><a href="/docs/developers/renderizer">Renderizers</a>.</li>
+<li><a href="/docs/developers/data-writer">The data writer</a>.</li>
+<li><a href="/docs/developers/command-plugins">Command plugins</a>.</li>
+<li>A new way for <a href="/docs/pagination">paginating</a> items.</li>
+<li><a href="/docs/taxonomies">Taxonomies</a>.</li>
+<li><a href="/docs/creating-pages/#markdown">Parsedown converter</a> for Markdown content.</li>
+<li><a href="/docs/how-it-works/#self-update">self-update</a> command.</li>
+</ul>
+
+
+                    <a href="/releases/2016/01/02/spress-2-0-0-released">Read more</a>]]>
+                </description>
+                <link>/releases/2016/01/02/spress-2-0-0-released</link>
+                <pubDate>Sat, 02 Jan 2016 00:00:00 +0000</pubDate>
+                <guid>/releases/2016/01/02/spress-2-0-0-released</guid>
+            </item>
+                    <item>
+                <title>Spress 2.0.0-rc</title>
+                <description>
+                    <![CDATA[<p>We have now released the <a href="/about/changelog/#2-0-0-rc">first release candidate</a> and, in theory, the unique release candidate.
+This release contains some features and fixes.</p>
+
+<h2>The highlight of this release</h2>
+
+<ul>
+<li>A new data source called <strong>MemoryDataSource</strong> is available for generating dynamic content. An example is <a href="/docs/developers/data-sources/#MemoryDataSource">available at developer documentation</a>.</li>
+<li>Support to sort items at <code>PaginationGenerator</code> with attributes <code>sort_by</code> and <code>sort_type</code>. See <a href="https://github.com/spress/Spress/issues/61">#61</a>.</li>
+<li>Added <code>getGeneratorManager</code> method to <code>EnvironmentEvent</code> for managing generators at plugins.</li>
+<li>Improved the way of generating the classname in PluginGenerator (<code>new:plugin</code> command). e.g: a plugin named <code>yosymfony\hola-user</code> will generate a <code>YosymfonyHolaUser</code> class.</li>
+<li>Fixed the lifecycle: render phase starts after converter phase has been finished for all items.</li>
+</ul>
+
+
+                    <a href="/releases/2015/12/08/spress-2-0-0-rc">Read more</a>]]>
+                </description>
+                <link>/releases/2015/12/08/spress-2-0-0-rc</link>
+                <pubDate>Tue, 08 Dec 2015 00:00:00 +0000</pubDate>
+                <guid>/releases/2015/12/08/spress-2-0-0-rc</guid>
+            </item>
+                    <item>
+                <title>Spress 2.0.0-beta is here</title>
+                <description>
+                    <![CDATA[<p>Today is a great day because <a href="/about/changelog/#2-0-0-beta">Spress 2.0.0-beta</a> is here. In this release we have included
+new features such as command plugins (a new kind o plugin), a new Markdown converter based on 
+<a href="http://parsedown.org/">Parsedown</a> a parser 2-3 times faster than
+<a href="https://michelf.ca/projects/php-markdown/">Michel Fortin's parser</a> implementation or the the expected
+taxonomy generator.</p>
+
+<h2>The highlight of this release</h2>
+
+<ul>
+<li><strong>Command plugins</strong>: a new kind of plugins witch provides subcommand for <code>spress</code> executable.</li>
+<li><strong>self-update command</strong>: a new command for keeping Spress up to date.</li>
+<li><strong>Taxonomy generator</strong> for grouping content around a set of terms.</li>
+<li>Added a new special attributte <code>avoid_renderizer</code> for avoiding the renderizer phase over an item of content. See <a href="https://github.com/spress/Spress/issues/59">#59</a>.</li>
+<li>Deleted the <code>site:new</code> alias for command <code>new:site</code>.</li>
+</ul>
+
+
+                    <a href="/releases/2015/10/18/spress-2-0-0-beta-is-here">Read more</a>]]>
+                </description>
+                <link>/releases/2015/10/18/spress-2-0-0-beta-is-here</link>
+                <pubDate>Sun, 18 Oct 2015 00:00:00 +0000</pubDate>
+                <guid>/releases/2015/10/18/spress-2-0-0-beta-is-here</guid>
+            </item>
+                    <item>
+                <title>Spress 2.0.0-alpha is out</title>
+                <description>
+                    <![CDATA[<p>We’re super excited to announce that <a href="https://github.com/spress/Spress/releases/tag/v2.0.0-alpha">Spress 2.0.0-alpha</a> is now available! This is the first and unique alpha pre-release.
+Check out the full <a href="https://github.com/spress/Spress/releases/tag/v2.0.0-alpha">changelog</a> but in a nutshell, this are the
+key features:</p>
+
+<ul>
+<li>Data-sources: (see <a href="https://github.com/spress/Spress/issues/46">#46</a>) data sources can load site data from certain locations like filesystem or database.</li>
+<li>Data-writer (see <a href="https://github.com/spress/Spress/issues/44">#44</a>): The DataWriter's responsibility is to persist the content of the items, typically to filesystem.</li>
+<li>New site's structure (see <a href="https://github.com/spress/Spress/issues/41">#41</a>).</li>
+<li>Collections of content (see <a href="https://github.com/spress/Spress/issues/43">#43</a>): collections allow you to define a new type of document like page or post.</li>
+<li>Generators (see <a href="https://github.com/spress/Spress/issues/45">#45</a>): Generators are used for generating new items of content.</li>
+<li>Renderizer (see <a href="https://github.com/spress/Spress/issues/48">#48</a>): Renderizer are responsible for formatting content.</li>
+<li>Established PHP 5.5 as minimum version (see <a href="https://github.com/spress/Spress/issues/42">#42</a>).</li>
+</ul>
+
+
+                    <a href="/releases/2015/08/12/spress-2-0-0-alpha-is-out">Read more</a>]]>
+                </description>
+                <link>/releases/2015/08/12/spress-2-0-0-alpha-is-out</link>
+                <pubDate>Wed, 12 Aug 2015 00:00:00 +0000</pubDate>
+                <guid>/releases/2015/08/12/spress-2-0-0-alpha-is-out</guid>
+            </item>
+                    <item>
+                <title>Spress 1.1.1 is out</title>
+                <description>
+                    <![CDATA[<p>Hey! a minor release of spress 1.1 is out. <a href="https://github.com/spress/Spress/releases/tag/v1.1.1">1.1.1</a>
+fix a <a href="https://github.com/spress/Spress/issues/36">issue</a> with spresso theme reported by <a href="https://github.com/Remo">@remo</a>.
+The <a href="https://github.com/spress/Openshift-spress-cartridge">OpenShift Spress Cartridge</a> has been updated too.</p>
+
+
+                    <a href="/releases/2015/02/25/spress-1-1-1-is-out">Read more</a>]]>
+                </description>
+                <link>/releases/2015/02/25/spress-1-1-1-is-out</link>
+                <pubDate>Wed, 25 Feb 2015 00:00:00 +0000</pubDate>
+                <guid>/releases/2015/02/25/spress-1-1-1-is-out</guid>
+            </item>
+                    <item>
+                <title>spress.phar file has been rebuilt</title>
+                <description>
+                    <![CDATA[<p>Due to a filter too much strict on <code>finder</code> section of <a href="https://github.com/spress/Spress/blob/master/box.json"><code>box.json</code></a> file, a file responsible of generating <code>spress.phar</code> file, a
+<a href="https://github.com/spress/Spress/issues/33">PHP warning was thrown during building a site with plugins</a>.
+This issue only affect to <code>spress.phar</code>. A new version of <code>spress.phar</code> 1.1.0 is
+<a href="https://github.com/spress/Spress/releases/download/v1.1.0/spress.phar">available for download</a>.</p>
+
+                    <a href="/news/2015/01/26/spress-phar-file-has-been-rebuilt">Read more</a>]]>
+                </description>
+                <link>/news/2015/01/26/spress-phar-file-has-been-rebuilt</link>
+                <pubDate>Mon, 26 Jan 2015 00:00:00 +0000</pubDate>
+                <guid>/news/2015/01/26/spress-phar-file-has-been-rebuilt</guid>
+            </item>
+                    <item>
+                <title>Spress cartridge for Openshift</title>
+                <description>
+                    <![CDATA[<p><img class="center-block" src="/assets/img/openshift-logo.svg"></p>
+
+<p>Logo owned by Red Hat for <a href="http://openshift.com">OpenShift</a>.</p>
+
+<p>OpenShift is a cloud computing platform as a service from Red Hat for running applications in several
+platform like NodeJs, Java or PHP. Openshift is a one of the most common PaaS because has a
+competitive prices for computing with free and premium plans. The free plan is a good starting
+point for creating static blogs and web pages. Openshift is organized in Gears and inside of each
+Gears we have one or more cartridges. OpenShift has a few prepared carteridges for PHP, Java, MySQL
+and other applications. Today we are proudly to present a
+<a href="https://github.com/spress/Openshift-spress-cartridge">Cartridge for running a static site or blog</a>
+using Spress.</p>
+
+
+                    <a href="/news/2015/01/17/spress-cartridge-for-openshift">Read more</a>]]>
+                </description>
+                <link>/news/2015/01/17/spress-cartridge-for-openshift</link>
+                <pubDate>Sat, 17 Jan 2015 00:00:00 +0000</pubDate>
+                <guid>/news/2015/01/17/spress-cartridge-for-openshift</guid>
+            </item>
+                    <item>
+                <title>The new executable phar file</title>
+                <description>
+                    <![CDATA[<p><img class="img-responsive" src="/assets/img/lego.jpg"></p>
+
+<p>Photo by <a href="https://flic.kr/p/8cNqid">Pascal</a>.</p>
+
+<p>With the release of Spress 1.1.0 we have a new way for getting Spress: as <code>phar</code> file.</p>
+
+<blockquote>
+  <p>...a phar archive provides a way to distribute a complete
+  PHP application in a single file.</p>
+</blockquote>
+
+
+                    <a href="/news/2015/01/10/the-new-executable-phar-file">Read more</a>]]>
+                </description>
+                <link>/news/2015/01/10/the-new-executable-phar-file</link>
+                <pubDate>Sat, 10 Jan 2015 00:00:00 +0000</pubDate>
+                <guid>/news/2015/01/10/the-new-executable-phar-file</guid>
+            </item>
+                    <item>
+                <title>Spress turns 1.1.0</title>
+                <description>
+                    <![CDATA[<p>Spress just turned 1.1.0. This release comes seven months later of the last stable 1.0.3
+with interesting new goodies. This release also marks the start of Spress 2 development.
+What’s changed in 1.1.0? Here are some highlights:</p>
+
+<ul>
+<li><strong>Two new scaffolding commands</strong>: <code>new:post</code> and <code>new:plugin</code> for creating posts and plugin respectively. See the <a href="/releases/2014/11/21/spress-1-1-0-beta-2-is-out/">blog post</a>.</li>
+<li><strong>Built-in server and watch for changes</strong>. With the built-in server you have a simple web server for viewing your site without any extra requirement. The new watch mode for <code>site:build</code> command enables to watch for changes and to regenerate your site automatically. See the <a href="/news/2014/10/13/new-in-spress-1-1-built-in-server-and-watch-for-changes/">blog post</a>.</li>
+<li>The new <strong>IO API</strong> enables to plugins for interact with the user. See the <a href="/news/2014/05/11/new-in-spress-1-1-io-api/">blog post</a>.</li>
+<li>Support for environment configurations. This is useful for writing configuration options for development and production environments. See the <a href="/news/2014/06/12/new-in-spress-1-1-environment-configurations/">blog post</a>.</li>
+<li><strong>Debug mode</strong>. With this mode activated you can dump information about a template variable in your templates. </li>
+</ul>
+
+
+                    <a href="/releases/2015/01/08/spress-turns-1-1-0">Read more</a>]]>
+                </description>
+                <link>/releases/2015/01/08/spress-turns-1-1-0</link>
+                <pubDate>Thu, 08 Jan 2015 00:00:00 +0000</pubDate>
+                <guid>/releases/2015/01/08/spress-turns-1-1-0</guid>
+            </item>
+                    <item>
+                <title>Spress 1.1.0 RC available</title>
+                <description>
+                    <![CDATA[<p>Happy Holidays, everyone.</p>
+
+<p>The first and unique <em>release candidate</em> of Spress 1.1.0 has been released containing
+a performance improvement and some minor fixes. See the 
+<a href="https://github.com/spress/Spress/releases/tag/v1.1.0-rc.1">full changelog</a> for more
+information. If you notice any problems, please open a <a href="https://github.com/spress/Spress">pull-request</a>.</p>
+
+<h2>How to get Spress 1.1.0-RC?</h2>
+
+<p>To test Spress 1.1.0-RC you can clone the repository at <a href="https://github.com/spress/Spress">GitHub</a>.
+Next you should get the vendors with <code>composer</code>:</p>
+
+<pre><code>$ git clone https://github.com/spress/Spress.git
+$ composer update
+</code></pre>
+
+<p>Enjoy it!</p>
+
+                    <a href="/releases/2014/12/23/spress-1-1-0-rc-available">Read more</a>]]>
+                </description>
+                <link>/releases/2014/12/23/spress-1-1-0-rc-available</link>
+                <pubDate>Tue, 23 Dec 2014 00:00:00 +0000</pubDate>
+                <guid>/releases/2014/12/23/spress-1-1-0-rc-available</guid>
+            </item>
+                    <item>
+                <title>Spress-in for Christmas &#039;14</title>
+                <description>
+                    <![CDATA[<p><img class="img-responsive" src="/assets/img/spressin-christmas-2014.jpg"/></p>
+
+<p>Christmas time is near and for this time we want to present a new Spress-in photo, this time authored by 
+<a href="https://www.flickr.com/photos/mandarina94/6560359103">Iryna Yeroshko</a>.</p>
+
+                    <a href="/news/2014/12/05/spress-in-for-christmas-03914">Read more</a>]]>
+                </description>
+                <link>/news/2014/12/05/spress-in-for-christmas-03914</link>
+                <pubDate>Fri, 05 Dec 2014 00:00:00 +0000</pubDate>
+                <guid>/news/2014/12/05/spress-in-for-christmas-03914</guid>
+            </item>
+                    <item>
+                <title>Spress 1.1.0 beta 2 is out</title>
+                <description>
+                    <![CDATA[<p>Hi again. The second and last beta of Spress 1.1.0 <a href="https://github.com/spress/Spress/releases/tag/v1.1.0-beta.2">has been released</a>. The main feature included in this release are two new commands for scaffolding plugins and posts: <code>new:post</code> and <code>new:plugin</code>. Another new goodies are included like
+Issue <a href="https://github.com/spress/Spress/issues/17">#17</a>: <a href="/news/2014/10/28/new-in-spress-1-1-debug-mode/">Twig debug mode</a> through configuration. Spress 1.1.0 is due for release in few weeks and we need your help with testing of new command for scaffolding.If you found any bug, please open a issue at <a href="https://github.com/spress/Spress/issues">Github</a>.</p>
+
+<h2>Scaffolding commands</h2>
+
+<p>By default, the commands interacts with the user to tweak the generation. Any passed option will be used as a default value for the interaction. The command <code>site:new</code> has been declared deprecated and replaced by `new:site.</p>
+
+<h3>new:post</h3>
+
+<p>The <code>new:post</code> command helps you generates new posts.</p>
+
+<p><code>new:post [--title="..."] [--layout="default"] [--date="..."] [--tags="..."] [--categories="..."]</code></p>
+
+<ul>
+<li><code>--title</code>: The title of the post.</li>
+<li><code>--layout</code>: The layout of the post.</li>
+<li><code>--date</code>: The date assigned to the post.</li>
+<li><code>--tags</code>: Tags list separed by white spaces.</li>
+<li><code>--categories</code>: Categories list separed by white spaces.</li>
+</ul>
+
+<p>Example:</p>
+
+<pre><code>$&gt;spress new:post
+</code></pre>
+
+
+                    <a href="/releases/2014/11/21/spress-1-1-0-beta-2-is-out">Read more</a>]]>
+                </description>
+                <link>/releases/2014/11/21/spress-1-1-0-beta-2-is-out</link>
+                <pubDate>Fri, 21 Nov 2014 00:00:00 +0000</pubDate>
+                <guid>/releases/2014/11/21/spress-1-1-0-beta-2-is-out</guid>
+            </item>
+                    <item>
+                <title>New in Spress 1.1: debug mode</title>
+                <description>
+                    <![CDATA[<p>A debug mode can be activated with Spress 1.1 according with <a href="https://github.com/spress/Spress/issues/17">issue #17</a>
+from <a href="https://github.com/valllabh">@valllabh</a>. With this mode activated you can
+<a href="http://twig.sensiolabs.org/doc/functions/dump.html">dump</a> information about a template
+variable in your templates. By default debug mode is disabled. To enable add this line in <code>config.yml</code> of your
+site:</p>
+
+<pre><code>debug: true
+</code></pre>
+
+<p>To dumps information about a variable simply uses <code>dump</code> function from Twig:</p>
+
+<p></p>
+
+<pre><code>{{ dump(page) }}
+</code></pre>
+
+<p></p>
+
+<p>Enjoy it!</p>
+
+                    <a href="/news/2014/10/28/new-in-spress-1-1-debug-mode">Read more</a>]]>
+                </description>
+                <link>/news/2014/10/28/new-in-spress-1-1-debug-mode</link>
+                <pubDate>Tue, 28 Oct 2014 00:00:00 +0000</pubDate>
+                <guid>/news/2014/10/28/new-in-spress-1-1-debug-mode</guid>
+            </item>
+                    <item>
+                <title>Spress 1.1.0 beta 1</title>
+                <description>
+                    <![CDATA[<p>After some months, <strong>Spress 1.1.0 beta 1 is available!</strong>. This software
+still in development phase but now have some interesting goodies:</p>
+
+<p><strong>What's new in Spress 1.1.0</strong> (the main changes):</p>
+
+<ul>
+<li>[New] <a href="/news/2014/05/11/new-in-spress-1-1-io-api/">IO API</a> useful for interacting with the users.</li>
+<li>[New] Proposal <a href="https://github.com/spress/Spress/issues/9">#9</a>: Support for <a href="/news/2014/06/12/new-in-spress-1-1-environment-configurations/">environment configuration files</a>. New key <code>env</code> for <code>config.yml</code>.</li>
+<li>[New] PR <a href="https://github.com/spress/Spress/issues/12">#12</a>: Added ability to use multiple extensions on layouts. Thank you for <a href="https://github.com/kieldoyle">@kieldoyle</a>.</li>
+<li>[New] Proposal <a href="https://github.com/spress/Spress/issues/15">#15</a>: <a href="/news/2014/10/13/new-in-spress-1-1-built-in-server-and-watch-for-changes/">Built-in server and watch for changes</a>.</li>
+<li>[Improved] Proposal <a href="https://github.com/spress/Spress/issues/11">#11</a>: Improve the plugins manager for <a href="/news/2014/06/28/new-in-spress-1-1-plugins-manager-improved/">writing plugins more easily</a>.</li>
+<li>[Fixed] Issue <a href="https://github.com/spress/Spress/issues/10">#10</a>: Classname with typo: EnviromentEvent. This class was replaced by EnvironmentEvent.</li>
+<li>[Fixed] PR <a href="https://github.com/spress/Spress/issues/14">#14</a>: Changed Frontmatter regex pattern to allow for CRLF line endings. Thank you for <a href="https://github.com/kieldoyle">@kieldoyle</a>.</li>
+<li>[Deprecated] The configuration options: <code>baseurl</code> and <code>relative_permalinks</code> has been declared deprecated.</li>
+</ul>
+
+<p>Full <a href="https://github.com/spress/Spress/releases/tag/v1.1.0-beta.1">changelog available here</a>.</p>
+
+<p>This software is still in development, so we need your help for testing. If you found any bug, please
+open a issue at <a href="https://github.com/spress/Spress/issues">Github</a>.</p>
+
+
+                    <a href="/releases/2014/10/19/spress-1-1-0-beta-1">Read more</a>]]>
+                </description>
+                <link>/releases/2014/10/19/spress-1-1-0-beta-1</link>
+                <pubDate>Sun, 19 Oct 2014 00:00:00 +0000</pubDate>
+                <guid>/releases/2014/10/19/spress-1-1-0-beta-1</guid>
+            </item>
+                    <item>
+                <title>New in Spress 1.1: built-in server and watch for changes</title>
+                <description>
+                    <![CDATA[<p>Spress 1.1.0 is coming and this time we want to show you two new features:
+the <strong>built-in server and the resource watcher</strong>. With the built-in server you
+have a simple web server for viewing your site without any extra requirement.
+To enable this server you can use <code>--server</code> option with <code>spress site:build</code> command.
+The other feature included in this version is a resource watcher for watching for
+changes and to regenerate your site automatically. To enable this feature you can
+use <code>--watch</code> option with <code>spress site:build</code> command. Each option can be used individually.</p>
+
+<pre><code>$ spress site:build --server --watch
+</code></pre>
+
+<p>By defacult the built-in server is listening <code>0.0.0.0:4000</code> accepting connections from any adress
+by port 4000. If you want change this values you can add this lines to <code>config.yml</code> of your site
+with your values:</p>
+
+<pre><code>host: 'localhost'
+port: 4000
+</code></pre>
+
+<p>This video show us how to work this new options:</p>
+
+<iframe width="640" height="360" src="//www.youtube.com/embed/-cRgJEH7ZDc?rel=0" frameborder="0" allowfullscreen></iframe>
+
+<p>Additionally, Spress 1.1.0 beta1 will be ready this week!.</p>
+
+                    <a href="/news/2014/10/13/new-in-spress-1-1-built-in-server-and-watch-for-changes">Read more</a>]]>
+                </description>
+                <link>/news/2014/10/13/new-in-spress-1-1-built-in-server-and-watch-for-changes</link>
+                <pubDate>Mon, 13 Oct 2014 00:00:00 +0000</pubDate>
+                <guid>/news/2014/10/13/new-in-spress-1-1-built-in-server-and-watch-for-changes</guid>
+            </item>
+                    <item>
+                <title>A static site generator in your PHP projects</title>
+                <description>
+                    <![CDATA[<p>The last days I have been working on splitting Spress into <a href="https://github.com/spress/Spress-core">Spress Core</a> and its ecosystem 
+(console commands and others) as I was described in <a href="https://github.com/spress/Spress/issues/13">issue #13</a>.
+Now you can include Spress Core in your PHP projects. This feature would be
+useful for generating HTML content of a web project that have both dynamic and static responses.</p>
+
+<h2>How to use?</h2>
+
+<p>The first step is to add <code>yosymfony/spress-core</code> to your <code>require</code> section in <code>composer.json</code> and to execute
+the <code>composer update</code> command.</p>
+
+<pre><code>{
+    "require": {
+        "yosymfony/spress-core": "1.1.*@dev"
+    }
+}
+</code></pre>
+
+
+                    <a href="/news/2014/07/29/a-static-site-generator-in-your-php-projects">Read more</a>]]>
+                </description>
+                <link>/news/2014/07/29/a-static-site-generator-in-your-php-projects</link>
+                <pubDate>Tue, 29 Jul 2014 00:00:00 +0000</pubDate>
+                <guid>/news/2014/07/29/a-static-site-generator-in-your-php-projects</guid>
+            </item>
+                    <item>
+                <title>New in Spress 1.1: Plugins manager improved</title>
+                <description>
+                    <![CDATA[<p>The plugins manager has been <a href="https://github.com/yosymfony/Spress/issues/11">improved</a> for the next
+Spress 1.1.0. Prior to version 1.1.0 for each Plugin was necessary a <code>composer.json</code> file. Now this file is optional
+and you can use it for distributable plugins with <a href="https://packagist.org/">Packagist</a> or for plugins
+with namespace.</p>
+
+
+                    <a href="/news/2014/06/28/new-in-spress-1-1-plugins-manager-improved">Read more</a>]]>
+                </description>
+                <link>/news/2014/06/28/new-in-spress-1-1-plugins-manager-improved</link>
+                <pubDate>Sat, 28 Jun 2014 00:00:00 +0000</pubDate>
+                <guid>/news/2014/06/28/new-in-spress-1-1-plugins-manager-improved</guid>
+            </item>
+                    <item>
+                <title>New in Spress 1.1: Environment configurations</title>
+                <description>
+                    <![CDATA[<p>The development of Spress 1.1.0 continues with new features like support to load configurations for
+different environments. This is <strong>useful for writing configuration options for development
+and production environments</strong>. Each Spress site has a <code>config.yml</code> file (mandatory) with the options
+for the default environment (dev). If you want set options for production environment you can
+to create a <code>config_prod.yml</code> file with the options that will be overrided in <code>config.yml</code>.
+The command line option <code>--env</code> let you to enable the environment.</p>
+
+
+                    <a href="/news/2014/06/12/new-in-spress-1-1-environment-configurations">Read more</a>]]>
+                </description>
+                <link>/news/2014/06/12/new-in-spress-1-1-environment-configurations</link>
+                <pubDate>Thu, 12 Jun 2014 00:00:00 +0000</pubDate>
+                <guid>/news/2014/06/12/new-in-spress-1-1-environment-configurations</guid>
+            </item>
+                    <item>
+                <title>Spress 1.0.3 released</title>
+                <description>
+                    <![CDATA[<p>Spress 1.0.3 is available with one <a href="https://github.com/yosymfony/Spress/issues/7">stability fix</a> 
+(thank you to <strong><a href="http://twitter.com/enzolutions">@enzolutions</a></strong>) and 
+<a href="https://github.com/yosymfony/ConfigServiceProvider">ConfigServiceProvider component</a> updated to the
+last version. Now Spress has support to 
+<strong><a href="http://stackoverflow.com/questions/16843080/what-does-dist-used-as-an-extension-of-some-source-code-file-means">.dist</a> files</strong>.</p>
+
+<p>We are involved with the next Spress 1.1.0. Today the <strong><a href="https://github.com/yosymfony/Spress/issues/8">roadmap</a></strong> was published.</p>
+
+                    <a href="/releases/2014/05/24/spress-1-0-3-released">Read more</a>]]>
+                </description>
+                <link>/releases/2014/05/24/spress-1-0-3-released</link>
+                <pubDate>Sat, 24 May 2014 00:00:00 +0000</pubDate>
+                <guid>/releases/2014/05/24/spress-1-0-3-released</guid>
+            </item>
+                    <item>
+                <title>New in Spress 1.1: IO API</title>
+                <description>
+                    <![CDATA[<p>The development of Spress 1.1 has started and the first improvement is the <strong>new IO API
+available for plugins</strong>. With the IO API your plugins can to interact with the user to show
+messages or to make questions:</p>
+
+<ul>
+<li>Write messages.</li>
+<li>Ask.</li>
+<li>Ask confirmation (for yes/no questions).</li>
+<li>Ask and hide answer.</li>
+</ul>
+
+<p>This is a example of how to use the new IO API:</p>
+
+
+                    <a href="/news/2014/05/11/new-in-spress-1-1-io-api">Read more</a>]]>
+                </description>
+                <link>/news/2014/05/11/new-in-spress-1-1-io-api</link>
+                <pubDate>Sun, 11 May 2014 00:00:00 +0000</pubDate>
+                <guid>/news/2014/05/11/new-in-spress-1-1-io-api</guid>
+            </item>
+                    <item>
+                <title>How to get the categories of your posts?</title>
+                <description>
+                    <![CDATA[<p>This is a simple <em>snippet</em> that explain to you how the get your posts' categories. Similar
+way for getting the tags of your posts:</p>
+
+<p></p>
+
+<pre><code>---
+layout: default
+title: Categories
+---
+{% for categorie, posts in site.categories %}
+    &lt;h3&gt;{{ categorie }}&lt;/h3&gt;
+
+    {% for post in posts %}
+        &lt;p&gt;
+            &lt;b&gt;{{ post.title }}&lt;/b&gt;
+            &lt;p&gt;{{ post.content }}&lt;/p&gt;
+        &lt;/p&gt;
+    {% endfor %}
+{% endfor %}
+</code></pre>
+
+<p></p>
+
+<p>Each element inside <code>site.categories</code> is a <a href="/docs/variables#page-variables">page</a> element.</p>
+
+                    <a href="/resources/2014/05/04/how-to-get-the-categories-of-your-posts">Read more</a>]]>
+                </description>
+                <link>/resources/2014/05/04/how-to-get-the-categories-of-your-posts</link>
+                <pubDate>Sun, 04 May 2014 00:00:00 +0000</pubDate>
+                <guid>/resources/2014/05/04/how-to-get-the-categories-of-your-posts</guid>
+            </item>
+                    <item>
+                <title>Spress 1.0.2 released</title>
+                <description>
+                    <![CDATA[<p>Spress 1.0.2 (<a href="https://github.com/yosymfony/Spress/releases/tag/v1.0.2">changelog</a>) 
+is available with one minor <a href="https://github.com/yosymfony/Spress/issues/6">bug</a> 
+fixed related with the content of variables: <code>site.posts</code>, <code>site.categories</code> and <code>site.tags</code>.</p>
+
+<p>If you are using <a href="https://github.com/yosymfony/Spress-plugin-more-tag">More tag plugin</a>, you
+need to update to the last version of this plugin.</p>
+
+                    <a href="/releases/2014/03/30/spress-1-0-2-released">Read more</a>]]>
+                </description>
+                <link>/releases/2014/03/30/spress-1-0-2-released</link>
+                <pubDate>Sun, 30 Mar 2014 00:00:00 +0000</pubDate>
+                <guid>/releases/2014/03/30/spress-1-0-2-released</guid>
+            </item>
+                    <item>
+                <title>Spress 1.0.1 released</title>
+                <description>
+                    <![CDATA[<p>After a month since the first stable version of Spress, <a href="/about/changelog/#1-0-1">v1.0.1</a> 
+is available with two minor fixed bugs and two new events related 
+with the posts pagination: <code>spress.before_render_pagination</code> and 
+<code>spress.after_render_pagination</code>. This events allow you to take
+the control of what happen both before and after of render each
+pagination template. The events receive an <a href="/docs/developers/events-list/#renderevent">RenderEvent</a>
+object as an argument each. An example of how to iterate over the posts of the current page:</p>
+
+
+                    <a href="/releases/2014/03/08/spress-1-0-1-released">Read more</a>]]>
+                </description>
+                <link>/releases/2014/03/08/spress-1-0-1-released</link>
+                <pubDate>Sat, 08 Mar 2014 00:00:00 +0000</pubDate>
+                <guid>/releases/2014/03/08/spress-1-0-1-released</guid>
+            </item>
+                    <item>
+                <title>How to create a contact form in Spress?</title>
+                <description>
+                    <![CDATA[<p>It's probably that soon or later you need to integrate a contact
+form in your site. To do it, you can use <a href="http://getsimpleform.com/">Get simple form</a>
+service that allows you setup forms with any kind of data. To use this service only
+requires a token that you will receive by email.</p>
+
+<pre><code>&lt;form action="http://getsimpleform.com/messages?form_api_token=&lt;form_api_token&gt;" method="post"&gt;
+
+    &lt;!-- 
+        the redirect_to is optional, the form will 
+        redirect to the referrer on submission 
+    --&gt;
+    &lt;input type='hidden' name='redirect_to' 
+        value='&lt;e.g. http://yoursite.com/thank-you.html&gt;' /&gt;
+
+    &lt;!-- all your input fields here.... --&gt;
+    &lt;input type='text' name='test' /&gt;
+
+    &lt;input type='submit' value='Test form' /&gt;
+&lt;/form&gt;
+</code></pre>
+
+<p>The above code shows us how to setup a form. The hidden field <strong>redirect_to</strong> allows us
+set a redirect URL for when the form is submitted. For each form submitted you receive a email.</p>
+
+                    <a href="/resources/2014/02/23/how-to-create-a-contact-form-in-spress">Read more</a>]]>
+                </description>
+                <link>/resources/2014/02/23/how-to-create-a-contact-form-in-spress</link>
+                <pubDate>Sun, 23 Feb 2014 00:00:00 +0000</pubDate>
+                <guid>/resources/2014/02/23/how-to-create-a-contact-form-in-spress</guid>
+            </item>
+                    <item>
+                <title>Spress 1.0.0 arrived</title>
+                <description>
+                    <![CDATA[<p>After 3 <em>releases candidate</em>, the first stable version arrived. With this release you can
+extend Spress with plugins and create themes that can be published at the
+<a href="/add-ons">add-ons</a> page (you only need to send a tweet to
+<a href="http://twitter.com/spress_cms/">@spress_cms</a> or <a href="http://twitter.com/yosymfony/">@yosymfony</a>).</p>
+
+<p>I'm starting to think in the new features of the next release and any suggestion
+will be welcome. If you have some stuff, you can open a issue at
+<a href="https://github.com/yosymfony/Spress/issues">Github page</a>.</p>
+
+                    <a href="/releases/2014/02/08/spress-1-0-0-arrived">Read more</a>]]>
+                </description>
+                <link>/releases/2014/02/08/spress-1-0-0-arrived</link>
+                <pubDate>Sat, 08 Feb 2014 00:00:00 +0000</pubDate>
+                <guid>/releases/2014/02/08/spress-1-0-0-arrived</guid>
+            </item>
+            </channel>
+</rss>
