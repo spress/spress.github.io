@@ -2,9 +2,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>The static site generator in PHP</title>
-        <link></link>
+        <link>http://spress.yosymfony.com</link>
         <description>RSS feed for The static site generator in PHP</description>
-        <atom:link href="/rss.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://spress.yosymfony.com/rss.xml" rel="self" type="application/rss+xml" />
                     <item>
                 <title>Spress 2.2.0 released</title>
                 <description>
@@ -26,11 +26,11 @@ Additionaly, a <code>new:theme</code> command has been added to facilitate the t
 a new theme. <a href="/docs/themes/#creating-a-new-theme">You can get more details about this one here</a>.</p>
 
 
-                    <a href="/releases/2017/04/30/spress-2-2-0-released">Read more</a>]]>
+                    <a href="http://spress.yosymfony.com/releases/2017/04/30/spress-2-2-0-released">Read more</a>]]>
                 </description>
-                <link>/releases/2017/04/30/spress-2-2-0-released</link>
+                <link>http://spress.yosymfony.com/releases/2017/04/30/spress-2-2-0-released</link>
                 <pubDate>Sun, 30 Apr 2017 00:00:00 +0000</pubDate>
-                <guid>/releases/2017/04/30/spress-2-2-0-released</guid>
+                <guid>http://spress.yosymfony.com/releases/2017/04/30/spress-2-2-0-released</guid>
             </item>
                     <item>
                 <title>Spress 2.2.0-rc is out. Help us to test</title>
@@ -46,11 +46,11 @@ according to the new features. Additionaly, I'm going to review the themes
 of <a href="https://github.com/spress-add-ons">Spress add-ons organization on Github</a>.</p>
 
 
-                    <a href="/releases/2017/01/22/spress-2-2-0-rc-is-out-help-us-to-test">Read more</a>]]>
+                    <a href="http://spress.yosymfony.com/releases/2017/01/22/spress-2-2-0-rc-is-out-help-us-to-test">Read more</a>]]>
                 </description>
-                <link>/releases/2017/01/22/spress-2-2-0-rc-is-out-help-us-to-test</link>
+                <link>http://spress.yosymfony.com/releases/2017/01/22/spress-2-2-0-rc-is-out-help-us-to-test</link>
                 <pubDate>Sun, 22 Jan 2017 00:00:00 +0000</pubDate>
-                <guid>/releases/2017/01/22/spress-2-2-0-rc-is-out-help-us-to-test</guid>
+                <guid>http://spress.yosymfony.com/releases/2017/01/22/spress-2-2-0-rc-is-out-help-us-to-test</guid>
             </item>
                     <item>
                 <title>New in Spress 2.2.0: themes and add-ons manager</title>
@@ -60,11 +60,11 @@ I want to show you two new features: the support for themes and a new set of
 commands aimed to manage Spress's add-ons.</p>
 
 
-                    <a href="/news/2016/12/13/new-in-spress-2-2-0-themes-and-add-ons-manager">Read more</a>]]>
+                    <a href="http://spress.yosymfony.com/news/2016/12/13/new-in-spress-2-2-0-themes-and-add-ons-manager">Read more</a>]]>
                 </description>
-                <link>/news/2016/12/13/new-in-spress-2-2-0-themes-and-add-ons-manager</link>
+                <link>http://spress.yosymfony.com/news/2016/12/13/new-in-spress-2-2-0-themes-and-add-ons-manager</link>
                 <pubDate>Tue, 13 Dec 2016 00:00:00 +0000</pubDate>
-                <guid>/news/2016/12/13/new-in-spress-2-2-0-themes-and-add-ons-manager</guid>
+                <guid>http://spress.yosymfony.com/news/2016/12/13/new-in-spress-2-2-0-themes-and-add-ons-manager</guid>
             </item>
                     <item>
                 <title>New in Spress 2.2.0: "avoid_renderizer" feature for type of files</title>
@@ -94,11 +94,11 @@ provided in a file.</p>
   paths: ['assets', 'bower_components', 'node_modules']
 </code></pre>
 
-                    <a href="/news/2016/09/03/new-in-spress-2-2-0-avoid-renderizer-feature-for-type-of-files">Read more</a>]]>
+                    <a href="http://spress.yosymfony.com/news/2016/09/03/new-in-spress-2-2-0-avoid-renderizer-feature-for-type-of-files">Read more</a>]]>
                 </description>
-                <link>/news/2016/09/03/new-in-spress-2-2-0-avoid-renderizer-feature-for-type-of-files</link>
+                <link>http://spress.yosymfony.com/news/2016/09/03/new-in-spress-2-2-0-avoid-renderizer-feature-for-type-of-files</link>
                 <pubDate>Sat, 03 Sep 2016 00:00:00 +0000</pubDate>
-                <guid>/news/2016/09/03/new-in-spress-2-2-0-avoid-renderizer-feature-for-type-of-files</guid>
+                <guid>http://spress.yosymfony.com/news/2016/09/03/new-in-spress-2-2-0-avoid-renderizer-feature-for-type-of-files</guid>
             </item>
                     <item>
                 <title>Importing posts to Spress from Wordpress and CSV files is now possible thanks to Spress Import plugin</title>
@@ -113,11 +113,11 @@ the brand-new <a href="https://github.com/spress/Spress-import">Spress Import pl
 can help you with that migration.</p>
 
 
-                    <a href="/plugin/news/2016/08/08/importing-posts-to-spress-from-wordpress-and-csv-files-is-now-possible-thanks-to-spress-import-plugin">Read more</a>]]>
+                    <a href="http://spress.yosymfony.com/plugin/news/2016/08/08/importing-posts-to-spress-from-wordpress-and-csv-files-is-now-possible-thanks-to-spress-import-plugin">Read more</a>]]>
                 </description>
-                <link>/plugin/news/2016/08/08/importing-posts-to-spress-from-wordpress-and-csv-files-is-now-possible-thanks-to-spress-import-plugin</link>
+                <link>http://spress.yosymfony.com/plugin/news/2016/08/08/importing-posts-to-spress-from-wordpress-and-csv-files-is-now-possible-thanks-to-spress-import-plugin</link>
                 <pubDate>Mon, 08 Aug 2016 00:00:00 +0000</pubDate>
-                <guid>/plugin/news/2016/08/08/importing-posts-to-spress-from-wordpress-and-csv-files-is-now-possible-thanks-to-spress-import-plugin</guid>
+                <guid>http://spress.yosymfony.com/plugin/news/2016/08/08/importing-posts-to-spress-from-wordpress-and-csv-files-is-now-possible-thanks-to-spress-import-plugin</guid>
             </item>
                     <item>
                 <title>Spress 2.1.3 released</title>
@@ -145,11 +145,11 @@ which of those are plugins.</p>
 </ul>
 
 
-                    <a href="/releases/2016/07/03/spress-2-1-3-released">Read more</a>]]>
+                    <a href="http://spress.yosymfony.com/releases/2016/07/03/spress-2-1-3-released">Read more</a>]]>
                 </description>
-                <link>/releases/2016/07/03/spress-2-1-3-released</link>
+                <link>http://spress.yosymfony.com/releases/2016/07/03/spress-2-1-3-released</link>
                 <pubDate>Sun, 03 Jul 2016 00:00:00 +0000</pubDate>
-                <guid>/releases/2016/07/03/spress-2-1-3-released</guid>
+                <guid>http://spress.yosymfony.com/releases/2016/07/03/spress-2-1-3-released</guid>
             </item>
                     <item>
                 <title>Spress 2.1.2 released</title>
@@ -166,11 +166,11 @@ which of those are plugins.</p>
 </ul>
 
 
-                    <a href="/releases/2016/05/23/spress-2-1-2-released">Read more</a>]]>
+                    <a href="http://spress.yosymfony.com/releases/2016/05/23/spress-2-1-2-released">Read more</a>]]>
                 </description>
-                <link>/releases/2016/05/23/spress-2-1-2-released</link>
+                <link>http://spress.yosymfony.com/releases/2016/05/23/spress-2-1-2-released</link>
                 <pubDate>Mon, 23 May 2016 00:00:00 +0000</pubDate>
-                <guid>/releases/2016/05/23/spress-2-1-2-released</guid>
+                <guid>http://spress.yosymfony.com/releases/2016/05/23/spress-2-1-2-released</guid>
             </item>
                     <item>
                 <title>Spress 2.1.1 released</title>
@@ -186,11 +186,11 @@ which of those are plugins.</p>
 </ul>
 
 
-                    <a href="/releases/2016/04/12/spress-2-1-1-released">Read more</a>]]>
+                    <a href="http://spress.yosymfony.com/releases/2016/04/12/spress-2-1-1-released">Read more</a>]]>
                 </description>
-                <link>/releases/2016/04/12/spress-2-1-1-released</link>
+                <link>http://spress.yosymfony.com/releases/2016/04/12/spress-2-1-1-released</link>
                 <pubDate>Tue, 12 Apr 2016 00:00:00 +0000</pubDate>
-                <guid>/releases/2016/04/12/spress-2-1-1-released</guid>
+                <guid>http://spress.yosymfony.com/releases/2016/04/12/spress-2-1-1-released</guid>
             </item>
                     <item>
                 <title>Spress 2.1.0 released</title>
@@ -211,11 +211,11 @@ with many features and improvements.</p>
 </ul>
 
 
-                    <a href="/releases/2016/03/26/spress-2-1-0-released">Read more</a>]]>
+                    <a href="http://spress.yosymfony.com/releases/2016/03/26/spress-2-1-0-released">Read more</a>]]>
                 </description>
-                <link>/releases/2016/03/26/spress-2-1-0-released</link>
+                <link>http://spress.yosymfony.com/releases/2016/03/26/spress-2-1-0-released</link>
                 <pubDate>Sat, 26 Mar 2016 00:00:00 +0000</pubDate>
-                <guid>/releases/2016/03/26/spress-2-1-0-released</guid>
+                <guid>http://spress.yosymfony.com/releases/2016/03/26/spress-2-1-0-released</guid>
             </item>
                     <item>
                 <title>A site variable with items matching a criteria</title>
@@ -225,11 +225,11 @@ with the items that matching certain criteria. In this post, I will explain how 
 items that contains an <code>categories</code> attribute.</p>
 
 
-                    <a href="/resources/plugin/2016/02/22/a-site-variable-with-items-matching-a-criteria">Read more</a>]]>
+                    <a href="http://spress.yosymfony.com/resources/plugin/2016/02/22/a-site-variable-with-items-matching-a-criteria">Read more</a>]]>
                 </description>
-                <link>/resources/plugin/2016/02/22/a-site-variable-with-items-matching-a-criteria</link>
+                <link>http://spress.yosymfony.com/resources/plugin/2016/02/22/a-site-variable-with-items-matching-a-criteria</link>
                 <pubDate>Mon, 22 Feb 2016 00:00:00 +0000</pubDate>
-                <guid>/resources/plugin/2016/02/22/a-site-variable-with-items-matching-a-criteria</guid>
+                <guid>http://spress.yosymfony.com/resources/plugin/2016/02/22/a-site-variable-with-items-matching-a-criteria</guid>
             </item>
                     <item>
                 <title>Spress 2.0.2 released</title>
@@ -246,11 +246,11 @@ retrieved by <code>getContent</code> method of <code>after_render_page</code> ev
 </ul>
 
 
-                    <a href="/releases/2016/01/16/spress-2-0-2-released">Read more</a>]]>
+                    <a href="http://spress.yosymfony.com/releases/2016/01/16/spress-2-0-2-released">Read more</a>]]>
                 </description>
-                <link>/releases/2016/01/16/spress-2-0-2-released</link>
+                <link>http://spress.yosymfony.com/releases/2016/01/16/spress-2-0-2-released</link>
                 <pubDate>Sat, 16 Jan 2016 00:00:00 +0000</pubDate>
-                <guid>/releases/2016/01/16/spress-2-0-2-released</guid>
+                <guid>http://spress.yosymfony.com/releases/2016/01/16/spress-2-0-2-released</guid>
             </item>
                     <item>
                 <title>Spress 2.0.1 released with better support for Windows users</title>
@@ -268,11 +268,11 @@ retrieved by <code>getContent</code> method of <code>after_render_page</code> ev
 </ul>
 
 
-                    <a href="/releases/2016/01/09/spress-2-0-1-released-with-better-support-for-windows-users">Read more</a>]]>
+                    <a href="http://spress.yosymfony.com/releases/2016/01/09/spress-2-0-1-released-with-better-support-for-windows-users">Read more</a>]]>
                 </description>
-                <link>/releases/2016/01/09/spress-2-0-1-released-with-better-support-for-windows-users</link>
+                <link>http://spress.yosymfony.com/releases/2016/01/09/spress-2-0-1-released-with-better-support-for-windows-users</link>
                 <pubDate>Sat, 09 Jan 2016 00:00:00 +0000</pubDate>
-                <guid>/releases/2016/01/09/spress-2-0-1-released-with-better-support-for-windows-users</guid>
+                <guid>http://spress.yosymfony.com/releases/2016/01/09/spress-2-0-1-released-with-better-support-for-windows-users</guid>
             </item>
                     <item>
                 <title>Spress 2.0.0 released</title>
@@ -303,11 +303,11 @@ The documentation for Spress 2 is available at <a href="/docs">docs</a> pages. D
 </ul>
 
 
-                    <a href="/releases/2016/01/02/spress-2-0-0-released">Read more</a>]]>
+                    <a href="http://spress.yosymfony.com/releases/2016/01/02/spress-2-0-0-released">Read more</a>]]>
                 </description>
-                <link>/releases/2016/01/02/spress-2-0-0-released</link>
+                <link>http://spress.yosymfony.com/releases/2016/01/02/spress-2-0-0-released</link>
                 <pubDate>Sat, 02 Jan 2016 00:00:00 +0000</pubDate>
-                <guid>/releases/2016/01/02/spress-2-0-0-released</guid>
+                <guid>http://spress.yosymfony.com/releases/2016/01/02/spress-2-0-0-released</guid>
             </item>
                     <item>
                 <title>Spress 2.0.0-rc</title>
@@ -326,11 +326,11 @@ This release contains some features and fixes.</p>
 </ul>
 
 
-                    <a href="/releases/2015/12/08/spress-2-0-0-rc">Read more</a>]]>
+                    <a href="http://spress.yosymfony.com/releases/2015/12/08/spress-2-0-0-rc">Read more</a>]]>
                 </description>
-                <link>/releases/2015/12/08/spress-2-0-0-rc</link>
+                <link>http://spress.yosymfony.com/releases/2015/12/08/spress-2-0-0-rc</link>
                 <pubDate>Tue, 08 Dec 2015 00:00:00 +0000</pubDate>
-                <guid>/releases/2015/12/08/spress-2-0-0-rc</guid>
+                <guid>http://spress.yosymfony.com/releases/2015/12/08/spress-2-0-0-rc</guid>
             </item>
                     <item>
                 <title>Spress 2.0.0-beta is here</title>
@@ -352,11 +352,11 @@ taxonomy generator.</p>
 </ul>
 
 
-                    <a href="/releases/2015/10/18/spress-2-0-0-beta-is-here">Read more</a>]]>
+                    <a href="http://spress.yosymfony.com/releases/2015/10/18/spress-2-0-0-beta-is-here">Read more</a>]]>
                 </description>
-                <link>/releases/2015/10/18/spress-2-0-0-beta-is-here</link>
+                <link>http://spress.yosymfony.com/releases/2015/10/18/spress-2-0-0-beta-is-here</link>
                 <pubDate>Sun, 18 Oct 2015 00:00:00 +0000</pubDate>
-                <guid>/releases/2015/10/18/spress-2-0-0-beta-is-here</guid>
+                <guid>http://spress.yosymfony.com/releases/2015/10/18/spress-2-0-0-beta-is-here</guid>
             </item>
                     <item>
                 <title>Spress 2.0.0-alpha is out</title>
@@ -376,11 +376,11 @@ key features:</p>
 </ul>
 
 
-                    <a href="/releases/2015/08/12/spress-2-0-0-alpha-is-out">Read more</a>]]>
+                    <a href="http://spress.yosymfony.com/releases/2015/08/12/spress-2-0-0-alpha-is-out">Read more</a>]]>
                 </description>
-                <link>/releases/2015/08/12/spress-2-0-0-alpha-is-out</link>
+                <link>http://spress.yosymfony.com/releases/2015/08/12/spress-2-0-0-alpha-is-out</link>
                 <pubDate>Wed, 12 Aug 2015 00:00:00 +0000</pubDate>
-                <guid>/releases/2015/08/12/spress-2-0-0-alpha-is-out</guid>
+                <guid>http://spress.yosymfony.com/releases/2015/08/12/spress-2-0-0-alpha-is-out</guid>
             </item>
                     <item>
                 <title>Spress 1.1.1 is out</title>
@@ -390,11 +390,11 @@ fix a <a href="https://github.com/spress/Spress/issues/36">issue</a> with spress
 The <a href="https://github.com/spress/Openshift-spress-cartridge">OpenShift Spress Cartridge</a> has been updated too.</p>
 
 
-                    <a href="/releases/2015/02/25/spress-1-1-1-is-out">Read more</a>]]>
+                    <a href="http://spress.yosymfony.com/releases/2015/02/25/spress-1-1-1-is-out">Read more</a>]]>
                 </description>
-                <link>/releases/2015/02/25/spress-1-1-1-is-out</link>
+                <link>http://spress.yosymfony.com/releases/2015/02/25/spress-1-1-1-is-out</link>
                 <pubDate>Wed, 25 Feb 2015 00:00:00 +0000</pubDate>
-                <guid>/releases/2015/02/25/spress-1-1-1-is-out</guid>
+                <guid>http://spress.yosymfony.com/releases/2015/02/25/spress-1-1-1-is-out</guid>
             </item>
                     <item>
                 <title>spress.phar file has been rebuilt</title>
@@ -404,11 +404,11 @@ The <a href="https://github.com/spress/Openshift-spress-cartridge">OpenShift Spr
 This issue only affect to <code>spress.phar</code>. A new version of <code>spress.phar</code> 1.1.0 is
 <a href="https://github.com/spress/Spress/releases/download/v1.1.0/spress.phar">available for download</a>.</p>
 
-                    <a href="/news/2015/01/26/spress-phar-file-has-been-rebuilt">Read more</a>]]>
+                    <a href="http://spress.yosymfony.com/news/2015/01/26/spress-phar-file-has-been-rebuilt">Read more</a>]]>
                 </description>
-                <link>/news/2015/01/26/spress-phar-file-has-been-rebuilt</link>
+                <link>http://spress.yosymfony.com/news/2015/01/26/spress-phar-file-has-been-rebuilt</link>
                 <pubDate>Mon, 26 Jan 2015 00:00:00 +0000</pubDate>
-                <guid>/news/2015/01/26/spress-phar-file-has-been-rebuilt</guid>
+                <guid>http://spress.yosymfony.com/news/2015/01/26/spress-phar-file-has-been-rebuilt</guid>
             </item>
                     <item>
                 <title>Spress cartridge for Openshift</title>
@@ -427,11 +427,11 @@ and other applications. Today we are proudly to present a
 using Spress.</p>
 
 
-                    <a href="/news/2015/01/17/spress-cartridge-for-openshift">Read more</a>]]>
+                    <a href="http://spress.yosymfony.com/news/2015/01/17/spress-cartridge-for-openshift">Read more</a>]]>
                 </description>
-                <link>/news/2015/01/17/spress-cartridge-for-openshift</link>
+                <link>http://spress.yosymfony.com/news/2015/01/17/spress-cartridge-for-openshift</link>
                 <pubDate>Sat, 17 Jan 2015 00:00:00 +0000</pubDate>
-                <guid>/news/2015/01/17/spress-cartridge-for-openshift</guid>
+                <guid>http://spress.yosymfony.com/news/2015/01/17/spress-cartridge-for-openshift</guid>
             </item>
                     <item>
                 <title>The new executable phar file</title>
@@ -448,11 +448,11 @@ using Spress.</p>
 </blockquote>
 
 
-                    <a href="/news/2015/01/10/the-new-executable-phar-file">Read more</a>]]>
+                    <a href="http://spress.yosymfony.com/news/2015/01/10/the-new-executable-phar-file">Read more</a>]]>
                 </description>
-                <link>/news/2015/01/10/the-new-executable-phar-file</link>
+                <link>http://spress.yosymfony.com/news/2015/01/10/the-new-executable-phar-file</link>
                 <pubDate>Sat, 10 Jan 2015 00:00:00 +0000</pubDate>
-                <guid>/news/2015/01/10/the-new-executable-phar-file</guid>
+                <guid>http://spress.yosymfony.com/news/2015/01/10/the-new-executable-phar-file</guid>
             </item>
                     <item>
                 <title>Spress turns 1.1.0</title>
@@ -470,11 +470,11 @@ What’s changed in 1.1.0? Here are some highlights:</p>
 </ul>
 
 
-                    <a href="/releases/2015/01/08/spress-turns-1-1-0">Read more</a>]]>
+                    <a href="http://spress.yosymfony.com/releases/2015/01/08/spress-turns-1-1-0">Read more</a>]]>
                 </description>
-                <link>/releases/2015/01/08/spress-turns-1-1-0</link>
+                <link>http://spress.yosymfony.com/releases/2015/01/08/spress-turns-1-1-0</link>
                 <pubDate>Thu, 08 Jan 2015 00:00:00 +0000</pubDate>
-                <guid>/releases/2015/01/08/spress-turns-1-1-0</guid>
+                <guid>http://spress.yosymfony.com/releases/2015/01/08/spress-turns-1-1-0</guid>
             </item>
                     <item>
                 <title>Spress 1.1.0 RC available</title>
@@ -497,11 +497,11 @@ $ composer update
 
 <p>Enjoy it!</p>
 
-                    <a href="/releases/2014/12/23/spress-1-1-0-rc-available">Read more</a>]]>
+                    <a href="http://spress.yosymfony.com/releases/2014/12/23/spress-1-1-0-rc-available">Read more</a>]]>
                 </description>
-                <link>/releases/2014/12/23/spress-1-1-0-rc-available</link>
+                <link>http://spress.yosymfony.com/releases/2014/12/23/spress-1-1-0-rc-available</link>
                 <pubDate>Tue, 23 Dec 2014 00:00:00 +0000</pubDate>
-                <guid>/releases/2014/12/23/spress-1-1-0-rc-available</guid>
+                <guid>http://spress.yosymfony.com/releases/2014/12/23/spress-1-1-0-rc-available</guid>
             </item>
                     <item>
                 <title>Spress-in for Christmas &#039;14</title>
@@ -511,11 +511,11 @@ $ composer update
 <p>Christmas time is near and for this time we want to present a new Spress-in photo, this time authored by 
 <a href="https://www.flickr.com/photos/mandarina94/6560359103">Iryna Yeroshko</a>.</p>
 
-                    <a href="/news/2014/12/05/spress-in-for-christmas-03914">Read more</a>]]>
+                    <a href="http://spress.yosymfony.com/news/2014/12/05/spress-in-for-christmas-03914">Read more</a>]]>
                 </description>
-                <link>/news/2014/12/05/spress-in-for-christmas-03914</link>
+                <link>http://spress.yosymfony.com/news/2014/12/05/spress-in-for-christmas-03914</link>
                 <pubDate>Fri, 05 Dec 2014 00:00:00 +0000</pubDate>
-                <guid>/news/2014/12/05/spress-in-for-christmas-03914</guid>
+                <guid>http://spress.yosymfony.com/news/2014/12/05/spress-in-for-christmas-03914</guid>
             </item>
                     <item>
                 <title>Spress 1.1.0 beta 2 is out</title>
@@ -547,11 +547,11 @@ Issue <a href="https://github.com/spress/Spress/issues/17">#17</a>: <a href="/ne
 </code></pre>
 
 
-                    <a href="/releases/2014/11/21/spress-1-1-0-beta-2-is-out">Read more</a>]]>
+                    <a href="http://spress.yosymfony.com/releases/2014/11/21/spress-1-1-0-beta-2-is-out">Read more</a>]]>
                 </description>
-                <link>/releases/2014/11/21/spress-1-1-0-beta-2-is-out</link>
+                <link>http://spress.yosymfony.com/releases/2014/11/21/spress-1-1-0-beta-2-is-out</link>
                 <pubDate>Fri, 21 Nov 2014 00:00:00 +0000</pubDate>
-                <guid>/releases/2014/11/21/spress-1-1-0-beta-2-is-out</guid>
+                <guid>http://spress.yosymfony.com/releases/2014/11/21/spress-1-1-0-beta-2-is-out</guid>
             </item>
                     <item>
                 <title>New in Spress 1.1: debug mode</title>
@@ -576,11 +576,11 @@ site:</p>
 
 <p>Enjoy it!</p>
 
-                    <a href="/news/2014/10/28/new-in-spress-1-1-debug-mode">Read more</a>]]>
+                    <a href="http://spress.yosymfony.com/news/2014/10/28/new-in-spress-1-1-debug-mode">Read more</a>]]>
                 </description>
-                <link>/news/2014/10/28/new-in-spress-1-1-debug-mode</link>
+                <link>http://spress.yosymfony.com/news/2014/10/28/new-in-spress-1-1-debug-mode</link>
                 <pubDate>Tue, 28 Oct 2014 00:00:00 +0000</pubDate>
-                <guid>/news/2014/10/28/new-in-spress-1-1-debug-mode</guid>
+                <guid>http://spress.yosymfony.com/news/2014/10/28/new-in-spress-1-1-debug-mode</guid>
             </item>
                     <item>
                 <title>Spress 1.1.0 beta 1</title>
@@ -607,11 +607,11 @@ still in development phase but now have some interesting goodies:</p>
 open a issue at <a href="https://github.com/spress/Spress/issues">Github</a>.</p>
 
 
-                    <a href="/releases/2014/10/19/spress-1-1-0-beta-1">Read more</a>]]>
+                    <a href="http://spress.yosymfony.com/releases/2014/10/19/spress-1-1-0-beta-1">Read more</a>]]>
                 </description>
-                <link>/releases/2014/10/19/spress-1-1-0-beta-1</link>
+                <link>http://spress.yosymfony.com/releases/2014/10/19/spress-1-1-0-beta-1</link>
                 <pubDate>Sun, 19 Oct 2014 00:00:00 +0000</pubDate>
-                <guid>/releases/2014/10/19/spress-1-1-0-beta-1</guid>
+                <guid>http://spress.yosymfony.com/releases/2014/10/19/spress-1-1-0-beta-1</guid>
             </item>
                     <item>
                 <title>New in Spress 1.1: built-in server and watch for changes</title>
@@ -641,11 +641,11 @@ port: 4000
 
 <p>Additionally, Spress 1.1.0 beta1 will be ready this week!.</p>
 
-                    <a href="/news/2014/10/13/new-in-spress-1-1-built-in-server-and-watch-for-changes">Read more</a>]]>
+                    <a href="http://spress.yosymfony.com/news/2014/10/13/new-in-spress-1-1-built-in-server-and-watch-for-changes">Read more</a>]]>
                 </description>
-                <link>/news/2014/10/13/new-in-spress-1-1-built-in-server-and-watch-for-changes</link>
+                <link>http://spress.yosymfony.com/news/2014/10/13/new-in-spress-1-1-built-in-server-and-watch-for-changes</link>
                 <pubDate>Mon, 13 Oct 2014 00:00:00 +0000</pubDate>
-                <guid>/news/2014/10/13/new-in-spress-1-1-built-in-server-and-watch-for-changes</guid>
+                <guid>http://spress.yosymfony.com/news/2014/10/13/new-in-spress-1-1-built-in-server-and-watch-for-changes</guid>
             </item>
                     <item>
                 <title>A static site generator in your PHP projects</title>
@@ -668,11 +668,11 @@ the <code>composer update</code> command.</p>
 </code></pre>
 
 
-                    <a href="/news/2014/07/29/a-static-site-generator-in-your-php-projects">Read more</a>]]>
+                    <a href="http://spress.yosymfony.com/news/2014/07/29/a-static-site-generator-in-your-php-projects">Read more</a>]]>
                 </description>
-                <link>/news/2014/07/29/a-static-site-generator-in-your-php-projects</link>
+                <link>http://spress.yosymfony.com/news/2014/07/29/a-static-site-generator-in-your-php-projects</link>
                 <pubDate>Tue, 29 Jul 2014 00:00:00 +0000</pubDate>
-                <guid>/news/2014/07/29/a-static-site-generator-in-your-php-projects</guid>
+                <guid>http://spress.yosymfony.com/news/2014/07/29/a-static-site-generator-in-your-php-projects</guid>
             </item>
                     <item>
                 <title>New in Spress 1.1: Plugins manager improved</title>
@@ -683,11 +683,11 @@ and you can use it for distributable plugins with <a href="https://packagist.org
 with namespace.</p>
 
 
-                    <a href="/news/2014/06/28/new-in-spress-1-1-plugins-manager-improved">Read more</a>]]>
+                    <a href="http://spress.yosymfony.com/news/2014/06/28/new-in-spress-1-1-plugins-manager-improved">Read more</a>]]>
                 </description>
-                <link>/news/2014/06/28/new-in-spress-1-1-plugins-manager-improved</link>
+                <link>http://spress.yosymfony.com/news/2014/06/28/new-in-spress-1-1-plugins-manager-improved</link>
                 <pubDate>Sat, 28 Jun 2014 00:00:00 +0000</pubDate>
-                <guid>/news/2014/06/28/new-in-spress-1-1-plugins-manager-improved</guid>
+                <guid>http://spress.yosymfony.com/news/2014/06/28/new-in-spress-1-1-plugins-manager-improved</guid>
             </item>
                     <item>
                 <title>New in Spress 1.1: Environment configurations</title>
@@ -700,11 +700,11 @@ to create a <code>config_prod.yml</code> file with the options that will be over
 The command line option <code>--env</code> let you to enable the environment.</p>
 
 
-                    <a href="/news/2014/06/12/new-in-spress-1-1-environment-configurations">Read more</a>]]>
+                    <a href="http://spress.yosymfony.com/news/2014/06/12/new-in-spress-1-1-environment-configurations">Read more</a>]]>
                 </description>
-                <link>/news/2014/06/12/new-in-spress-1-1-environment-configurations</link>
+                <link>http://spress.yosymfony.com/news/2014/06/12/new-in-spress-1-1-environment-configurations</link>
                 <pubDate>Thu, 12 Jun 2014 00:00:00 +0000</pubDate>
-                <guid>/news/2014/06/12/new-in-spress-1-1-environment-configurations</guid>
+                <guid>http://spress.yosymfony.com/news/2014/06/12/new-in-spress-1-1-environment-configurations</guid>
             </item>
                     <item>
                 <title>Spress 1.0.3 released</title>
@@ -717,11 +717,11 @@ last version. Now Spress has support to
 
 <p>We are involved with the next Spress 1.1.0. Today the <strong><a href="https://github.com/yosymfony/Spress/issues/8">roadmap</a></strong> was published.</p>
 
-                    <a href="/releases/2014/05/24/spress-1-0-3-released">Read more</a>]]>
+                    <a href="http://spress.yosymfony.com/releases/2014/05/24/spress-1-0-3-released">Read more</a>]]>
                 </description>
-                <link>/releases/2014/05/24/spress-1-0-3-released</link>
+                <link>http://spress.yosymfony.com/releases/2014/05/24/spress-1-0-3-released</link>
                 <pubDate>Sat, 24 May 2014 00:00:00 +0000</pubDate>
-                <guid>/releases/2014/05/24/spress-1-0-3-released</guid>
+                <guid>http://spress.yosymfony.com/releases/2014/05/24/spress-1-0-3-released</guid>
             </item>
                     <item>
                 <title>New in Spress 1.1: IO API</title>
@@ -740,11 +740,11 @@ messages or to make questions:</p>
 <p>This is a example of how to use the new IO API:</p>
 
 
-                    <a href="/news/2014/05/11/new-in-spress-1-1-io-api">Read more</a>]]>
+                    <a href="http://spress.yosymfony.com/news/2014/05/11/new-in-spress-1-1-io-api">Read more</a>]]>
                 </description>
-                <link>/news/2014/05/11/new-in-spress-1-1-io-api</link>
+                <link>http://spress.yosymfony.com/news/2014/05/11/new-in-spress-1-1-io-api</link>
                 <pubDate>Sun, 11 May 2014 00:00:00 +0000</pubDate>
-                <guid>/news/2014/05/11/new-in-spress-1-1-io-api</guid>
+                <guid>http://spress.yosymfony.com/news/2014/05/11/new-in-spress-1-1-io-api</guid>
             </item>
                     <item>
                 <title>How to get the categories of your posts?</title>
@@ -774,11 +774,11 @@ title: Categories
 
 <p>Each element inside <code>site.categories</code> is a <a href="/docs/variables#page-variables">page</a> element.</p>
 
-                    <a href="/resources/2014/05/04/how-to-get-the-categories-of-your-posts">Read more</a>]]>
+                    <a href="http://spress.yosymfony.com/resources/2014/05/04/how-to-get-the-categories-of-your-posts">Read more</a>]]>
                 </description>
-                <link>/resources/2014/05/04/how-to-get-the-categories-of-your-posts</link>
+                <link>http://spress.yosymfony.com/resources/2014/05/04/how-to-get-the-categories-of-your-posts</link>
                 <pubDate>Sun, 04 May 2014 00:00:00 +0000</pubDate>
-                <guid>/resources/2014/05/04/how-to-get-the-categories-of-your-posts</guid>
+                <guid>http://spress.yosymfony.com/resources/2014/05/04/how-to-get-the-categories-of-your-posts</guid>
             </item>
                     <item>
                 <title>Spress 1.0.2 released</title>
@@ -790,29 +790,29 @@ fixed related with the content of variables: <code>site.posts</code>, <code>site
 <p>If you are using <a href="https://github.com/yosymfony/Spress-plugin-more-tag">More tag plugin</a>, you
 need to update to the last version of this plugin.</p>
 
-                    <a href="/releases/2014/03/30/spress-1-0-2-released">Read more</a>]]>
+                    <a href="http://spress.yosymfony.com/releases/2014/03/30/spress-1-0-2-released">Read more</a>]]>
                 </description>
-                <link>/releases/2014/03/30/spress-1-0-2-released</link>
+                <link>http://spress.yosymfony.com/releases/2014/03/30/spress-1-0-2-released</link>
                 <pubDate>Sun, 30 Mar 2014 00:00:00 +0000</pubDate>
-                <guid>/releases/2014/03/30/spress-1-0-2-released</guid>
+                <guid>http://spress.yosymfony.com/releases/2014/03/30/spress-1-0-2-released</guid>
             </item>
                     <item>
                 <title>Spress 1.0.1 released</title>
                 <description>
-                    <![CDATA[<p>After a month since the first stable version of Spress, <a href="/about/changelog/#1-0-1">v1.0.1</a> 
+                    <![CDATA[<p>After a month since the first stable version of Spress, <a href="http://spress.yosymfony.com/about/changelog/#1-0-1">v1.0.1</a> 
 is available with two minor fixed bugs and two new events related 
 with the posts pagination: <code>spress.before_render_pagination</code> and 
 <code>spress.after_render_pagination</code>. This events allow you to take
 the control of what happen both before and after of render each
-pagination template. The events receive an <a href="/docs/developers/events-list/#renderevent">RenderEvent</a>
+pagination template. The events receive an <a href="http://spress.yosymfony.com/docs/developers/events-list/#renderevent">RenderEvent</a>
 object as an argument each. An example of how to iterate over the posts of the current page:</p>
 
 
-                    <a href="/releases/2014/03/08/spress-1-0-1-released">Read more</a>]]>
+                    <a href="http://spress.yosymfony.com/releases/2014/03/08/spress-1-0-1-released">Read more</a>]]>
                 </description>
-                <link>/releases/2014/03/08/spress-1-0-1-released</link>
+                <link>http://spress.yosymfony.com/releases/2014/03/08/spress-1-0-1-released</link>
                 <pubDate>Sat, 08 Mar 2014 00:00:00 +0000</pubDate>
-                <guid>/releases/2014/03/08/spress-1-0-1-released</guid>
+                <guid>http://spress.yosymfony.com/releases/2014/03/08/spress-1-0-1-released</guid>
             </item>
                     <item>
                 <title>How to create a contact form in Spress?</title>
@@ -841,29 +841,29 @@ requires a token that you will receive by email.</p>
 <p>The above code shows us how to setup a form. The hidden field <strong>redirect_to</strong> allows us
 set a redirect URL for when the form is submitted. For each form submitted you receive a email.</p>
 
-                    <a href="/resources/2014/02/23/how-to-create-a-contact-form-in-spress">Read more</a>]]>
+                    <a href="http://spress.yosymfony.com/resources/2014/02/23/how-to-create-a-contact-form-in-spress">Read more</a>]]>
                 </description>
-                <link>/resources/2014/02/23/how-to-create-a-contact-form-in-spress</link>
+                <link>http://spress.yosymfony.com/resources/2014/02/23/how-to-create-a-contact-form-in-spress</link>
                 <pubDate>Sun, 23 Feb 2014 00:00:00 +0000</pubDate>
-                <guid>/resources/2014/02/23/how-to-create-a-contact-form-in-spress</guid>
+                <guid>http://spress.yosymfony.com/resources/2014/02/23/how-to-create-a-contact-form-in-spress</guid>
             </item>
                     <item>
                 <title>Spress 1.0.0 arrived</title>
                 <description>
                     <![CDATA[<p>After 3 <em>releases candidate</em>, the first stable version arrived. With this release you can
 extend Spress with plugins and create themes that can be published at the
-<a href="/add-ons">add-ons</a> page (you only need to send a tweet to
+<a href="http://spress.yosymfony.com/add-ons">add-ons</a> page (you only need to send a tweet to
 <a href="http://twitter.com/spress_cms/">@spress_cms</a> or <a href="http://twitter.com/yosymfony/">@yosymfony</a>).</p>
 
 <p>I'm starting to think in the new features of the next release and any suggestion
 will be welcome. If you have some stuff, you can open a issue at
 <a href="https://github.com/yosymfony/Spress/issues">Github page</a>.</p>
 
-                    <a href="/releases/2014/02/08/spress-1-0-0-arrived">Read more</a>]]>
+                    <a href="http://spress.yosymfony.com/releases/2014/02/08/spress-1-0-0-arrived">Read more</a>]]>
                 </description>
-                <link>/releases/2014/02/08/spress-1-0-0-arrived</link>
+                <link>http://spress.yosymfony.com/releases/2014/02/08/spress-1-0-0-arrived</link>
                 <pubDate>Sat, 08 Feb 2014 00:00:00 +0000</pubDate>
-                <guid>/releases/2014/02/08/spress-1-0-0-arrived</guid>
+                <guid>http://spress.yosymfony.com/releases/2014/02/08/spress-1-0-0-arrived</guid>
             </item>
             </channel>
 </rss>
