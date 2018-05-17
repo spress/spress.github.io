@@ -91,6 +91,35 @@
                                 <article class="post">
     <header>
         <h1>
+            <a href="/news/2014/10/28/new-in-spress-1-1-debug-mode">New in Spress 1.1: debug mode</a>
+        </h1>
+    </header>
+    
+            <p>A debug mode can be activated with Spress 1.1 according with <a href="https://github.com/spress/Spress/issues/17">issue #17</a>
+from <a href="https://github.com/valllabh">@valllabh</a>. With this mode activated you can
+<a href="http://twig.sensiolabs.org/doc/functions/dump.html">dump</a> information about a template
+variable in your templates. By default debug mode is disabled. To enable add this line in <code>config.yml</code> of your
+site:</p>
+
+<pre><code>debug: true
+</code></pre>
+
+<p>To dumps information about a variable simply uses <code>dump</code> function from Twig:</p>
+
+<p>{% verbatim %}</p>
+
+<pre><code>{{ dump(page) }}
+</code></pre>
+
+<p>{% endverbatim %}</p>
+
+<p>Enjoy it!</p>
+
+                
+    </article>
+            <article class="post">
+    <header>
+        <h1>
             <a href="/releases/2014/10/19/spress-1-1-0-beta-1">Spress 1.1.0 beta 1</a>
         </h1>
     </header>
@@ -196,24 +225,6 @@ with namespace.</p>
 
 
                     <a href="http://spress.yosymfony.com/news/2014/06/28/new-in-spress-1-1-plugins-manager-improved">Read more</a>
-                
-    </article>
-            <article class="post">
-    <header>
-        <h1>
-            <a href="/news/2014/06/12/new-in-spress-1-1-environment-configurations">New in Spress 1.1: Environment configurations</a>
-        </h1>
-    </header>
-    
-            <p>The development of Spress 1.1.0 continues with new features like support to load configurations for
-different environments. This is <strong>useful for writing configuration options for development
-and production environments</strong>. Each Spress site has a <code>config.yml</code> file (mandatory) with the options
-for the default environment (dev). If you want set options for production environment you can
-to create a <code>config_prod.yml</code> file with the options that will be overrided in <code>config.yml</code>.
-The command line option <code>--env</code> let you to enable the environment.</p>
-
-
-                    <a href="http://spress.yosymfony.com/news/2014/06/12/new-in-spress-1-1-environment-configurations">Read more</a>
                 
     </article>
     

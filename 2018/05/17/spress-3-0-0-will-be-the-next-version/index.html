@@ -2,22 +2,22 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-<title>Welcome &#8250; Spress blog</title>
+<title>Spress 3.0.0 will be the next version &#8250; Spress blog</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Spress is a blog-aware application that transform your plain text files in static sites.">
 <meta name="author" content="Victor Puertas">
 
         <meta name="twitter:card" content="summary">
         <meta name="twitter:image" content="http://spress.yosymfony.com/assets/img/spress-logo.png">
-    <meta name="twitter:title" content="Welcome">
+    <meta name="twitter:title" content="Spress 3.0.0 will be the next version">
     <meta name="twitter:description" content="Spress is a blog-aware application that transform your plain text files in static sites.">
     <meta name="twitter:creator" content="@spress_cms">
 
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Welcome">
+<meta property="og:title" content="Spress 3.0.0 will be the next version">
 <meta property="og:description" content="Spress is a blog-aware application that transform your plain text files in static sites.">
-<meta property="og:url" content="http://spress.yosymfony.com/blog/page7">
+<meta property="og:url" content="http://spress.yosymfony.com/2018/05/17/spress-3-0-0-will-be-the-next-version">
 <meta property="og:site_name" content="The static site generator in PHP">
 
 <link href="http://spress.yosymfony.com/rss.xml" type="application/rss+xml" rel="alternate" title="The static site generator in PHP Feed">
@@ -88,126 +88,39 @@
         </div>
     </div>
 </div>            <div class="container">
-                                <article class="post">
+                    <article class="post">
     <header>
         <h1>
-            <a href="/news/2014/06/12/new-in-spress-1-1-environment-configurations">New in Spress 1.1: Environment configurations</a>
+            <a href="/2018/05/17/spress-3-0-0-will-be-the-next-version">Spress 3.0.0 will be the next version</a>
         </h1>
     </header>
     
-            <p>The development of Spress 1.1.0 continues with new features like support to load configurations for
-different environments. This is <strong>useful for writing configuration options for development
-and production environments</strong>. Each Spress site has a <code>config.yml</code> file (mandatory) with the options
-for the default environment (dev). If you want set options for production environment you can
-to create a <code>config_prod.yml</code> file with the options that will be overrided in <code>config.yml</code>.
-The command line option <code>--env</code> let you to enable the environment.</p>
+            <p>Hi community. I was working on Spress 2.3.0 whose only new feature would have been
+the incremental site regeneration, an experimental feature that lets Spress to recompile
+only the modified files in a site so it can save time and increments the performance.
+From a year and some months ago I'm father and I don't have enough free time for all my
+side projects so I have decided to focus my effors on Spress 3.0.0 (<a href="https://github.com/spress/spress">master branch</a>).
+This version will work over PHP 7.2 (minimum version) and Symfony 4. I'll keep
+you update about all the new features and changes.</p>
 
+        
+            <footer>    
+            <p>
+                Posted by Victor Puertas on <time pubdate="pubdate">2018-05-17</time>
+            </p>
 
-                    <a href="http://spress.yosymfony.com/news/2014/06/12/new-in-spress-1-1-environment-configurations">Read more</a>
-                
-    </article>
-            <article class="post">
-    <header>
-        <h1>
-            <a href="/releases/2014/05/24/spress-1-0-3-released">Spress 1.0.3 released</a>
-        </h1>
-    </header>
-    
-            <p>Spress 1.0.3 is available with one <a href="https://github.com/yosymfony/Spress/issues/7">stability fix</a> 
-(thank you to <strong><a href="http://twitter.com/enzolutions">@enzolutions</a></strong>) and 
-<a href="https://github.com/yosymfony/ConfigServiceProvider">ConfigServiceProvider component</a> updated to the
-last version. Now Spress has support to 
-<strong><a href="http://stackoverflow.com/questions/16843080/what-does-dist-used-as-an-extension-of-some-source-code-file-means">.dist</a> files</strong>.</p>
+                    </footer>
 
-<p>We are involved with the next Spress 1.1.0. Today the <strong><a href="https://github.com/yosymfony/Spress/issues/8">roadmap</a></strong> was published.</p>
-
-                
-    </article>
-            <article class="post">
-    <header>
-        <h1>
-            <a href="/news/2014/05/11/new-in-spress-1-1-io-api">New in Spress 1.1: IO API</a>
-        </h1>
-    </header>
-    
-            <p>The development of Spress 1.1 has started and the first improvement is the <strong>new IO API
-available for plugins</strong>. With the IO API your plugins can to interact with the user to show
-messages or to make questions:</p>
-
-<ul>
-<li>Write messages.</li>
-<li>Ask.</li>
-<li>Ask confirmation (for yes/no questions).</li>
-<li>Ask and hide answer.</li>
-</ul>
-
-<p>This is a example of how to use the new IO API:</p>
-
-
-                    <a href="http://spress.yosymfony.com/news/2014/05/11/new-in-spress-1-1-io-api">Read more</a>
-                
-    </article>
-            <article class="post">
-    <header>
-        <h1>
-            <a href="/resources/2014/05/04/how-to-get-the-categories-of-your-posts">How to get the categories of your posts?</a>
-        </h1>
-    </header>
-    
-            <p>This is a simple <em>snippet</em> that explain to you how the get your posts' categories. Similar
-way for getting the tags of your posts:</p>
-
-<p>{% verbatim %}</p>
-
-<pre><code>---
-layout: default
-title: Categories
----
-{% for categorie, posts in site.categories %}
-    &lt;h3&gt;{{ categorie }}&lt;/h3&gt;
-
-    {% for post in posts %}
-        &lt;p&gt;
-            &lt;b&gt;{{ post.title }}&lt;/b&gt;
-            &lt;p&gt;{{ post.content }}&lt;/p&gt;
-        &lt;/p&gt;
-    {% endfor %}
-{% endfor %}
-</code></pre>
-
-<p>{% endverbatim %}</p>
-
-<p>Each element inside <code>site.categories</code> is a <a href="/docs/variables#page-variables">page</a> element.</p>
-
-                
-    </article>
-            <article class="post">
-    <header>
-        <h1>
-            <a href="/releases/2014/03/30/spress-1-0-2-released">Spress 1.0.2 released</a>
-        </h1>
-    </header>
-    
-            <p>Spress 1.0.2 (<a href="https://github.com/yosymfony/Spress/releases/tag/v1.0.2">changelog</a>) 
-is available with one minor <a href="https://github.com/yosymfony/Spress/issues/6">bug</a> 
-fixed related with the content of variables: <code>site.posts</code>, <code>site.categories</code> and <code>site.tags</code>.</p>
-
-<p>If you are using <a href="https://github.com/yosymfony/Spress-plugin-more-tag">More tag plugin</a>, you
-need to update to the last version of this plugin.</p>
-
-                
-    </article>
-    
-    <ul class="pagination">
-					<li>
-                <a class="prev" href="http://spress.yosymfony.com/blog/page6">
-                    &laquo; Newer
-                </a>
-            </li>
-		
-					<li><a href="http://spress.yosymfony.com/blog/page8">Older &raquo;</a></li>
-			</ul>
-
+                    <section>
+                <h3>Comments</h3>
+                <div id="disqus_thread"></div>
+                <noscript>
+                    Please enable JavaScript to view the
+                    <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+                </noscript> 
+                <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            </section>
+            </article>
             </div>
         </div>
             
@@ -288,6 +201,15 @@ need to update to the last version of this plugin.</p>
     
     ga('create', 'UA-47797401-1', 'yosymfony.com');
     ga('send', 'pageview');
-</script>                                </footer>
+</script>                        <script type="text/javascript">
+            var disqus_shortname = 'yosymfony';
+            
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+            </footer>
     </body>
 </html>

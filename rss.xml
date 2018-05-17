@@ -6,6 +6,23 @@
         <description>RSS feed for The static site generator in PHP</description>
         <atom:link href="http://spress.yosymfony.com/rss.xml" rel="self" type="application/rss+xml" />
                     <item>
+                <title>Spress 3.0.0 will be the next version</title>
+                <description>
+                    <![CDATA[<p>Hi community. I was working on Spress 2.3.0 whose only new feature would have been
+the incremental site regeneration, an experimental feature that lets Spress to recompile
+only the modified files in a site so it can save time and increments the performance.
+From a year and some months ago I'm father and I don't have enough free time for all my
+side projects so I have decided to focus my effors on Spress 3.0.0 (<a href="https://github.com/spress/spress">master branch</a>).
+This version will work over PHP 7.2 (minimum version) and Symfony 4. I'll keep
+you update about all the new features and changes.</p>
+
+                    <a href="http://spress.yosymfony.com/2018/05/17/spress-3-0-0-will-be-the-next-version">Read more</a>]]>
+                </description>
+                <link>http://spress.yosymfony.com/2018/05/17/spress-3-0-0-will-be-the-next-version</link>
+                <pubDate>Thu, 17 May 2018 00:00:00 +0000</pubDate>
+                <guid>http://spress.yosymfony.com/2018/05/17/spress-3-0-0-will-be-the-next-version</guid>
+            </item>
+                    <item>
                 <title>Spress 2.2.0 released</title>
                 <description>
                     <![CDATA[<p>Hi community. After several months working on Spress 2.2.0, it is here with 11
