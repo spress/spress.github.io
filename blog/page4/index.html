@@ -91,6 +91,30 @@
                                 <article class="post">
     <header>
         <h1>
+            <a href="/releases/2015/12/08/spress-2-0-0-rc">Spress 2.0.0-rc</a>
+        </h1>
+    </header>
+    
+            <p>We have now released the <a href="/about/changelog/#2-0-0-rc">first release candidate</a> and, in theory, the unique release candidate.
+This release contains some features and fixes.</p>
+
+<h2>The highlight of this release</h2>
+
+<ul>
+<li>A new data source called <strong>MemoryDataSource</strong> is available for generating dynamic content. An example is <a href="/docs/developers/data-sources/#MemoryDataSource">available at developer documentation</a>.</li>
+<li>Support to sort items at <code>PaginationGenerator</code> with attributes <code>sort_by</code> and <code>sort_type</code>. See <a href="https://github.com/spress/Spress/issues/61">#61</a>.</li>
+<li>Added <code>getGeneratorManager</code> method to <code>EnvironmentEvent</code> for managing generators at plugins.</li>
+<li>Improved the way of generating the classname in PluginGenerator (<code>new:plugin</code> command). e.g: a plugin named <code>yosymfony\hola-user</code> will generate a <code>YosymfonyHolaUser</code> class.</li>
+<li>Fixed the lifecycle: render phase starts after converter phase has been finished for all items.</li>
+</ul>
+
+
+                    <a href="http://spress.yosymfony.com/releases/2015/12/08/spress-2-0-0-rc">Read more</a>
+                
+    </article>
+            <article class="post">
+    <header>
+        <h1>
             <a href="/releases/2015/10/18/spress-2-0-0-beta-is-here">Spress 2.0.0-beta is here</a>
         </h1>
     </header>
@@ -169,30 +193,6 @@ This issue only affect to <code>spress.phar</code>. A new version of <code>spres
 
                 
     </article>
-            <article class="post">
-    <header>
-        <h1>
-            <a href="/news/2015/01/17/spress-cartridge-for-openshift">Spress cartridge for Openshift</a>
-        </h1>
-    </header>
-    
-            <p><img class="center-block" src="/assets/img/openshift-logo.svg"></p>
-
-<p>Logo owned by Red Hat for <a href="http://openshift.com">OpenShift</a>.</p>
-
-<p>OpenShift is a cloud computing platform as a service from Red Hat for running applications in several
-platform like NodeJs, Java or PHP. Openshift is a one of the most common PaaS because has a
-competitive prices for computing with free and premium plans. The free plan is a good starting
-point for creating static blogs and web pages. Openshift is organized in Gears and inside of each
-Gears we have one or more cartridges. OpenShift has a few prepared carteridges for PHP, Java, MySQL
-and other applications. Today we are proudly to present a
-<a href="https://github.com/spress/Openshift-spress-cartridge">Cartridge for running a static site or blog</a>
-using Spress.</p>
-
-
-                    <a href="http://spress.yosymfony.com/news/2015/01/17/spress-cartridge-for-openshift">Read more</a>
-                
-    </article>
     
     <ul class="pagination">
 					<li>
@@ -266,7 +266,7 @@ using Spress.</p>
                 </p>
                 <p class="text-center">
                     &copy;
-                    2018
+                    2020
                                             <a href="http://yosymfony.com">
                             Yo! Symfony
                         </a>

@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Standard variables of Spress">
 <meta name="author" content="Victor Puertas">
-<meta name="generator" content="Spress v2.2.0">
+<meta name="generator" content="Spress v3.0.0">
 
             <meta name="twitter:card" content="summary">
         <meta name="twitter:image" content="http://spress.yosymfony.com/assets/img/spress-logo.png">
@@ -166,7 +166,7 @@
     <div class="col-md-9">
     	<p class="text-right">
     		<i class="fa fa-github"></i>
-    		<a href="https://github.com/yosymfony/Spress.yosymfony.com/edit/master/src/content/docs/variables.md">
+    		<a href="https://github.com/spress/spress.yosymfony.com/edit/master/src/content/docs/variables.md">
     			Edit this page on Github
     		</a>
     	</p>
@@ -185,8 +185,8 @@
         <tr>
             <td><a href="#site-variables">site</a></td>
             <td>
-    Contains site information and site configuration read from <code>config.yml</code>.
-</td>
+                Contains site information and site configuration read from <code>config.yml</code>.
+            </td>
         </tr>
         <tr>
             <td><a href="#page-variables">page</a></td>
@@ -216,9 +216,9 @@
             <td>collections</td>
             <td>array</td>
             <td>
-    List of all collections. Each element of this list is of type <a href="#collection-variables">collection</a>.
-    The key of each element is the collection's name.
-</td>
+                List of all collections. Each element of this list is of type <a href="#collection-variables">collection</a>.
+                The key of each element is the collection's name.
+            </td>
         </tr>
         <tr>
             <td>time</td>
@@ -229,29 +229,29 @@
             <td>categories</td>
             <td>array</td>
             <td>
-    List of <a href="/docs/writing-posts">post</a> groups by categories.
-    E.g: <code>site.cagetories.news</code> get all posts with <code>news</code>
-    category. Each element of this list is of type <a href="#page-variables">page</a>.
-    Posts are located at <code>src/content/posts</code>.
-</td>
+                List of <a href="/docs/writing-posts">post</a> groups by categories.
+                E.g: <code>site.cagetories.news</code> get all posts with <code>news</code>
+                category. Each element of this list is of type <a href="#page-variables">page</a>.
+                Posts are located at <code>src/content/posts</code>.
+            </td>
         </tr>
         <tr>
             <td>tags</td>
             <td>array</td>
             <td>
-    List of <a href="/docs/writing-posts">post</a> groups by tags.
-    E.g: <code>site.tags.car</code> get all posts with <code>car</code>
-    tag. Each element of this list is of type <a href="#page-variables">page</a>.
-    Posts are located at <code>src/content/posts</code>.
-</td>
+                List of <a href="/docs/writing-posts">post</a> groups by tags.
+                E.g: <code>site.tags.car</code> get all posts with <code>car</code>
+                tag. Each element of this list is of type <a href="#page-variables">page</a>.
+                Posts are located at <code>src/content/posts</code>.
+            </td>
         </tr>
         <tr>
             <td>your-variable-name</td>
             <td></td>
             <td>
-    Your custom variables in <code>config.yml</code> are available here.
-    Example: <code>{{ site.your-variable-name }}</code>.
-</td>
+                Your custom variables in <code>config.yml</code> are available here.
+                Example: <code>{{ site.your-variable-name }}</code>.
+            </td>
         </tr>
     </tbody>
 </table>
@@ -273,23 +273,23 @@
             <td>path</td>
             <td>string</td>
             <td>
-    The collection's relative path to <code>src/content</code> folder.
-</td>
+                The collection's relative path to <code>src/content</code> folder.
+            </td>
         </tr>
         <tr>
             <td>output</td>
             <td>boolean</td>
             <td>
-    With a <code>true</code> value the collection's item will be output as individual file.
-</td>
+                With a <code>true</code> value the collection's item will be output as individual file.
+            </td>
         </tr>
          <tr>
             <td>your-variable-name</td>
             <td></td>
             <td>
-    Your custom variables declared at the collection definition are available here.
-    Example: <code>{{ site.collection-name.your-variable-name }}</code>.
-</td>
+                Your custom variables declared at the collection definition are available here.
+                Example: <code>{{ site.collection-name.your-variable-name }}</code>.
+            </td>
         </tr>
     </tbody>
 </table>
@@ -322,9 +322,9 @@ Example of access with Twig: <code>{{ page.id }}</code>.</p>
             <td>mtime</td>
             <td>string</td>
             <td>
-    The modified time in <a href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a>
-    format.
-</td>
+                The modified time in <a href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a>
+                format.
+            </td>
         </tr>
         <tr>
             <td>filename</td>
@@ -340,15 +340,15 @@ Example of access with Twig: <code>{{ page.id }}</code>.</p>
             <td>path</td>
             <td>string</td>
             <td>
-    The relative path to <code>/src/content</code> folder. e.g: <code>about/index.html</code>.
-</td>
+                The relative path to <code>/src/content</code> folder. e.g: <code>about/index.html</code>.
+            </td>
         </tr>
         <tr>
             <td>url</td>
             <td>string</td>
             <td>
-    The URL of the page without the domain, but with a leading slash. e.g: <code>/about/changelog/</code>.
-</td>
+                The URL of the page without the domain, but with a leading slash. e.g: <code>/about/changelog/</code>.
+            </td>
         </tr>
         <tr>
             <td>content</td>
@@ -359,11 +359,11 @@ Example of access with Twig: <code>{{ page.id }}</code>.</p>
             <td>relationships</td>
             <td>array</td>
             <td>
-    <span class="label label-success">Spress >= 2.1</span>
-    Only available in items belonging to a sorted <a href="/docs/collections/">collection</a>.
-    Contains items related to the current item. Each relationship of this array
-    contains a set of items. <a href="/docs/collections/#relationships">Here's an example</a>.
-</td>
+                <span class="label label-success">Spress >= 2.1</span>
+                Only available in items belonging to a sorted <a href="/docs/collections/">collection</a>.
+                Contains items related to the current item. Each relationship of this array
+                contains a set of items. <a href="/docs/collections/#relationships">Here's an example</a>.
+            </td>
         </tr>
     </tbody>
 </table>
@@ -388,17 +388,17 @@ Example of access with Twig: <code>{{ page.id }}</code>.</p>
             <td>title_path</td>
             <td>string</td>
             <td>
-    The title obtained from filename. e.g: "hola user" from <code>2015-12-08-hola-user.md</code>.
-</td>
+                The title obtained from filename. e.g: "hola user" from <code>2015-12-08-hola-user.md</code>.
+            </td>
         </tr>
         <tr>
             <td>date</td>
             <td>string</td>
             <td>
-    The date assigned to the post in 
-    <a href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a>
-    format.
-</td>
+                The date assigned to the post in 
+                <a href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a>
+                format.
+            </td>
         </tr>
     </tbody>
 </table>
@@ -548,7 +548,7 @@ Example of access with Twig: <code>{{ page.id }}</code>.</p>
                     </div>
                 </div>
                 <p class="text-center">
-                    &copy; 2018 <a href="http://yosymfony.com">Yo! Symfony</a>.
+                    &copy; 2020 <a href="http://yosymfony.com">Yo! Symfony</a>.
                     <span class="label label-default">Proudly powered by Spress</span>
                 </p>
             </div>

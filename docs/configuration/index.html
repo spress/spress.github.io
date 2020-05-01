@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="The Spress site configuration file">
 <meta name="author" content="Victor Puertas">
-<meta name="generator" content="Spress v2.2.0">
+<meta name="generator" content="Spress v3.0.0">
 
             <meta name="twitter:card" content="summary">
         <meta name="twitter:image" content="http://spress.yosymfony.com/assets/img/spress-logo.png">
@@ -166,7 +166,7 @@
     <div class="col-md-9">
     	<p class="text-right">
     		<i class="fa fa-github"></i>
-    		<a href="https://github.com/yosymfony/Spress.yosymfony.com/edit/master/src/content/docs/configuration.md">
+    		<a href="https://github.com/spress/spress.yosymfony.com/edit/master/src/content/docs/configuration.md">
     			Edit this page on Github
     		</a>
     	</p>
@@ -183,9 +183,9 @@ of Spress and create new variables that will be accessible in your template with
         </div>
         <div class="col-md-11">
             <p>
-    The configuration is using <a href="http://yaml.org">YAML</a> formatted file. Do not use
-    tabs!
-</p>
+                The configuration is using <a href="http://yaml.org">YAML</a> formatted file. Do not use
+                tabs!
+            </p>
         </div>
     </div>
   </div>
@@ -269,9 +269,9 @@ plugin_manager_builder:
             <td>attribute_syntax</td>
             <td>string</td>
             <td>
-    Format for declaration of <a href="/docs/attributes">attributes</a>.
-    Values: <code>yaml</code> or <code>json</code>.
-</td>
+                Format for declaration of <a href="/docs/attributes">attributes</a>.
+                Values: <code>yaml</code> or <code>json</code>.
+            </td>
         </tr>
         <tr>
             <td>collections</td>
@@ -297,34 +297,34 @@ plugin_manager_builder:
             <td>exclude</td>
             <td>array</td>
             <td>
-    Force to exclude files or directories from <code>src/content</code> folder.
-    e.g: <code>['posts']</code>.
-</td>
+                Force to exclude files or directories from <code>src/content</code> folder.
+                e.g: <code>['posts']</code>.
+            </td>
         </tr>
         <tr>
             <td>include</td>
             <td>array</td>
             <td>
-    Force to include files or directories.
-    e.g: <code>['/home/static/pages']</code>.
-</td>
+                Force to include files or directories.
+                e.g: <code>['/home/static/pages']</code>.
+            </td>
         </tr>
         <tr>
             <td>host</td>
             <td>string</td>
             <td>
-    Listen at the given hostname. Used with <code>site:build --server</code> command.
-</td>
+                Listen at the given hostname. Used with <code>site:build --server</code> command.
+            </td>
         </tr>
         <tr>
             <td>map_converter_extension</td>
             <td>array</td>
             <td>
-    <span class="label label-success">Spress >= 2.1</span>
-    Map filename extention to another one. e.g: <code>.twig</code> to <code>.html</code>.
-    This feature lets you work more appropriately with pages using
-    IDEs that have support for <a href="http://twig.sensiolabs.org/">Twig</a> syntax.
-</td>
+                <span class="label label-success">Spress >= 2.1</span>
+                Map filename extention to another one. e.g: <code>.twig</code> to <code>.html</code>.
+                This feature lets you work more appropriately with pages using
+                IDEs that have support for <a href="http://twig.sensiolabs.org/">Twig</a> syntax.
+            </td>
         </tr>
         <tr>
             <td>markdown_ext</td>
@@ -345,52 +345,52 @@ plugin_manager_builder:
             <td>parsedown_activated</td>
             <td>boolean</td>
             <td>
-    Activates <a href="http://parsedown.org/">Parsedown</a> as default Markdown converter instead of
-    <a href="https://michelf.ca/projects/php-markdown/">Michel Fortin</a> converter - Parsedown is
-    3-4 times faster than Markdown.
-</td>
+                Activates <a href="http://parsedown.org/">Parsedown</a> as default Markdown converter instead of
+                <a href="https://michelf.ca/projects/php-markdown/">Michel Fortin</a> converter - Parsedown is
+                3-4 times faster than Markdown.
+            </td>
         </tr>
         <tr>
             <td>permalink</td>
             <td>string</td>
             <td>
-    The style of the <a href="/docs/permalinks/">permalinks</a>.
-</td>
+                The style of the <a href="/docs/permalinks/">permalinks</a>.
+            </td>
         </tr>
         <tr>
             <td>plugin_manager_builder</td>
             <td>array</td>
             <td>
-    <span class="label label-success">Spress >= 2.1.3</span>
-    Directives for plugin manager builder. See <a href="#plugin_manager_builder">more details</a>.
-</td>
+                <span class="label label-success">Spress >= 2.1.3</span>
+                Directives for plugin manager builder. See <a href="#plugin_manager_builder">more details</a>.
+            </td>
         </tr>
         <tr>
             <td>port</td>
             <td>integer</td>
             <td>
-    Listen on the given port. Used with <code>site:build --server</code> command.
-</td>
+                Listen on the given port. Used with <code>site:build --server</code> command.
+            </td>
         </tr>
         <tr>
             <td>preserve_path_title</td>
             <td>boolean</td>
             <td>
-    Set to <code>true</code> in case of you want to
-    <a href="/docs/writing-posts/#preserve-title">preserve the title extracted
-    from the filename path</a>
-    over the Front matter title attribute.
-</td>
+                Set to <code>true</code> in case of you want to
+                <a href="/docs/writing-posts/#preserve-title">preserve the title extracted
+                from the filename path</a>
+                over the Front matter title attribute.
+            </td>
         </tr>
         <tr>
             <td>no_html_extension</td>
             <td>boolean</td>
             <td>
-    <span class="label label-success">Spress >= 2.1.0</span>
-    Set to <code>true</code> in case of you want to
-    <a href="/docs/permalinks/#forcing-extensionless">force the "extensionless" mode</a>
-    from <code>pretty</code> permalink style with custom permalinks.
-</td>
+                <span class="label label-success">Spress >= 2.1.0</span>
+                Set to <code>true</code> in case of you want to
+                <a href="/docs/permalinks/#forcing-extensionless">force the "extensionless" mode</a>
+                from <code>pretty</code> permalink style with custom permalinks.
+            </td>
         </tr>
         <tr>
             <td>safe</span></td>
@@ -406,9 +406,9 @@ plugin_manager_builder:
             <td>timezone</td>
             <td>string</td>
             <td>
-    Set the Timezone. See
-    <a href="http://www.php.net/manual/en/timezones.php">more timezones in PHP</a>.
-</td>
+                Set the Timezone. See
+                <a href="http://www.php.net/manual/en/timezones.php">more timezones in PHP</a>.
+            </td>
         </tr>
         <tr>
             <td>server_watch_ext</td>
@@ -419,12 +419,12 @@ plugin_manager_builder:
             <td>url</td>
             <td>string</td>
             <td>
-    URL base of your site. This is useful for scenarios where a site
-    isn't available from the domain root. Example of use in a template:
-    
-    <code>&lt;link href="{{ site.url }}/css/style.css" rel="stylesheet"&gt;</code>
-    
-</td>
+                URL base of your site. This is useful for scenarios where a site
+                isn't available from the domain root. Example of use in a template:
+                
+                <code>&lt;link href="{{ site.url }}/css/style.css" rel="stylesheet"&gt;</code>
+                
+            </td>
         </tr>
     </tbody>
 </table>
@@ -444,10 +444,10 @@ plugin_manager_builder:
             <td>exclude_path</td>
             <td>array</td>
             <td>
-    Indicates which directories are
-    excluded of the discovering class process. Useful for excluding
-    tests directories.
-</td>
+                Indicates which directories are
+                excluded of the discovering class process. Useful for excluding
+                tests directories.
+            </td>
         </tr>
     </tbody>
 </table>
@@ -510,7 +510,7 @@ plugin_manager_builder:
                     </div>
                 </div>
                 <p class="text-center">
-                    &copy; 2018 <a href="http://yosymfony.com">Yo! Symfony</a>.
+                    &copy; 2020 <a href="http://yosymfony.com">Yo! Symfony</a>.
                     <span class="label label-default">Proudly powered by Spress</span>
                 </p>
             </div>

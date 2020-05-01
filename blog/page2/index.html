@@ -91,6 +91,40 @@
                                 <article class="post">
     <header>
         <h1>
+            <a href="/news/2016/09/03/new-in-spress-2-2-0-avoid-renderizer-feature-for-type-of-files">New in Spress 2.2.0: "avoid_renderizer" feature for type of files</a>
+        </h1>
+    </header>
+    
+            <p>Hello community! Spress is on the way to 2.2.0 and today we want to unveil
+a <a href="https://github.com/spress/Spress/issues/91">new feature</a> for applying the <a href="docs/themes/#avoid-renderizer">"avoid_renderizer"</a>
+feature automatically to both certain type of files and files that belong to a path.
+The <code>avoid_renderizer</code> attribute let's avoid the <a href="/docs/developers/renderizer/">renderizer</a>
+comes into action with a file. Prior to Spress 2.2.0, you needed to put this attribute
+file by file. Now, you can set a filter in the <code>config.yml</code> file like the following:</p>
+
+<pre><code class="yaml"># config.yml
+avoid_renderizer:
+  filename_extensions: ['css', 'js']
+  paths: ['assets']
+</code></pre>
+
+<p>In the prior example, all files belonging to <code>assets</code> folder (this folder is relative
+to <code>src/content</code> path) or those with a filename's extension type <code>css</code> or <code>js</code>
+will receive an <code>avoid_renderizer: true</code> attribute unless otherwise expressly
+provided in a file.</p>
+
+<p>Spress comes with the following configuration by default:</p>
+
+<pre><code class="yaml">avoid_renderizer:
+  filename_extensions: ['css', 'js']
+  paths: ['assets', 'bower_components', 'node_modules']
+</code></pre>
+
+                
+    </article>
+            <article class="post">
+    <header>
+        <h1>
             <a href="/plugin/news/2016/08/08/importing-posts-to-spress-from-wordpress-and-csv-files-is-now-possible-thanks-to-spress-import-plugin">Importing posts to Spress from Wordpress and CSV files is now possible thanks to Spress Import plugin</a>
         </h1>
     </header>
@@ -184,32 +218,6 @@ which of those are plugins.</p>
                     <a href="http://spress.yosymfony.com/releases/2016/04/12/spress-2-1-1-released">Read more</a>
                 
     </article>
-            <article class="post">
-    <header>
-        <h1>
-            <a href="/releases/2016/03/26/spress-2-1-0-released">Spress 2.1.0 released</a>
-        </h1>
-    </header>
-    
-            <p>Hi community. To make your weekend all the better, we have just released Spress 2.1.0
-with many features and improvements.</p>
-
-<h2>Key features</h2>
-
-<ul>
-<li><span class="label label-success">New</span> <strong>Sorted items in <a href="/docs/collections/#sort-items">collections</a></strong>. Feature thanks to <a href="https://github.com/jjk-jacky">jjk-jacky</a>.</li>
-<li><span class="label label-success">New</span> <strong>Attributes referring to the <a href="/docs/collections/#relationships">previous and next items in a sorted collection</a></strong>. Feature thanks to <a href="https://github.com/jjk-jacky">jjk-jacky</a>.</li>
-<li><span class="label label-success">New</span> <strong>Calling an existing command</strong> in <a href="/docs/developers/command-plugins/#calling-command">command plugins</a>.</li>
-<li><span class="label label-success">New</span> <strong>Support for extending Spress with Twig tags.</strong> Contributed by <a href="https://github.com/jjk-jacky">jjk-jacky</a> in <a href="https://github.com/spress/Spress/pull/65">#65</a>.</li>
-<li><span class="label label-success">New</span> <strong>Support <code>.twig</code> extention</strong>. This feature lets you work more appropriately with pages using IDEs such as PHPStorm. Feature thanks to <a href="https://github.com/peterfox">peterfox</a>.</li>
-<li><span class="label label-primary">Improved</span> <strong>Improved permalinks customizations</strong>. Contributed by <a href="https://github.com/jjk-jacky">jjk-jacky</a> in <a href="https://github.com/spress/Spress/pull/64">#65</a>.</li>
-<li><span class="label label-default">Fixed</span> Fixed the path available at <code>page.path</code> variable. Prior to this version, this variable contains the relative path to <code>src/content/</code> but with the filename extension changed by the <a href="/docs/developers/converters/">Converter</a>. Now, the original filename extension isn't altered.</li>
-</ul>
-
-
-                    <a href="http://spress.yosymfony.com/releases/2016/03/26/spress-2-1-0-released">Read more</a>
-                
-    </article>
     
     <ul class="pagination">
 					<li>
@@ -283,7 +291,7 @@ with many features and improvements.</p>
                 </p>
                 <p class="text-center">
                     &copy;
-                    2018
+                    2020
                                             <a href="http://yosymfony.com">
                             Yo! Symfony
                         </a>

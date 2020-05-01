@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Getting started with Spress 1.x plugins">
 <meta name="author" content="Victor Puertas">
-<meta name="generator" content="Spress v2.2.0">
+<meta name="generator" content="Spress v3.0.0">
 
             <meta name="twitter:card" content="summary">
         <meta name="twitter:image" content="http://spress.yosymfony.com/assets/img/spress-logo.png">
@@ -208,8 +208,7 @@ entry-point class or other libraries required by it.</p>
 <li><strong>require</strong>: List of other packages required by the plugin. <strong>If you want to make
 a public plugin then you must add the <code>spress-installer</code> to the required list</strong>.</li>
 <li><strong>extra</strong>: Extra information for Composer about the plugin is mandatory.</li>
-<li>
-<ul>
+<li><ul>
 <li><strong>spress_name</strong>: The name of the plugin. This value determines the name of the folder where it will be installed.</li>
 </ul></li>
 </ul>
@@ -257,9 +256,9 @@ class YourPluginName extends Plugin
             <td>$eventName</td>
             <td>string</td>
             <td>
-    The name of the event.
-    See <a href="/docs/1.0/developers/events-list">Events list</a>.
-</td>
+                The name of the event.
+                See <a href="/docs/1.0/developers/events-list">Events list</a>.
+            </td>
         </tr>
         <tr>
             <td>$listener</td>
@@ -352,7 +351,7 @@ class YourPluginName extends Plugin
                     </div>
                 </div>
                 <p class="text-center">
-                    &copy; 2018 <a href="http://yosymfony.com">Yo! Symfony</a>.
+                    &copy; 2020 <a href="http://yosymfony.com">Yo! Symfony</a>.
                     <span class="label label-default">Proudly powered by Spress</span>
                 </p>
             </div>

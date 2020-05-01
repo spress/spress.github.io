@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="The Spress changelog">
 <meta name="author" content="Victor Puertas">
-<meta name="generator" content="Spress v2.2.0">
+<meta name="generator" content="Spress v3.0.0">
 
             <meta name="twitter:card" content="summary">
         <meta name="twitter:image" content="http://spress.yosymfony.com/assets/img/spress-logo.png">
@@ -124,6 +124,20 @@
     </div>
     <div  id="changelog"  class="col-md-9">
         <p>More information about the <a href="https://github.com/spress/Spress/releases">releases</a>.</p>
+
+<h2 id="3-0-0">3.0.0</h2>
+
+<ul>
+<li><span class="label label-success">New</span> Fixed the PHP minimum version to 7.4 in <code>composer.json</code> file.</li>
+<li><span class="label label-success">New</span> Added the supporting class <code>Filesystem</code>. It is an extension of Symfony Filesystem component with a method for reading the content of files.</li>
+<li><span class="label label-primary">Improved</span> Updated Symfony components to 4.4.</li>
+<li><span class="label label-primary">Improved</span> Updated Twig to 3.0.</li>
+<li><span class="label label-primary">Improved</span> Updated "michelf/php-markdown" to 1.9.</li>
+<li><span class="label label-success">New</span> Added class <code>DependencyResolver</code>, a simple dependency resolver. It is useful for keeping tracks of inter-document dependencies.</li>
+<li><span class="label label-danger">Deleted</span> The configuration option <code>layout_ext</code> is not necessary anymore. Now, the option <code>text_extensions</code> is used to recognize layouts files.</li>
+<li><span class="label label-primary">Improved</span> The class <code>FilesystemDataSource</code> returns layout item identifiers without file extensions when they are unique. In case of name collision, the filename extension will be added.</li>
+<li><span class="label label-default">Fixed</span> Now, Appveyor CI installs PHP and Composer using Chocolatey package system.</li>
+</ul>
 
 <h2 id="2-2-0">2.2.0</h2>
 
@@ -505,7 +519,7 @@ non-empty directory that contains "hidden" directories and files.</li>
                     </div>
                 </div>
                 <p class="text-center">
-                    &copy; 2018 <a href="http://yosymfony.com">Yo! Symfony</a>.
+                    &copy; 2020 <a href="http://yosymfony.com">Yo! Symfony</a>.
                     <span class="label label-default">Proudly powered by Spress</span>
                 </p>
             </div>

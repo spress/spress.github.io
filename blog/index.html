@@ -91,6 +91,40 @@
                                 <article class="post">
     <header>
         <h1>
+            <a href="/releases/2020/05/01/spress-3-is-here">Spress 3 is here</a>
+        </h1>
+    </header>
+    
+            <p>Hi community, it's been a long time coming but Spress is back with the version 3.
+This version does not content new features but some of the main packages have been updated such
+us Twig (from 1.x to 3.x) and Symfony components (from 3.1 to 4.4). Another
+important thing is that <strong>PHP 7.4 is the minimum PHP version that Spress 3 will run on</strong>.
+Spress 3 should be backward compatible with version 2.2.0.</p>
+
+<h2>Changelog</h2>
+
+<ul>
+<li><span class="label label-success">New</span> Fixed the PHP minimum version to 7.4 in <code>composer.json</code> file.</li>
+<li><span class="label label-success">New</span> Added the supporting class <code>Filesystem</code>. It is an extension of Symfony Filesystem component with a method for reading the content of files.</li>
+<li><span class="label label-primary">Improved</span> Updated Symfony components to 4.4.</li>
+<li><span class="label label-primary">Improved</span> Updated Twig to 3.0.</li>
+<li><span class="label label-primary">Improved</span> Updated "michelf/php-markdown" to 1.9.</li>
+<li><span class="label label-success">New</span> Added class <code>DependencyResolver</code>, a simple dependency resolver. It is useful for keeping tracks of inter-document dependencies.</li>
+<li><span class="label label-danger">Deleted</span> The configuration option <code>layout_ext</code> is not necessary anymore. Now, the option <code>text_extensions</code> is used to recognize layouts files.</li>
+<li><span class="label label-primary">Improved</span> The class <code>FilesystemDataSource</code> returns layout item identifiers without file extensions when they are unique. In case of name collision, the filename extension will be added.</li>
+<li><span class="label label-default">Fixed</span> Now, Appveyor CI installs PHP and Composer using Chocolatey package system.</li>
+</ul>
+
+<p>If you encounter issues with the new release or have suggestions, 
+please use <a href="https://github.com/spress/spress/issues">GitHub Issues</a> or the comments below.</p>
+
+<p>Enjoy!</p>
+
+                
+    </article>
+            <article class="post">
+    <header>
+        <h1>
             <a href="/2018/05/17/spress-3-0-0-will-be-the-next-version">Spress 3.0.0 will be the next version</a>
         </h1>
     </header>
@@ -169,40 +203,6 @@ commands aimed to manage Spress's add-ons.</p>
                     <a href="http://spress.yosymfony.com/news/2016/12/13/new-in-spress-2-2-0-themes-and-add-ons-manager">Read more</a>
                 
     </article>
-            <article class="post">
-    <header>
-        <h1>
-            <a href="/news/2016/09/03/new-in-spress-2-2-0-avoid-renderizer-feature-for-type-of-files">New in Spress 2.2.0: "avoid_renderizer" feature for type of files</a>
-        </h1>
-    </header>
-    
-            <p>Hello community! Spress is on the way to 2.2.0 and today we want to unveil
-a <a href="https://github.com/spress/Spress/issues/91">new feature</a> for applying the <a href="docs/themes/#avoid-renderizer">"avoid_renderizer"</a>
-feature automatically to both certain type of files and files that belong to a path.
-The <code>avoid_renderizer</code> attribute let's avoid the <a href="/docs/developers/renderizer/">renderizer</a>
-comes into action with a file. Prior to Spress 2.2.0, you needed to put this attribute
-file by file. Now, you can set a filter in the <code>config.yml</code> file like the following:</p>
-
-<pre><code class="yaml"># config.yml
-avoid_renderizer:
-  filename_extensions: ['css', 'js']
-  paths: ['assets']
-</code></pre>
-
-<p>In the prior example, all files belonging to <code>assets</code> folder (this folder is relative
-to <code>src/content</code> path) or those with a filename's extension type <code>css</code> or <code>js</code>
-will receive an <code>avoid_renderizer: true</code> attribute unless otherwise expressly
-provided in a file.</p>
-
-<p>Spress comes with the following configuration by default:</p>
-
-<pre><code class="yaml">avoid_renderizer:
-  filename_extensions: ['css', 'js']
-  paths: ['assets', 'bower_components', 'node_modules']
-</code></pre>
-
-                
-    </article>
     
     <ul class="pagination">
 		
@@ -271,7 +271,7 @@ provided in a file.</p>
                 </p>
                 <p class="text-center">
                     &copy;
-                    2018
+                    2020
                                             <a href="http://yosymfony.com">
                             Yo! Symfony
                         </a>

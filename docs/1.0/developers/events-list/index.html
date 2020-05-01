@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Events list of Spress livecycle">
 <meta name="author" content="Victor Puertas">
-<meta name="generator" content="Spress v2.2.0">
+<meta name="generator" content="Spress v3.0.0">
 
             <meta name="twitter:card" content="summary">
         <meta name="twitter:image" content="http://spress.yosymfony.com/assets/img/spress-logo.png">
@@ -167,9 +167,9 @@ namespace. All events inherits from
                     of each page.
                 </p>
                 <p>
-    <code>getContent()</code> method returns the original content in
-    source format.
-</p>
+                    <code>getContent()</code> method returns the original content in
+                    source format.
+                </p>
             </td>
         </tr>
         <tr>
@@ -177,15 +177,15 @@ namespace. All events inherits from
             <td><a href="#convertevent"><code>ConvertEvent</code></a></td>
             <td>
                 <p>
-    The spress.after_convert is thrown after converting the content of
-    each page.
-    <strong>If the content doesn't have Front-matter, this event will never be
-    dispatched</strong>.
-</p>
+                    The spress.after_convert is thrown after converting the content of
+                    each page.
+                    <strong>If the content doesn't have Front-matter, this event will never be
+                    dispatched</strong>.
+                </p>
                 <p>
-    <code>getContent()</code> method returns the content transformed by
-    converter. In this step Twig tags are not resolved.
-</p>
+                    <code>getContent()</code> method returns the content transformed by
+                    converter. In this step Twig tags are not resolved.
+                </p>
             </td>
         </tr>
         <tr>
@@ -200,15 +200,15 @@ namespace. All events inherits from
             <td><a href="#renderevent"><code>RenderEvent</code></a></td>
             <td>
                 <p>
-    The spress.before_render is thrown before rendering the content of
-    each page.
-    <strong>If the content doesn't have Front-matter this event will never be
-    dispatched</strong>.
-</p>
+                    The spress.before_render is thrown before rendering the content of
+                    each page.
+                    <strong>If the content doesn't have Front-matter this event will never be
+                    dispatched</strong>.
+                </p>
                 <p>
-    <code>getContent()</code> method returns the content transformed by
-    converter. In this step Twig tags are not resolved.
-</p>
+                    <code>getContent()</code> method returns the content transformed by
+                    converter. In this step Twig tags are not resolved.
+                </p>
             </td>
         </tr>
         <tr>
@@ -216,19 +216,19 @@ namespace. All events inherits from
             <td><a href="#renderevent"><code>RenderEvent</code></a></td>
             <td>
                 <p>
-    The spress.after_render is thrown after rendering the content of
-    each page.
-    <strong>If the content doesn't have Front-matter this event will never be
-    dispatched</strong>.
-</p>
+                    The spress.after_render is thrown after rendering the content of
+                    each page.
+                    <strong>If the content doesn't have Front-matter this event will never be
+                    dispatched</strong>.
+                </p>
                 <p>
-    <code>getContent()</code> method return the fully rendered content 
-    (layout included).
-</p>
+                    <code>getContent()</code> method return the fully rendered content 
+                    (layout included).
+                </p>
                 <p>
-    If you need to access to the rendered content without layout
-    you can to use <code>page.content</code> from the payload.
-</p>
+                    If you need to access to the rendered content without layout
+                    you can to use <code>page.content</code> from the payload.
+                </p>
             </td>
         </tr>
         <tr>
@@ -239,14 +239,14 @@ namespace. All events inherits from
             <td><a href="#renderevent"><code>RenderEvent</code></a></td>
             <td>
                 <p>
-    The spress.before_render_pagination is thrown before rendering the content of
-    each page of post pagination.
-    <strong>This event won't fire unless you enable pagination of posts</strong>.
-</p>
+                    The spress.before_render_pagination is thrown before rendering the content of
+                    each page of post pagination.
+                    <strong>This event won't fire unless you enable pagination of posts</strong>.
+                </p>
                 <p>
-    <code>getContent()</code> method returns the content of pagination template.
-    In this step Twig tags are not resolved.
-</p>
+                    <code>getContent()</code> method returns the content of pagination template.
+                    In this step Twig tags are not resolved.
+                </p>
             </td>
         </tr>
         <tr>
@@ -257,27 +257,27 @@ namespace. All events inherits from
             <td><a href="#renderevent"><code>RenderEvent</code></a></td>
             <td>
                 <p>
-    The spress.after_render_pagination is thrown after rendering the content of
-    each pagination of posts.
-    <strong>This event won't fire unless you enable pagination of posts</strong>.
-</p>
+                    The spress.after_render_pagination is thrown after rendering the content of
+                    each pagination of posts.
+                    <strong>This event won't fire unless you enable pagination of posts</strong>.
+                </p>
                 <p>
-    <code>getContent()</code> method returns the full content rendered
-    (layout included).
-</p>
+                    <code>getContent()</code> method returns the full content rendered
+                    (layout included).
+                </p>
                 <p>
-    If you need to access to the pagination template content rendered
-    without layout you can to use <code>page.content</code> from the payload.
-</p>
+                    If you need to access to the pagination template content rendered
+                    without layout you can to use <code>page.content</code> from the payload.
+                </p>
             </td>
         </tr>
         <tr>
             <td>spress.finish</td>
             <td><a href="#finishevent"><code>FinishEvent</code></a></td>
             <td>
-    The spress.finish is thrown after the site was generated. All files 
-    are saved in <code>_site</code> folder.
-</td>
+                The spress.finish is thrown after the site was generated. All files 
+                are saved in <code>_site</code> folder.
+            </td>
         </tr>
     </tbody>
 </table></p>
@@ -568,7 +568,7 @@ the RenderEvent argument points to pagination template page.</p>
                     </div>
                 </div>
                 <p class="text-center">
-                    &copy; 2018 <a href="http://yosymfony.com">Yo! Symfony</a>.
+                    &copy; 2020 <a href="http://yosymfony.com">Yo! Symfony</a>.
                     <span class="label label-default">Proudly powered by Spress</span>
                 </p>
             </div>

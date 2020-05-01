@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Spress is a blog-aware application that transform your plain text files in static sites.">
 <meta name="author" content="Victor Puertas">
-<meta name="generator" content="Spress v2.2.0">
+<meta name="generator" content="Spress v3.0.0">
 
             <meta name="twitter:card" content="summary">
         <meta name="twitter:image" content="http://spress.yosymfony.com/assets/img/spress-logo.png">
@@ -166,7 +166,7 @@
     <div class="col-md-9">
     	<p class="text-right">
     		<i class="fa fa-github"></i>
-    		<a href="https://github.com/yosymfony/Spress.yosymfony.com/edit/master/src/content/docs/permalinks.md">
+    		<a href="https://github.com/spress/spress.yosymfony.com/edit/master/src/content/docs/permalinks.md">
     			Edit this page on Github
     		</a>
     	</p>
@@ -190,26 +190,26 @@ items should be written.</p>
         <tr>
             <td>:path</td>
             <td>
-    Relative path to content folder without filename. e.g: <code>posts</code>.
-</td>
+                Relative path to content folder without filename. e.g: <code>posts</code>.
+            </td>
         </tr>
         <tr>
             <td>:extension</td>
             <td>
-    Filename extension. e.g: <code>md</code>.
-</td>
+                Filename extension. e.g: <code>md</code>.
+            </td>
         </tr>
         <tr>
             <td>:basename</td>
             <td>
-    Base name of the file without path info. e.g: <code>/about/changelog.md</code> gets <code>changelog</code>.
-</td>
+                Base name of the file without path info. e.g: <code>/about/changelog.md</code> gets <code>changelog</code>.
+            </td>
         </tr>
         <tr>
             <td>:collection</td>
             <td>
-    Collection name assigned to an item. e.g: <code>posts</code>.
-</td>
+                Collection name assigned to an item. e.g: <code>posts</code>.
+            </td>
         </tr>
         <tr>
             <td>:categories</td>
@@ -220,38 +220,38 @@ items should be written.</p>
         <tr>
             <td>:title</td>
             <td>
-    Title from the post. Slugified tittle. e.g: <code>welcome-to-my-blog</code>.
-</td>
+                Title from the post. Slugified tittle. e.g: <code>welcome-to-my-blog</code>.
+            </td>
         </tr>
         <tr>
             <td>:year</td>
             <td>
-    Year extracted from <code>date</code> attribute or current date. e.g: <code>2015</code>.
-</td>
+                Year extracted from <code>date</code> attribute or current date. e.g: <code>2015</code>.
+            </td>
         </tr>
         <tr>
             <td>:month</td>
             <td>
-    Month extracted from <code>date</code> attribute or current date. e.g: <code>01</code>.
-</td>
+                Month extracted from <code>date</code> attribute or current date. e.g: <code>01</code>.
+            </td>
         </tr>
         <tr>
             <td>:i_month</td>
             <td>
-    Month extracted from <code>date</code> attribute or current date without leading zeros. e.g: <code>1</code>.
-</td>
+                Month extracted from <code>date</code> attribute or current date without leading zeros. e.g: <code>1</code>.
+            </td>
         </tr>
         <tr>
             <td>:day</td>
             <td>
-    Day extracted from <code>date</code> attribute or current date. e.g: <code>01</code>.
-</td>
+                Day extracted from <code>date</code> attribute or current date. e.g: <code>01</code>.
+            </td>
         </tr>
         <tr>
             <td>:i_day</td>
             <td>
-    Day extracted from <code>date</code> attribute or current date without leading zeros. e.g: <code>1</code>.
-</td>
+                Day extracted from <code>date</code> attribute or current date without leading zeros. e.g: <code>1</code>.
+            </td>
         </tr>
     </tbody>
 </table>
@@ -280,8 +280,8 @@ on your site simply use its name:</p>
         <tr>
             <td>pretty</td>
             <td>
-    <code>/:categories/:year/:month/:day/:title</code> or <code>/:path/:basename</code>.
-</td>
+                <code>/:categories/:year/:month/:day/:title</code> or <code>/:path/:basename</code>.
+            </td>
             <td>
                 /news/2015/12/31/new-apps/
             </td>
@@ -289,8 +289,8 @@ on your site simply use its name:</p>
         <tr>
             <td>ordinal</td>
             <td>
-    <code>/:categories/:year/:i_day/:title.:extension</code>
-</td>
+                <code>/:categories/:year/:i_day/:title.:extension</code>
+            </td>
             <td>
                 /news/2015/31/new-apps.html
             </td>
@@ -298,8 +298,8 @@ on your site simply use its name:</p>
         <tr>
             <td>date</td>
             <td>
-    <code>/:categories/:year/:month/:day/:title.:extension</code>
-</td>
+                <code>/:categories/:year/:month/:day/:title.:extension</code>
+            </td>
             <td>
                 /2015/12/31/new-apps.html
             </td>
@@ -390,7 +390,7 @@ result will be a page with a path: <code>build/amazing-foo/index.html</code> whi
                     </div>
                 </div>
                 <p class="text-center">
-                    &copy; 2018 <a href="http://yosymfony.com">Yo! Symfony</a>.
+                    &copy; 2020 <a href="http://yosymfony.com">Yo! Symfony</a>.
                     <span class="label label-default">Proudly powered by Spress</span>
                 </p>
             </div>

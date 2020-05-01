@@ -6,6 +6,40 @@
         <description>RSS feed for The static site generator in PHP</description>
         <atom:link href="http://spress.yosymfony.com/rss.xml" rel="self" type="application/rss+xml" />
                     <item>
+                <title>Spress 3 is here</title>
+                <description>
+                    <![CDATA[<p>Hi community, it's been a long time coming but Spress is back with the version 3.
+This version does not content new features but some of the main packages have been updated such
+us Twig (from 1.x to 3.x) and Symfony components (from 3.1 to 4.4). Another
+important thing is that <strong>PHP 7.4 is the minimum PHP version that Spress 3 will run on</strong>.
+Spress 3 should be backward compatible with version 2.2.0.</p>
+
+<h2>Changelog</h2>
+
+<ul>
+<li><span class="label label-success">New</span> Fixed the PHP minimum version to 7.4 in <code>composer.json</code> file.</li>
+<li><span class="label label-success">New</span> Added the supporting class <code>Filesystem</code>. It is an extension of Symfony Filesystem component with a method for reading the content of files.</li>
+<li><span class="label label-primary">Improved</span> Updated Symfony components to 4.4.</li>
+<li><span class="label label-primary">Improved</span> Updated Twig to 3.0.</li>
+<li><span class="label label-primary">Improved</span> Updated "michelf/php-markdown" to 1.9.</li>
+<li><span class="label label-success">New</span> Added class <code>DependencyResolver</code>, a simple dependency resolver. It is useful for keeping tracks of inter-document dependencies.</li>
+<li><span class="label label-danger">Deleted</span> The configuration option <code>layout_ext</code> is not necessary anymore. Now, the option <code>text_extensions</code> is used to recognize layouts files.</li>
+<li><span class="label label-primary">Improved</span> The class <code>FilesystemDataSource</code> returns layout item identifiers without file extensions when they are unique. In case of name collision, the filename extension will be added.</li>
+<li><span class="label label-default">Fixed</span> Now, Appveyor CI installs PHP and Composer using Chocolatey package system.</li>
+</ul>
+
+<p>If you encounter issues with the new release or have suggestions, 
+please use <a href="https://github.com/spress/spress/issues">GitHub Issues</a> or the comments below.</p>
+
+<p>Enjoy!</p>
+
+                    <a href="http://spress.yosymfony.com/releases/2020/05/01/spress-3-is-here">Read more</a>]]>
+                </description>
+                <link>http://spress.yosymfony.com/releases/2020/05/01/spress-3-is-here</link>
+                <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
+                <guid>http://spress.yosymfony.com/releases/2020/05/01/spress-3-is-here</guid>
+            </item>
+                    <item>
                 <title>Spress 3.0.0 will be the next version</title>
                 <description>
                     <![CDATA[<p>Hi community. I was working on Spress 2.3.0 whose only new feature would have been
@@ -483,7 +517,7 @@ What’s changed in 1.1.0? Here are some highlights:</p>
 <li><strong>Built-in server and watch for changes</strong>. With the built-in server you have a simple web server for viewing your site without any extra requirement. The new watch mode for <code>site:build</code> command enables to watch for changes and to regenerate your site automatically. See the <a href="/news/2014/10/13/new-in-spress-1-1-built-in-server-and-watch-for-changes/">blog post</a>.</li>
 <li>The new <strong>IO API</strong> enables to plugins for interact with the user. See the <a href="/news/2014/05/11/new-in-spress-1-1-io-api/">blog post</a>.</li>
 <li>Support for environment configurations. This is useful for writing configuration options for development and production environments. See the <a href="/news/2014/06/12/new-in-spress-1-1-environment-configurations/">blog post</a>.</li>
-<li><strong>Debug mode</strong>. With this mode activated you can dump information about a template variable in your templates. </li>
+<li><strong>Debug mode</strong>. With this mode activated you can dump information about a template variable in your templates.</li>
 </ul>
 
 

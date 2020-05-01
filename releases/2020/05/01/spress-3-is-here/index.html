@@ -2,22 +2,22 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-<title>The static site generator in PHP &#8250; Spress blog</title>
+<title>Spress 3 is here &#8250; Spress blog</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Spress is a blog-aware application that transform your plain text files in static sites.">
 <meta name="author" content="Victor Puertas">
 
         <meta name="twitter:card" content="summary">
         <meta name="twitter:image" content="http://spress.yosymfony.com/assets/img/spress-logo.png">
-    <meta name="twitter:title" content="The static site generator in PHP">
+    <meta name="twitter:title" content="Spress 3 is here">
     <meta name="twitter:description" content="Spress is a blog-aware application that transform your plain text files in static sites.">
     <meta name="twitter:creator" content="@spress_cms">
 
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="The static site generator in PHP">
+<meta property="og:title" content="Spress 3 is here">
 <meta property="og:description" content="Spress is a blog-aware application that transform your plain text files in static sites.">
-<meta property="og:url" content="http://spress.yosymfony.com/blog/categories/releases/page5">
+<meta property="og:url" content="http://spress.yosymfony.com/releases/2020/05/01/spress-3-is-here">
 <meta property="og:site_name" content="The static site generator in PHP">
 
 <link href="http://spress.yosymfony.com/rss.xml" type="application/rss+xml" rel="alternate" title="The static site generator in PHP Feed">
@@ -88,32 +88,62 @@
         </div>
     </div>
 </div>            <div class="container">
-                    <div class="page-header">
-    <h1>releases <small>category</small></h1>
-</div>
+                    <article class="post">
+    <header>
+        <h1>
+            <a href="/releases/2020/05/01/spress-3-is-here">Spress 3 is here</a>
+        </h1>
+    </header>
+    
+            <p>Hi community, it's been a long time coming but Spress is back with the version 3.
+This version does not content new features but some of the main packages have been updated such
+us Twig (from 1.x to 3.x) and Symfony components (from 3.1 to 4.4). Another
+important thing is that <strong>PHP 7.4 is the minimum PHP version that Spress 3 will run on</strong>.
+Spress 3 should be backward compatible with version 2.2.0.</p>
 
-    <ul class="posts-list">
-        <li class="posts-list-item">
-        <a href="/releases/2014/03/08/spress-1-0-1-released">
-            <h4>Spress 1.0.1 released</h4>
-        </a>
-    </li>
-        <li class="posts-list-item">
-        <a href="/releases/2014/02/08/spress-1-0-0-arrived">
-            <h4>Spress 1.0.0 arrived</h4>
-        </a>
-    </li>
-    </ul>
+<h2>Changelog</h2>
 
-    <ul class="pagination">
-					<li>
-                <a class="prev" href="http://spress.yosymfony.com/blog/categories/releases/page4">
-                    &laquo; Newer
-                </a>
-            </li>
-		
-			</ul>
+<ul>
+<li><span class="label label-success">New</span> Fixed the PHP minimum version to 7.4 in <code>composer.json</code> file.</li>
+<li><span class="label label-success">New</span> Added the supporting class <code>Filesystem</code>. It is an extension of Symfony Filesystem component with a method for reading the content of files.</li>
+<li><span class="label label-primary">Improved</span> Updated Symfony components to 4.4.</li>
+<li><span class="label label-primary">Improved</span> Updated Twig to 3.0.</li>
+<li><span class="label label-primary">Improved</span> Updated "michelf/php-markdown" to 1.9.</li>
+<li><span class="label label-success">New</span> Added class <code>DependencyResolver</code>, a simple dependency resolver. It is useful for keeping tracks of inter-document dependencies.</li>
+<li><span class="label label-danger">Deleted</span> The configuration option <code>layout_ext</code> is not necessary anymore. Now, the option <code>text_extensions</code> is used to recognize layouts files.</li>
+<li><span class="label label-primary">Improved</span> The class <code>FilesystemDataSource</code> returns layout item identifiers without file extensions when they are unique. In case of name collision, the filename extension will be added.</li>
+<li><span class="label label-default">Fixed</span> Now, Appveyor CI installs PHP and Composer using Chocolatey package system.</li>
+</ul>
 
+<p>If you encounter issues with the new release or have suggestions, 
+please use <a href="https://github.com/spress/spress/issues">GitHub Issues</a> or the comments below.</p>
+
+<p>Enjoy!</p>
+
+        
+            <footer>    
+            <p>
+                Posted by Victor Puertas on <time pubdate="pubdate">2020-05-01</time>
+            </p>
+
+                        <ul class="list-unstyled">
+                                                    <li>
+                        <i class="fa fa-folder"></i>
+                                                    <a href="http://spress.yosymfony.com/blog/categories/releases">releases</a> 
+                                            </li>
+                            </ul>
+                    </footer>
+
+                    <section>
+                <h3>Comments</h3>
+                <div id="disqus_thread"></div>
+                <noscript>
+                    Please enable JavaScript to view the
+                    <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+                </noscript> 
+                <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            </section>
+            </article>
             </div>
         </div>
             
@@ -194,6 +224,15 @@
     
     ga('create', 'UA-47797401-1', 'yosymfony.com');
     ga('send', 'pageview');
-</script>                                </footer>
+</script>                        <script type="text/javascript">
+            var disqus_shortname = 'yosymfony';
+            
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+            </footer>
     </body>
 </html>
